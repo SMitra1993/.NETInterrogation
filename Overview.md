@@ -29,9 +29,9 @@
 - [Invalid overloading of Main() Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#invalid-overloading-of-main-method-)
 - [Garbage Collection](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#garbage-collection-)
 
-## **The .NET Framework’s basic architecture consists of two key elements:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **The .NET Framework’s basic architecture consists of two key elements:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
-### **Common Language Runtime (CLR):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+### **Common Language Runtime (CLR):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 In the .NET Framework, CLR stands for Common Language Runtime. It's a fundamental component that serves as the execution engine for .NET applications. Here's a breakdown of what CLR does:
 
@@ -49,7 +49,7 @@ In the .NET Framework, CLR stands for Common Language Runtime. It's a fundamenta
 
 Overall, CLR plays a crucial role in enabling the execution and management of .NET applications, providing a stable and reliable runtime environment for developers to build upon.
 
-### **.NET Framework Class Library (FCL):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+### **.NET Framework Class Library (FCL):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 The .NET Framework Class Library (FCL) is a comprehensive collection of reusable types, commonly known as classes, organized into namespaces, that provides a vast array of functionality for developers building .NET applications. Here's a breakdown of its key characteristics:
 
@@ -65,9 +65,9 @@ The .NET Framework Class Library (FCL) is a comprehensive collection of reusable
 
 Overall, the .NET Framework Class Library serves as a foundational building block for .NET developers, offering a vast repository of reusable components and functionality that streamline application development, promote code reuse, and facilitate rapid development of robust and feature-rich applications.
 
-## **Main components of CLR:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **Main components of CLR:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
-### **Common Language Specification (CLS):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+### **Common Language Specification (CLS):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 The Common Language Specification (CLS) is a set of rules and guidelines defined within the .NET Framework that ensures interoperability between different programming languages targeting the Common Language Runtime (CLR). Here's a breakdown of its key aspects:
 
@@ -85,7 +85,7 @@ The Common Language Specification (CLS) is a set of rules and guidelines defined
 
 Overall, the Common Language Specification plays a crucial role in facilitating interoperability and code reuse across different .NET languages, enabling developers to leverage the strengths of each language while ensuring compatibility and consistency within the .NET ecosystem.
 
-### **Common Type System (CTS):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+### **Common Type System (CTS):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 The Common Type System (CTS) is a fundamental component of the .NET Framework that defines the data types and rules for how types can interact within the framework. Here's a breakdown of its key aspects:
 
@@ -103,7 +103,7 @@ The Common Type System (CTS) is a fundamental component of the .NET Framework th
 
 Overall, the Common Type System plays a critical role in ensuring consistency, type safety, and interoperability within the .NET Framework, enabling developers to write robust and maintainable code across different languages and platforms.
 
-### **Types of Common Type System:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+### **Types of Common Type System:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 The Common Type System (CTS) within the .NET Framework defines a set of data types that are shared across all .NET languages, ensuring consistency and interoperability. These data types can be categorized into three main groups: primitive types, reference types, and value types.
 
@@ -132,22 +132,22 @@ The Common Type System (CTS) within the .NET Framework defines a set of data typ
 
 These three categories encompass the majority of data types within the Common Type System. By standardizing these types across all .NET languages, the CTS ensures consistent behavior and interoperability among different components and languages within the .NET ecosystem.
 
-## **Three Phases of the development of .NET technology:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **Three Phases of the development of .NET technology:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
-### **OLE Technology (Object Linking and Embedding):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+### **OLE Technology (Object Linking and Embedding):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 - **Introduction**: OLE technology was introduced by Microsoft in the early 1990s as a means to enable compound documents, where documents contain objects from different applications. It allowed users to embed or link objects (such as charts or spreadsheets) created in one application into documents created in another application.
 - **Component Model**: OLE introduced the concept of component-based development, where software functionality is encapsulated into reusable components that can be shared and integrated across different applications.
 - **Challenges**: While OLE provided a mechanism for integrating objects across applications, it was complex and had limitations in terms of interoperability and ease of development.
 
-### **COM Technology (Component Object Model):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+### **COM Technology (Component Object Model):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 - **Evolution from OLE**: COM evolved from OLE and became a fundamental technology in the Windows ecosystem. It introduced a standardized way for software components to communicate and interact with each other, regardless of the programming language or development environment used.
 - **Componentization**: COM promoted the development of software components that encapsulated specific functionality and exposed well-defined interfaces. Components could be instantiated, configured, and invoked by other components or applications through these interfaces.
 - **Binary Compatibility**: One of the key features of COM was binary compatibility, which allowed components to be reused without recompilation. This enabled developers to build applications by assembling and reusing existing components, leading to increased productivity and maintainability.
 - **Challenges**: COM programming could be complex and error-prone, particularly due to issues such as reference counting for memory management and the lack of standardized development tools and frameworks.
 
-### **.NET Technology:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+### **.NET Technology:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 - **Introduction**: .NET technology represents a significant paradigm shift in software development, introduced by Microsoft in the early 2000s. It aimed to address the limitations and challenges of COM and provide a modern, unified platform for building and deploying applications.
 - **Managed Code and CLR**: .NET introduced the concept of managed code, where code is executed within a managed runtime environment called the Common Language Runtime (CLR). CLR provided features such as automatic memory management (garbage collection), type safety, and runtime services.
@@ -157,11 +157,11 @@ These three categories encompass the majority of data types within the Common Ty
 - **Modernization and Cross-Platform Expansion**: In recent years, .NET has continued to evolve with a focus on modernization, cross-platform support, and cloud-native development. Technologies such as .NET Core and .NET 5 have expanded the reach of .NET beyond Windows to Linux, macOS, and cloud environments like Azure.
 
 
-## **Managed code and Unmanaged code in .NET:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **Managed code and Unmanaged code in .NET:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 In the context of .NET, "managed code" and "unmanaged code" refer to different types of code execution environments and memory management models:
 
-### 1. **Managed Code**: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+### 1. **Managed Code**: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
    - Managed code is code that is executed within a managed runtime environment, such as the Common Language Runtime (CLR) in the .NET Framework.
    - Characteristics:
      - Memory Management: Managed code benefits from automatic memory management through features like garbage collection. The CLR automatically allocates and deallocates memory for objects, tracks references, and performs garbage collection to reclaim memory from unused objects.
@@ -190,7 +190,7 @@ class Program
 - It benefits from automatic memory management, type safety, and runtime services provided by the CLR.
 - The Console.WriteLine method call is an example of invoking functionality from a managed library (System.Console), which is part of the .NET Framework's Base Class Library (BCL).
 
-### 2. **Unmanaged Code**: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+### 2. **Unmanaged Code**: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
    - Unmanaged code is code that runs directly on the underlying hardware without the assistance of a managed runtime environment. It typically interacts directly with the operating system and hardware resources.
    - Characteristics:
      - Memory Management: Unmanaged code is responsible for managing memory manually, including allocation and deallocation of memory resources. This can lead to issues like memory leaks and memory corruption if not handled carefully.
@@ -224,7 +224,7 @@ class Program
 
 In summary, managed code runs within a managed runtime environment like the CLR, benefiting from automatic memory management, type safety, and runtime services. Unmanaged code, on the other hand, operates directly on the underlying hardware, requiring manual memory management and lacking the safety features provided by managed environments. The choice between managed and unmanaged code depends on factors such as performance requirements, development complexity, and access to system resources.
 
-## **Managed Vs Unmanaged code in .NET:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **Managed Vs Unmanaged code in .NET:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 | Feature                   | Managed Code                                  | Unmanaged Code                                      |
 |---------------------------|-----------------------------------------------|------------------------------------------------------|
@@ -241,7 +241,7 @@ In summary, managed code runs within a managed runtime environment like the CLR,
 | Examples                  | C#, Visual Basic.NET, F#                    | C++, legacy code, Win32 API calls                   |
 | Garbage Collection | Memory is managed by CLR’s Garbage Collector | Memory is managed by the programmer |
 
-## **CIL or MSIL (Common Intermediate Language or Microsoft Intermediate Language):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **CIL or MSIL (Common Intermediate Language or Microsoft Intermediate Language):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 Microsoft Intermediate Language (MSIL), also known as Common Intermediate Language (CIL), is an intermediate language used within the .NET Framework. Here's an explanation:
 
@@ -259,7 +259,7 @@ Microsoft Intermediate Language (MSIL), also known as Common Intermediate Langua
 
 In summary, Microsoft Intermediate Language (MSIL) or Common Intermediate Language (CIL) is an intermediate representation of .NET code that facilitates platform independence, managed execution, interoperability, and optimization within the .NET Framework. It plays a crucial role in enabling the portability, flexibility, and performance of .NET applications across different platforms and environments.
 
-## **.NET Framework Class Library (FCL):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **.NET Framework Class Library (FCL):** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 The .NET Framework Class Library (FCL) is a comprehensive collection of reusable types (classes, interfaces, structs, enums, etc.) organized into namespaces, providing a wide range of functionality for developers building .NET applications. Here's an explanation along with an example:
 
@@ -317,7 +317,7 @@ Explanation:
 
 In summary, the .NET Framework Class Library (FCL) provides a rich set of functionality that enables developers to build .NET applications more efficiently by leveraging pre-built components and APIs. It simplifies common programming tasks and promotes code reuse, consistency, and interoperability across different .NET applications.
 
-## **Some of the namespaces in the FCL along with their description is given as follows:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **Some of the namespaces in the FCL along with their description is given as follows:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 | Namespace              | Description                                                                                                                                      |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -344,7 +344,7 @@ In summary, the .NET Framework Class Library (FCL) provides a rich set of functi
 
 This expanded table includes additional namespaces from the .NET Framework, covering a broader range of functionality and domains, including reflection, multimedia, LINQ, globalization, drawing, configuration, workflow, and XAML.
 
-## **Just-In-Time Compiler:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **Just-In-Time Compiler:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 The Just-In-Time (JIT) compiler is a key component of the .NET runtime environment, responsible for translating Intermediate Language (IL) code, also known as Common Intermediate Language (CIL), into native machine code that can be executed by the underlying hardware. Here's an explanation of the JIT compiler:
 
@@ -373,7 +373,7 @@ The Just-In-Time (JIT) compiler is a key component of the .NET runtime environme
 
 In summary, the Just-In-Time (JIT) compiler in the .NET runtime environment translates Intermediate Language (IL) code into native machine code at runtime, on a "just-in-time" basis as the code is needed for execution. It performs optimizations to improve performance and efficiency and caches the compiled native code to reduce startup times and overhead.
 
-## **Main Method in C#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **Main Method in C#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 The `Main` method in C# serves as the entry point for a C# application. It is a static method defined within a class, typically the program's entry class, and it is where program execution begins. Here's a detailed explanation along with an example:
 
@@ -433,7 +433,7 @@ The `Main` method in C# serves as the entry point for a C# application. It is a 
 
 In summary, the `Main` method in C# is the starting point for the execution of a C# application. It receives command-line arguments as input, if any, and controls the flow of program execution. It is a critical component of every C# program, defining its behavior and entry point.
 
-## **Method Overloading of Main method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **Method Overloading of Main method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 In C#, you can overload the `Main()` method, meaning you can define multiple versions of the `Main()` method within the same class, as long as each version has a unique signature. Here's an explanation along with scenarios where overloading `Main()` can be useful:
 
@@ -545,7 +545,7 @@ In C#, you can overload the `Main()` method, meaning you can define multiple ver
 
 In summary, overloading the `Main()` method in C# allows you to define multiple entry points or startup scenarios for your application, handle different types of command-line arguments, and perform specific initialization or cleanup logic as needed. It provides flexibility and customization options for controlling the behavior of your application at startup.
 
-## **Invalid overloading of Main() Method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **Invalid overloading of Main() Method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 In C#, overloading the `Main()` method with parameters other than `string[] args` is not allowed, as it is the only recognized entry point by the runtime. Attempting to overload the `Main()` method with different parameter types or numbers of parameters will result in a compilation error. Here are examples of invalid overloading of the `Main()` method:
 
@@ -591,7 +591,7 @@ Explanation: The compiler generates an error because overloading the `Main()` me
 
 In both examples, attempting to overload the `Main()` method with parameters other than `string[] args` results in a compilation error. This is because the runtime expects a specific signature (`string[] args`) for the `Main()` method as the entry point for the application, and any deviation from this signature is not recognized as a valid entry point.
 
-## **Garbage Collection:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
+## **Garbage Collection:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#overview-of-net-framework-)
 
 Garbage Collection (GC) in C# is an automatic memory management mechanism provided by the .NET Framework. It helps manage memory by automatically reclaiming memory occupied by objects that are no longer in use, freeing up resources and preventing memory leaks. Here's an explanation of how garbage collection works in C# along with scenarios:
 
