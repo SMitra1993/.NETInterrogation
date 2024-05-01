@@ -2,6 +2,33 @@
 
 .NET Framework is a software development framework published by Microsoft. It offers developers a runtime environment along with a comprehensive set of libraries and tools for building and executing applications specifically tailored for Windows operating systems.
 
+**Links:**
+
+- [The .NET Framework’s basic architecture](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#the-net-frameworks-basic-architecture-consists-of-two-key-elements)
+    - [Common Language Runtime (CLR)](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#common-language-runtime-clr)
+    - [.NET Framework Class Library (FCL)](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#net-framework-class-library-fcl)
+- [Main components of CLR](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#main-components-of-clr)
+    - [Common Language Specification (CLS)](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#common-language-specification-cls)
+    - [Common Type System (CTS)](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#common-type-system-cts)
+    - [Types of Common Type System](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#types-of-common-type-system)
+- [Three Phases of the development of .NET technology](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#three-phases-of-the-development-of-net-technology)
+    - [OLE Technology (Object Linking and Embedding)](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#ole-technology-object-linking-and-embedding)
+    - [COM Technology (Component Object Model)](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#com-technology-component-object-model)
+    - [.NET Technology](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#net-technology)
+- [Managed code and Unmanaged code in .NET](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#managed-code-and-unmanaged-code-in-net)
+- [Managed code and Unmanaged code in .NET](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#managed-code-and-unmanaged-code-in-net)
+    - [Managed Code](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#1-managed-code)
+    - [Unmanaged Code](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#2-unmanaged-code)
+- [Managed Vs Unmanaged code in .NET](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#managed-vs-unmanaged-code-in-net)
+- [CIL or MSIL (Common Intermediate Language or Microsoft Intermediate Language)](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#cil-or-msil-common-intermediate-language-or-microsoft-intermediate-language)
+- [.NET Framework Class Library (FCL)](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#net-framework-class-library-fcl-1)
+- [Namespaces in the FCL](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#some-of-the-namespaces-in-the-fcl-along-with-their-description-is-given-as-follows)
+- [Just-In-Time Compiler](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#just-in-time-compiler)
+- [Main Method in C#](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#main-method-in-c)
+- [Method Overloading of Main method](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#method-overloading-of-main-method)
+- [Invalid overloading of Main() Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#invalid-overloading-of-main-method)
+- [Garbage Collection](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#garbage-collection)
+
 ## **The .NET Framework’s basic architecture consists of two key elements:**
 
 ### **Common Language Runtime (CLR):**
