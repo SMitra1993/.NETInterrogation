@@ -16,7 +16,6 @@
     - [COM Technology (Component Object Model)](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#com-technology-component-object-model-)
     - [.NET Technology](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#net-technology-)
 - [Managed code and Unmanaged code in .NET](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#managed-code-and-unmanaged-code-in-net-)
-- [Managed code and Unmanaged code in .NET](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#managed-code-and-unmanaged-code-in-net-)
     - [Managed Code](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#1-managed-code-)
     - [Unmanaged Code](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#2-unmanaged-code-)
 - [Managed Vs Unmanaged code in .NET](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#managed-vs-unmanaged-code-in-net-)
