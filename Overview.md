@@ -29,7 +29,7 @@
 - [Invalid overloading of Main() Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#invalid-overloading-of-main-method)
 - [Garbage Collection](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md#garbage-collection)
 
-## **The .NET Framework’s basic architecture consists of two key elements:**
+## **The .NET Framework’s basic architecture consists of two key elements:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Overview.md)
 
 ### **Common Language Runtime (CLR):**
 
