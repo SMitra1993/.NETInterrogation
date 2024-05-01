@@ -1,4 +1,4 @@
-# .NET Framework ❤🍕
+# Overview of .NET Framework ❤🍕
 
 .NET Framework is a software development framework published by Microsoft. It offers developers a runtime environment along with a comprehensive set of libraries and tools for building and executing applications specifically tailored for Windows operating systems.
 
@@ -345,3 +345,287 @@ The Just-In-Time (JIT) compiler is a key component of the .NET runtime environme
      - **Pre-JIT Compilation**: The entire application is compiled into native code ahead of time, typically during installation or deployment, resulting in faster startup but larger deployment packages.
 
 In summary, the Just-In-Time (JIT) compiler in the .NET runtime environment translates Intermediate Language (IL) code into native machine code at runtime, on a "just-in-time" basis as the code is needed for execution. It performs optimizations to improve performance and efficiency and caches the compiled native code to reduce startup times and overhead.
+
+## **Main Method in C#:**
+
+The `Main` method in C# serves as the entry point for a C# application. It is a static method defined within a class, typically the program's entry class, and it is where program execution begins. Here's a detailed explanation along with an example:
+
+1. **Signature and Syntax**:
+   - The `Main` method must be declared with the following signature:
+     ```csharp
+     static void Main(string[] args)
+     ```
+   - It is static, meaning it belongs to the class itself rather than to any specific instance of the class.
+   - It returns `void`, indicating that it does not return any value.
+   - It takes a single parameter, an array of strings (`string[] args`), which represents the command-line arguments passed to the application when it is executed.
+
+2. **Entry Point**:
+   - When a C# application is executed, the runtime environment starts by locating and invoking the `Main` method defined in the program's entry class.
+   - The `Main` method serves as the starting point for the execution of the application, from which control flows to other parts of the program.
+
+3. **Command-Line Arguments**:
+   - The `args` parameter allows the `Main` method to receive command-line arguments passed to the application when it is launched.
+   - Command-line arguments are provided by the user and can be used to customize the behavior of the application at runtime.
+   - The `args` array contains each command-line argument as a separate element, with the first element (`args[0]`) typically being the name of the executable file itself.
+
+4. **Example**:
+   ```csharp
+   using System;
+
+   class Program
+   {
+       static void Main(string[] args)
+       {
+           // Display a greeting message
+           Console.WriteLine("Hello, world!");
+
+           // Check if command-line arguments were provided
+           if (args.Length > 0)
+           {
+               Console.WriteLine("Command-line arguments:");
+               // Display each command-line argument
+               foreach (string arg in args)
+               {
+                   Console.WriteLine(arg);
+               }
+           }
+           else
+           {
+               Console.WriteLine("No command-line arguments provided.");
+           }
+       }
+   }
+   ```
+
+*Explanation:*
+- In this example, the `Main` method of the `Program` class serves as the entry point for the application.
+- It starts by displaying a greeting message ("Hello, world!") to the console using `Console.WriteLine`.
+- It then checks if any command-line arguments were provided by checking the length of the `args` array.
+- If command-line arguments were provided, it iterates over each argument in the `args` array and displays them to the console.
+- If no command-line arguments were provided, it displays a message indicating so.
+
+In summary, the `Main` method in C# is the starting point for the execution of a C# application. It receives command-line arguments as input, if any, and controls the flow of program execution. It is a critical component of every C# program, defining its behavior and entry point.
+
+## **Method Overloading of Main method:**
+
+In C#, you can overload the `Main()` method, meaning you can define multiple versions of the `Main()` method within the same class, as long as each version has a unique signature. Here's an explanation along with scenarios where overloading `Main()` can be useful:
+
+1. **Different Parameter Types**:
+   - You can overload the `Main()` method by defining versions with different parameter types.
+   - This allows you to handle different types of command-line arguments or application startup scenarios.
+
+   ```csharp
+   class Program
+   {
+       // Main method with string[] args parameter
+       static void Main(string[] args)
+       {
+           // Handle command-line arguments
+           foreach (string arg in args)
+           {
+               Console.WriteLine(arg);
+           }
+       }
+
+       // Overloaded Main method with no parameters
+       static void Main()
+       {
+           // No command-line arguments provided
+           Console.WriteLine("No command-line arguments provided.");
+       }
+   }
+   ```
+
+*Explanation:*
+- In this example, the first `Main()` method accepts command-line arguments (`string[] args`) and displays them.
+- The second `Main()` method is overloaded with no parameters and displays a message when no command-line arguments are provided.
+- Depending on whether command-line arguments are passed when the application is launched, the appropriate `Main()` method will be invoked.
+- If the application is launched with command-line arguments, the `Main(string[] args)` method will be called.
+- If no command-line arguments are provided, the `Main()` method with no parameters will be called.
+
+2. **Different Return Types**:
+   - You cannot overload the `Main()` method based on return types because it must always return `void`. However, you can have additional methods with different return types.
+
+   ```csharp
+   class Program
+   {
+       // Main method with string[] args parameter
+       static void Main(string[] args)
+       {
+           // Handle command-line arguments
+           ProcessArguments(args);
+       }
+
+       static void ProcessArguments(string[] args)
+       {
+           // Process command-line arguments
+       }
+
+       // Overloaded method with int return type
+       static int Main()
+       {
+           // Return an exit code
+           return 0;
+       }
+   }
+   ```
+
+*Explanation:*
+- In this example, the `Main()` method with command-line arguments delegates the argument processing to another method (`ProcessArguments()`).
+- Another version of `Main()` is overloaded with no parameters and returns an integer exit code, which can be useful for indicating the success or failure of the application execution.
+- In this case, the `Main(string[] args)` method will always be called because the `Main()` method returning int is not considered as an entry point by the runtime.
+
+3. **Multiple Entry Points**:
+   - Overloading `Main()` can be useful when you want to provide multiple entry points to your application for different startup scenarios.
+   - Each version of `Main()` can handle a specific startup scenario or initialization logic.
+
+   ```csharp
+   class Program
+   {
+       // Main method with string[] args parameter
+       static void Main(string[] args)
+       {
+           // Handle command-line arguments
+       }
+
+       // Overloaded Main method with no parameters
+       static void Main()
+       {
+           // Perform initialization logic
+           InitializeApplication();
+
+           // Start the application
+           RunApplication();
+       }
+
+       static void InitializeApplication()
+       {
+           // Initialize application resources
+       }
+
+       static void RunApplication()
+       {
+           // Start the application logic
+       }
+   }
+   ```
+
+*Explanation:*
+- In this example, the `Main()` method with command-line arguments handles application startup based on provided command-line arguments.
+- Another version of `Main()` is overloaded with no parameters and performs initialization logic (`InitializeApplication()`) before starting the application (`RunApplication()`).
+- If the application is launched without command-line arguments, the `Main()` method with no parameters will be called.
+- If command-line arguments are provided, the `Main(string[] args)` method will be called.
+
+In summary, overloading the `Main()` method in C# allows you to define multiple entry points or startup scenarios for your application, handle different types of command-line arguments, and perform specific initialization or cleanup logic as needed. It provides flexibility and customization options for controlling the behavior of your application at startup.
+
+## **Invalid overloading of Main() Method:**
+
+In C#, overloading the `Main()` method with parameters other than `string[] args` is not allowed, as it is the only recognized entry point by the runtime. Attempting to overload the `Main()` method with different parameter types or numbers of parameters will result in a compilation error. Here are examples of invalid overloading of the `Main()` method:
+
+1. **Invalid Overloading with Different Parameter Types**:
+
+```csharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Main method with string[] args parameter
+    }
+
+    // Invalid overloading with int parameter
+    static void Main(int value)
+    {
+        // Compiler error: 'Program.Main(string[])': cannot overload static method 'Main' with a static method that differs only by parameter types
+    }
+}
+```
+
+Explanation: The compiler generates an error because overloading the `Main()` method with a different parameter type (`int` in this case) is not allowed.
+
+2. **Invalid Overloading with Different Number of Parameters**:
+
+```csharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Main method with string[] args parameter
+    }
+
+    // Invalid overloading with no parameters
+    static void Main()
+    {
+        // Compiler error: 'Program.Main(string[])': cannot overload static method 'Main' with a static method that differs only by parameter types
+    }
+}
+```
+
+Explanation: The compiler generates an error because overloading the `Main()` method with a different number of parameters (no parameters in this case) is not allowed.
+
+In both examples, attempting to overload the `Main()` method with parameters other than `string[] args` results in a compilation error. This is because the runtime expects a specific signature (`string[] args`) for the `Main()` method as the entry point for the application, and any deviation from this signature is not recognized as a valid entry point.
+
+## **Garbage Collection:**
+
+Garbage Collection (GC) in C# is an automatic memory management mechanism provided by the .NET Framework. It helps manage memory by automatically reclaiming memory occupied by objects that are no longer in use, freeing up resources and preventing memory leaks. Here's an explanation of how garbage collection works in C# along with scenarios:
+
+**1. Allocation of Objects**:
+   - When you create objects in a C# program using the `new` keyword, memory is allocated from the managed heap to store those objects.
+   - For example:
+     ```csharp
+     MyClass obj = new MyClass(); // Allocates memory for an instance of MyClass
+     ```
+
+**2. Object Reachability**:
+   - The garbage collector determines which objects are reachable or "live" by tracing references from root objects.
+   - Root objects include global variables, local variables on the stack, static variables, and CPU registers.
+   - Any objects that are reachable from the root objects are considered live objects and are not eligible for garbage collection.
+   - Objects that are not reachable from the root objects are considered unreachable or "dead" and can be collected by the garbage collector.
+
+**3. Mark Phase**:
+   - During the mark phase, the garbage collector traverses the object graph starting from the root objects and marks all reachable objects.
+   - It uses an algorithm called "mark and sweep" to mark objects as live or dead.
+   - Objects that are marked as live are retained in memory, while objects that are not marked are considered garbage.
+
+**4. Sweep Phase**:
+   - During the sweep phase, the garbage collector identifies memory blocks that are no longer in use (i.e., objects that were not marked during the mark phase).
+   - It releases these memory blocks and updates its internal data structures to indicate that the memory is available for future allocations.
+   - The memory is returned to the managed heap and can be reused for subsequent object allocations.
+
+**5. Compaction (Optional)**:
+   - In some cases, the garbage collector may perform memory compaction after sweeping.
+   - Compaction involves moving live objects together to reduce fragmentation and optimize memory usage.
+   - This helps improve memory locality and can lead to better performance by reducing the overhead of memory allocation and access.
+
+**Scenarios**:
+
+1. **Scenario 1: Object no longer referenced**:
+   ```csharp
+   MyClass obj = new MyClass(); // Object allocated
+   obj = null; // Object no longer referenced
+   ```
+
+   Explanation: In this scenario, the object created by `new MyClass()` is no longer referenced after setting `obj` to `null`. During garbage collection, the object will be identified as unreachable and eligible for collection.
+
+2. **Scenario 2: Circular Reference**:
+   ```csharp
+   class MyClass
+   {
+       public MyClass Other;
+   }
+
+   MyClass obj1 = new MyClass();
+   MyClass obj2 = new MyClass();
+   obj1.Other = obj2;
+   obj2.Other = obj1;
+   obj1 = null;
+   obj2 = null;
+   ```
+
+   Explanation: In this scenario, `obj1` and `obj2` reference each other, creating a circular reference. Even though they are not reachable from root objects, they still reference each other. In .NET, circular references are handled using a technique called "reference counting" along with garbage collection to identify and collect circularly referenced objects.
+
+3. **Scenario 3: Large Object Heap (LOH)**:
+   - Large objects (objects with a size greater than 85,000 bytes) are allocated on the Large Object Heap (LOH).
+   - Garbage collection of LOH is less frequent than that of the regular heap.
+   - If large objects are created and discarded frequently, it can lead to fragmentation and affect application performance.
+
+In summary, garbage collection in C# automatically manages memory by reclaiming memory occupied by unreachable objects. It involves marking reachable objects, sweeping and releasing memory occupied by unreachable objects, and optionally compacting memory to reduce fragmentation. Understanding garbage collection and its behavior is important for writing efficient and scalable C# applications.
