@@ -16,6 +16,14 @@
 - [Literals in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#literals-in-c-)
 - [Opertors in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#opertors-in-c-)
 - [Assignment Operators in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#assignment-operators-in-c-)
+- [Boxing Vs Unboxing](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#boxing-vs-unboxing-)
+- [Params in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#params-in-c-)
+- [Type Casting in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#type-casting-in-c-)
+- [Enumeration in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#enumeration-in-c-)
+- [Properties in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#properties-in-c-)
+- [Get Accessor & Set Accessor](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#get-accessor--set-accessor-)
+- [Nullable types](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#nullable-types-)
+- [Structures in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#structures-in-c-)
 
 ## **C# Identifier:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
@@ -935,7 +943,7 @@ Operators are essential for performing various operations in C# programming. Und
 
 Assignment operators are fundamental in C# for modifying the values of variables efficiently. They provide a shorthand way to perform arithmetic operations and assign the result back to the variable. Understanding and using assignment operators correctly is essential for writing concise and readable code.
 
-## **Boxing Vs Unboxing:**
+## **Boxing Vs Unboxing:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Sure! Let's start with the explanations:
 
@@ -972,7 +980,7 @@ Now, let's present the differences between boxing and unboxing in tabular form:
 
 Understanding the differences between boxing and unboxing is important for optimizing performance and avoiding unintended side effects in C# applications, especially when dealing with large datasets or performance-critical code sections.
 
-## **Params in c#:**
+## **Params in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 The `params` keyword in C# allows you to specify a method parameter that takes a variable number of arguments. This means that the number of arguments passed to the parameter can vary, and the compiler creates an array to contain them. Let's explore this with scenarios:
 
@@ -1053,7 +1061,7 @@ In this scenario, the `Format` method can accept a format string with placeholde
 
 Using the `params` keyword allows you to create methods that are more flexible and easier to use, especially when the number of arguments passed to the method may vary. It simplifies the syntax for callers and provides more convenience when working with variable-length argument lists.
 
-## **Type Casting in c#:**
+## **Type Casting in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Type casting in C# is the process of converting a value from one data type to another. There are two types of casting: implicit casting (also known as widening conversion) and explicit casting (also known as narrowing conversion). Let's explore both types with examples:
 
@@ -1096,7 +1104,7 @@ In this scenario, the `double` value representing the temperature in Celsius is 
 
 Type casting is a powerful feature in C# that allows you to convert data between different data types, enabling interoperability and flexibility in your code. However, you should be cautious when performing explicit casting, as it may result in loss of precision or data truncation.
 
-## **Enumeration in c#:**
+## **Enumeration in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Enums in C# provide a way to define a group of related named constants that represent integral values. They are often used to improve code readability and maintainability by giving meaningful names to numeric values. Let's explore enums with examples and outputs:
 
@@ -1219,7 +1227,7 @@ Write access granted.
 
 Enums in C# are versatile and widely used for defining sets of named constants. They improve code readability, make it easier to understand and maintain, and provide compile-time type safety.
 
-## **Properties in c#:**
+## **Properties in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Properties in C# provide a way to encapsulate data within objects and control access to that data. They allow you to define methods to get (getters) and set (setters) the value of private fields while hiding the implementation details. Properties came into existence to provide a more object-oriented approach to access and modify class members, compared to using public fields directly. Let's see an example and discuss why properties are used:
 
@@ -1293,7 +1301,7 @@ In this example, we have a `Student` class with private fields `name` and `age`,
 
 Overall, properties in C# enhance the encapsulation, data validation, abstraction, and maintainability of object-oriented code, leading to more robust and flexible software designs.
 
-## **Get Accessor & Set Accessor:**
+## **Get Accessor & Set Accessor:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 In C#, properties are composed of a getter and/or a setter, which are referred to as accessors. These accessors define how the value of the property can be retrieved and modified. Let's explain each accessor:
 
@@ -1385,7 +1393,7 @@ public int WriteOnlyProperty
 
 Properties with accessors provide a clean and intuitive way to work with object data, enhancing encapsulation, data validation, and code readability in C#.
 
-## **Nullable types:**
+## **Nullable types:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 In C#, a nullable type allows you to represent both normal range of values for its underlying value type and a null value. This is particularly useful when you need to represent the absence of a value in scenarios where a value type is required. Nullable types are represented by appending a `?` to the underlying value type. Let's explore nullable types with an example and output:
 
@@ -1471,7 +1479,7 @@ Value of nullableBool: True
 
 Nullable types in C# are useful when you need to represent a value type that can also be null, providing flexibility in handling missing or optional values.
 
-## **Structures in c#:**
+## **Structures in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Structures (structs) in C# are user-defined value types that can contain data members and member functions. They are similar to classes but have some key differences, such as being value types (allocated on the stack) rather than reference types (allocated on the heap). Structs are commonly used for small, lightweight objects that represent simple data types. Let's explore structs with a detailed example and output.
 
