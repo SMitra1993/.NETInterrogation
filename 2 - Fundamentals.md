@@ -935,4 +935,693 @@ Operators are essential for performing various operations in C# programming. Und
 
 Assignment operators are fundamental in C# for modifying the values of variables efficiently. They provide a shorthand way to perform arithmetic operations and assign the result back to the variable. Understanding and using assignment operators correctly is essential for writing concise and readable code.
 
+## **Boxing Vs Unboxing:**
+
+Sure! Let's start with the explanations:
+
+### Boxing:
+
+- **Definition**: Boxing is the process of converting a value type (e.g., `int`, `float`, `struct`) to an object type (e.g., `object`, `interface`).
+- **Scenario**: When you need to store value types in collections or pass them as arguments to methods that accept object types.
+- **Example**:
+  ```csharp
+  int intValue = 10;         // Value type
+  Object boxedValue = intValue;  // Boxing: converting int to object
+  ```
+
+### Unboxing:
+
+- **Definition**: Unboxing is the process of converting an object type (e.g., `object`, `interface`) to a value type (e.g., `int`, `float`, `struct`).
+- **Scenario**: When you retrieve value types from collections or cast them from object types back to their original value types.
+- **Example**:
+  ```csharp
+  Object boxedValue = 10;    // Object type
+  int intValue = (int)boxedValue;  // Unboxing: converting object to int
+  ```
+
+Now, let's present the differences between boxing and unboxing in tabular form:
+
+| Feature                | Boxing                                    | Unboxing                                      |
+|------------------------|-------------------------------------------|-----------------------------------------------|
+| Definition             | Converts Value types to Reference types.     | Converts Reference types to Value types.         |
+| Direction              | Converts from value type to object type.  | Converts from object type to value type.      |
+| Memory              | Value Type variables are always stored in Stack memory.  | Reference Type variables are stored in Heap memory.      |
+| Process                | Allocates memory and copies value.        | Retrieves the value from memory.              |
+| Performance Impact     | May incur performance overhead due to memory allocation and copying. | Generally faster as it's a direct type cast. |
+| Example Scenario       | Storing value types in collections such as ArrayList or List<object>. | Retrieving value types from collections.      |
+
+Understanding the differences between boxing and unboxing is important for optimizing performance and avoiding unintended side effects in C# applications, especially when dealing with large datasets or performance-critical code sections.
+
+## **Params in c#:**
+
+The `params` keyword in C# allows you to specify a method parameter that takes a variable number of arguments. This means that the number of arguments passed to the parameter can vary, and the compiler creates an array to contain them. Let's explore this with scenarios:
+
+### Scenario 1: Calculating the Sum of Numbers
+
+Suppose you want to create a method that calculates the sum of a variable number of integers.
+
+```csharp
+public class MathUtils
+{
+    public static int Sum(params int[] numbers)
+    {
+        int sum = 0;
+        foreach (int num in numbers)
+        {
+            sum += num;
+        }
+        return sum;
+    }
+}
+```
+
+**Usage:**
+
+```csharp
+int result = MathUtils.Sum(1, 2, 3, 4, 5); // result will be 15
+```
+
+In this scenario, the `Sum` method can accept any number of integer arguments, and the `params` keyword simplifies the method signature, allowing the caller to pass a variable number of arguments.
+
+### Scenario 2: Logging Messages
+
+Suppose you want to create a logging method that accepts a variable number of strings to log.
+
+```csharp
+public class Logger
+{
+    public static void Log(params string[] messages)
+    {
+        foreach (string message in messages)
+        {
+            Console.WriteLine(message);
+        }
+    }
+}
+```
+
+**Usage:**
+
+```csharp
+Logger.Log("Error: File not found.", "Warning: Memory usage high.", "Info: Task completed successfully.");
+```
+
+In this scenario, the `Log` method can accept any number of string messages to log, and the `params` keyword simplifies the method signature, allowing the caller to pass a variable number of arguments.
+
+### Scenario 3: Formatting Strings
+
+Suppose you want to create a method that formats a string with a variable number of placeholders and values.
+
+```csharp
+public class StringFormatter
+{
+    public static string Format(string format, params object[] args)
+    {
+        return string.Format(format, args);
+    }
+}
+```
+
+**Usage:**
+
+```csharp
+string result = StringFormatter.Format("Hello, {0}! Today's date is {1}.", "John", DateTime.Now);
+Console.WriteLine(result);
+```
+
+In this scenario, the `Format` method can accept a format string with placeholders and a variable number of arguments to replace the placeholders, and the `params` keyword simplifies the method signature.
+
+Using the `params` keyword allows you to create methods that are more flexible and easier to use, especially when the number of arguments passed to the method may vary. It simplifies the syntax for callers and provides more convenience when working with variable-length argument lists.
+
+## **Type Casting in c#:**
+
+Type casting in C# is the process of converting a value from one data type to another. There are two types of casting: implicit casting (also known as widening conversion) and explicit casting (also known as narrowing conversion). Let's explore both types with examples:
+
+### 1. Implicit Casting (Widening Conversion):
+
+Implicit casting occurs when the target data type can accommodate all possible values of the source data type without loss of precision. This type of casting is performed automatically by the compiler.
+
+**Example:**
+
+```csharp
+int intValue = 10;
+double doubleValue = intValue; // Implicit casting from int to double
+```
+
+In this example, the `int` value `10` is implicitly cast to a `double` value without the need for an explicit cast. Since `double` can accommodate all possible values of `int`, the conversion is performed automatically.
+
+### 2. Explicit Casting (Narrowing Conversion):
+
+Explicit casting occurs when the target data type may not be able to accommodate all possible values of the source data type without loss of precision. This type of casting requires an explicit cast operator.
+
+**Example:**
+
+```csharp
+double doubleValue = 10.5;
+int intValue = (int)doubleValue; // Explicit casting from double to int
+```
+
+In this example, the `double` value `10.5` is explicitly cast to an `int` value using the cast operator `(int)`. Since `int` cannot accommodate fractional values, the fractional part of `10.5` is truncated, and the resulting `intValue` will be `10`.
+
+### Scenario:
+
+Consider a scenario where you have a `double` variable representing a temperature in Celsius, and you need to convert it to an `int` variable representing the temperature in Fahrenheit.
+
+```csharp
+double celsiusTemp = 25.5;
+int fahrenheitTemp = (int)(celsiusTemp * 9 / 5 + 32); // Explicit casting from double to int
+```
+
+In this scenario, the `double` value representing the temperature in Celsius is explicitly cast to an `int` value representing the temperature in Fahrenheit using the formula `(celsiusTemp * 9 / 5 + 32)`. Since `int` cannot accommodate fractional values, the result is explicitly cast to an `int` using the cast operator `(int)`.
+
+Type casting is a powerful feature in C# that allows you to convert data between different data types, enabling interoperability and flexibility in your code. However, you should be cautious when performing explicit casting, as it may result in loss of precision or data truncation.
+
+## **Enumeration in c#:**
+
+Enums in C# provide a way to define a group of related named constants that represent integral values. They are often used to improve code readability and maintainability by giving meaningful names to numeric values. Let's explore enums with examples and outputs:
+
+### Example 1: Days of the Week
+
+```csharp
+using System;
+
+public enum DayOfWeek
+{
+    Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+}
+
+class Program
+{
+    static void Main()
+    {
+        DayOfWeek today = DayOfWeek.Monday;
+        Console.WriteLine($"Today is {today}");
+        Console.WriteLine($"Enum Value for {today} is {(int)today}");
+    }
+}
+```
+
+**Output:**
+```
+Today is Monday
+Enum Value for Monday is 1
+```
+
+### Example 2: Traffic Light Colors
+
+```csharp
+using System;
+
+public enum TrafficLightColor
+{
+    Red, Yellow, Green
+}
+
+class Program
+{
+    static void Main()
+    {
+        TrafficLightColor currentColor = TrafficLightColor.Red;
+        Console.WriteLine($"The current color is {currentColor}");
+    }
+}
+```
+
+**Output:**
+```
+The current color is Red
+```
+
+### Example 3: Custom Integral Values
+
+```csharp
+using System;
+
+public enum HttpStatusCode
+{
+    OK = 200,
+    BadRequest = 400,
+    NotFound = 404,
+    InternalServerError = 500
+}
+
+class Program
+{
+    static void Main()
+    {
+        HttpStatusCode responseCode = HttpStatusCode.OK;
+        Console.WriteLine($"Response code: {responseCode}");
+    }
+}
+```
+
+**Output:**
+```
+Response code: OK
+```
+
+### Example 4: Flags Enum
+
+```csharp
+using System;
+
+[Flags]
+public enum FileAccess
+{
+    None = 0,
+    Read = 1 << 0,
+    Write = 1 << 1,
+    ReadWrite = Read | Write
+}
+
+class Program
+{
+    static void Main()
+    {
+        FileAccess myAccess = FileAccess.Read | FileAccess.Write;
+        if ((myAccess & FileAccess.Read) != 0)
+        {
+            Console.WriteLine("Read access granted.");
+        }
+        if ((myAccess & FileAccess.Write) != 0)
+        {
+            Console.WriteLine("Write access granted.");
+        }
+    }
+}
+```
+
+**Output:**
+```
+Read access granted.
+Write access granted.
+```
+
+Enums in C# are versatile and widely used for defining sets of named constants. They improve code readability, make it easier to understand and maintain, and provide compile-time type safety.
+
+## **Properties in c#:**
+
+Properties in C# provide a way to encapsulate data within objects and control access to that data. They allow you to define methods to get (getters) and set (setters) the value of private fields while hiding the implementation details. Properties came into existence to provide a more object-oriented approach to access and modify class members, compared to using public fields directly. Let's see an example and discuss why properties are used:
+
+### Example: Student Class with Properties
+
+```csharp
+using System;
+
+public class Student
+{
+    private string name;
+    private int age;
+
+    // Property to get and set the name
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+
+    // Property to get and set the age
+    public int Age
+    {
+        get { return age; }
+        set
+        {
+            if (value >= 0 && value <= 120)
+            {
+                age = value;
+            }
+            else
+            {
+                throw new ArgumentException("Age must be between 0 and 120.");
+            }
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create a new student object
+        Student student = new Student();
+
+        // Set the properties
+        student.Name = "John Doe";
+        student.Age = 25;
+
+        // Retrieve and display the properties
+        Console.WriteLine($"Name: {student.Name}");
+        Console.WriteLine($"Age: {student.Age}");
+    }
+}
+```
+
+In this example, we have a `Student` class with private fields `name` and `age`, and properties `Name` and `Age` to get and set their values, respectively. 
+
+
+### Why Properties Are Used:
+
+1. **Encapsulation**: Properties encapsulate the internal state of an object by providing controlled access to its data. They allow you to hide the implementation details of how the data is stored or computed.
+
+2. **Data Validation**: Properties enable you to validate the values being assigned to them before updating the underlying fields. This ensures data integrity and consistency.
+
+3. **Abstraction**: Properties provide an abstraction layer over fields, allowing you to modify the internal representation of data without affecting the external interface.
+
+4. **Code Maintainability**: By encapsulating data access within properties, you can modify the internal implementation of a class without impacting the code that uses it.
+
+5. **Readability and Expressiveness**: Properties make the code more readable and expressive by providing a clear and concise syntax for accessing and modifying object data.
+
+Overall, properties in C# enhance the encapsulation, data validation, abstraction, and maintainability of object-oriented code, leading to more robust and flexible software designs.
+
+## **Get Accessor & Set Accessor:**
+
+In C#, properties are composed of a getter and/or a setter, which are referred to as accessors. These accessors define how the value of the property can be retrieved and modified. Let's explain each accessor:
+
+### Get Accessor (Getter):
+
+The get accessor is used to retrieve the value of the property. It is responsible for returning the current value of the property when the property is accessed.
+
+**Syntax:**
+```csharp
+public int MyProperty
+{
+    get
+    {
+        // Return the value of the property
+        return someValue;
+    }
+}
+```
+
+In this example, `MyProperty` is a property with a get accessor that returns the value of `someValue`.
+
+### Set Accessor (Setter):
+
+The set accessor is used to modify the value of the property. It allows you to assign a new value to the property.
+
+**Syntax:**
+```csharp
+public int MyProperty
+{
+    set
+    {
+        // Assign the value to the property
+        someValue = value;
+    }
+}
+```
+
+In this example, `MyProperty` is a property with a set accessor that assigns the value of `value` to `someValue`.
+
+### Example: Property with Both Get and Set Accessors
+
+```csharp
+private int myProperty;
+
+public int MyProperty
+{
+    get
+    {
+        // Return the value of the property
+        return myProperty;
+    }
+    set
+    {
+        // Assign the value to the property
+        myProperty = value;
+    }
+}
+```
+
+In this example, `MyProperty` is a property with both a get accessor to retrieve the value and a set accessor to modify the value.
+
+### Usage:
+
+Properties with both get and set accessors provide a way to encapsulate data within an object while controlling access to it. They allow you to define read-only, write-only, or read-write properties based on your requirements. 
+
+**Read-Only Property:**
+```csharp
+public int ReadOnlyProperty
+{
+    get
+    {
+        // Return the value (no setter)
+        return someValue;
+    }
+}
+```
+
+**Write-Only Property:**
+```csharp
+public int WriteOnlyProperty
+{
+    set
+    {
+        // Assign the value (no getter)
+        someValue = value;
+    }
+}
+```
+
+Properties with accessors provide a clean and intuitive way to work with object data, enhancing encapsulation, data validation, and code readability in C#.
+
+## **Nullable types:**
+
+In C#, a nullable type allows you to represent both normal range of values for its underlying value type and a null value. This is particularly useful when you need to represent the absence of a value in scenarios where a value type is required. Nullable types are represented by appending a `?` to the underlying value type. Let's explore nullable types with an example and output:
+
+### Example: Nullable Integers
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Declare a nullable integer
+        int? nullableInt = null;
+
+        // Assign a value to the nullable integer
+        nullableInt = 10;
+
+        // Output the value of the nullable integer
+        if (nullableInt.HasValue)
+        {
+            Console.WriteLine($"Value of nullableInt: {nullableInt.Value}");
+        }
+        else
+        {
+            Console.WriteLine("nullableInt is null");
+        }
+    }
+}
+```
+
+**Output:**
+```
+Value of nullableInt: 10
+```
+
+### Explanation:
+
+- In this example, we declare a nullable integer `nullableInt` using the `int?` syntax. By default, `nullableInt` is assigned a value of `null`.
+- We then assign a value of `10` to `nullableInt`.
+- We use the `HasValue` property to check if `nullableInt` has a value. If it does, we output the value using the `Value` property. If it doesn't, we output that `nullableInt` is null.
+- Since `nullableInt` has a value of `10`, the output will be "Value of nullableInt: 10".
+
+### Example: Nullable Booleans
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Declare a nullable boolean
+        bool? nullableBool = null;
+
+        // Assign a value to the nullable boolean
+        nullableBool = true;
+
+        // Output the value of the nullable boolean
+        if (nullableBool.HasValue)
+        {
+            Console.WriteLine($"Value of nullableBool: {nullableBool.Value}");
+        }
+        else
+        {
+            Console.WriteLine("nullableBool is null");
+        }
+    }
+}
+```
+
+**Output:**
+```
+Value of nullableBool: True
+```
+
+### Explanation:
+
+- In this example, we declare a nullable boolean `nullableBool` using the `bool?` syntax. By default, `nullableBool` is assigned a value of `null`.
+- We then assign a value of `true` to `nullableBool`.
+- We use the `HasValue` property to check if `nullableBool` has a value. If it does, we output the value using the `Value` property. If it doesn't, we output that `nullableBool` is null.
+- Since `nullableBool` has a value of `true`, the output will be "Value of nullableBool: True".
+
+Nullable types in C# are useful when you need to represent a value type that can also be null, providing flexibility in handling missing or optional values.
+
+## **Structures in c#:**
+
+Structures (structs) in C# are user-defined value types that can contain data members and member functions. They are similar to classes but have some key differences, such as being value types (allocated on the stack) rather than reference types (allocated on the heap). Structs are commonly used for small, lightweight objects that represent simple data types. Let's explore structs with a detailed example and output.
+
+### Example: Creating a Struct for a Point in 2D Space
+
+Let's create a struct called `Point` to represent a point in 2D space with x and y coordinates. We'll define properties to access and modify the coordinates, and a method to calculate the distance from another point.
+
+```csharp
+using System;
+
+public struct Point
+{
+    // Data members
+    public int X { get; set; }
+    public int Y { get; set; }
+
+    // Constructor
+    public Point(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    // Method to calculate distance from another point
+    public double DistanceTo(Point other)
+    {
+        int deltaX = X - other.X;
+        int deltaY = Y - other.Y;
+        return Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create two points
+        Point point1 = new Point(3, 4);
+        Point point2 = new Point(6, 8);
+
+        // Display the coordinates of the points
+        Console.WriteLine($"Point 1: ({point1.X}, {point1.Y})");
+        Console.WriteLine($"Point 2: ({point2.X}, {point2.Y})");
+
+        // Calculate and display the distance between the points
+        double distance = point1.DistanceTo(point2);
+        Console.WriteLine($"Distance between the points: {distance}");
+    }
+}
+```
+
+**Output:**
+```
+Point 1: (3, 4)
+Point 2: (6, 8)
+Distance between the points: 5
+```
+
+### Explanation:
+
+- We define a struct called `Point` with two data members `X` and `Y` representing the x and y coordinates of the point.
+- We define a constructor to initialize the coordinates of the point when it is created.
+- We define a method `DistanceTo` to calculate the distance between the current point and another point passed as an argument.
+- In the `Main` method, we create two instances of the `Point` struct, `point1` and `point2`, with different coordinates.
+- We display the coordinates of the points and calculate the distance between them using the `DistanceTo` method.
+
+### Key Points about Structs:
+
+1. **Value Types**: Structs are value types, which means they are stored on the stack and copied by value when passed as arguments or assigned to other variables.
+
+2. **Lightweight**: Structs are lightweight compared to classes, making them suitable for representing small, simple data structures.
+
+3. **Immutability**: By default, structs are immutable, meaning their data members cannot be modified after creation. However, you can define mutable structs by using mutable data members or methods that modify the state of the struct.
+
+4. **Performance**: Structs can offer better performance than classes in certain scenarios, especially when dealing with small, frequently used objects.
+
+5. **Use Cases**: Structs are commonly used for representing simple data types, such as coordinates, points, rectangles, and other small, value-based objects.
+
+Structs provide a powerful and efficient way to define and work with small, lightweight data structures in C#, offering performance benefits and flexibility for various programming tasks.
+
+### Can we add methods inside struct in c#? How can we access static and non-static members inside struct?
+
+Yes, we can add methods inside a struct in C#. These methods can be both static and non-static, allowing structs to encapsulate behavior along with data. Let's explore how to add methods to a struct and how to access both static and non-static members inside a struct with examples and outputs.
+
+### Example: Adding Methods to a Struct
+
+```csharp
+using System;
+
+public struct Rectangle
+{
+    public int Length { get; set; }
+    public int Width { get; set; }
+
+    // Non-static method to calculate area
+    public int CalculateArea()
+    {
+        return Length * Width;
+    }
+
+    // Static method to compare two rectangles
+    public static bool AreEqual(Rectangle r1, Rectangle r2)
+    {
+        return r1.Length == r2.Length && r1.Width == r2.Width;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Rectangle rect1 = new Rectangle { Length = 5, Width = 4 };
+        Rectangle rect2 = new Rectangle { Length = 3, Width = 6 };
+
+        // Access non-static method
+        int area1 = rect1.CalculateArea();
+        Console.WriteLine($"Area of rect1: {area1}");
+
+        // Access static method
+        bool equal = Rectangle.AreEqual(rect1, rect2);
+        Console.WriteLine($"Are rect1 and rect2 equal? {equal}");
+    }
+}
+```
+
+**Output:**
+```
+Area of rect1: 20
+Are rect1 and rect2 equal? False
+```
+
+### Explanation:
+
+- We define a struct called `Rectangle` with two data members `Length` and `Width`, representing the dimensions of a rectangle.
+- We add a non-static method `CalculateArea()` to calculate the area of the rectangle.
+- We add a static method `AreEqual()` to compare two rectangles for equality.
+- In the `Main` method, we create two instances of the `Rectangle` struct, `rect1` and `rect2`, with different dimensions.
+- We call the non-static method `CalculateArea()` on `rect1` to calculate its area and display the result.
+- We call the static method `AreEqual()` on the `Rectangle` struct itself to compare `rect1` and `rect2` for equality and display the result.
+
+### Accessing Static and Non-Static Members Inside Struct
+
+- **Accessing Non-Static Members**: Non-static members (properties, methods) inside a struct can be accessed using the instance of the struct (`this` keyword is optional).
+
+- **Accessing Static Members**: Static members (properties, methods) inside a struct can be accessed using the name of the struct itself, followed by the member name.
+
+In the example above:
+- We access the non-static method `CalculateArea()` using the instance `rect1`.
+- We access the static method `AreEqual()` using the name of the struct `Rectangle`.
+
+Both static and non-static methods can be useful inside a struct, providing behavior and functionality along with data encapsulation. They allow structs to represent more complex entities and perform operations on them.
+
 ## 
