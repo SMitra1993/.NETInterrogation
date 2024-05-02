@@ -1,7 +1,15 @@
 # Fundamentals ❤🍕
 
+**Links:**
 
-## **C# Identifier:**
+- [C# Identifier](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#c-identifier-)
+- [Data Types](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#data-types-)
+- [Data Variables](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#data-variables-)
+- [Types of Variables](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#types-of-variables-)
+- [Instance variable Vs Static variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#instance-variable-vs-static-variable-)
+- [Constants variable Vs Read-Only variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#constants-variable-vs-read-only-variable-)
+
+## **C# Identifier:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 In C#, identifiers are names used to identify variables, methods, classes, namespaces, and other programming elements within a C# program. Identifiers play a crucial role in coding because they provide a way to refer to different elements and make the code readable and understandable. Here are the main rules and characteristics of C# identifiers:
 
@@ -44,7 +52,7 @@ In C#, identifiers are names used to identify variables, methods, classes, names
 
 In summary, identifiers in C# are names used to refer to various programming elements within a C# program, such as variables, methods, classes, and namespaces. They must adhere to certain rules and conventions to ensure readability, maintainability, and compliance with C# language specifications.
 
-## **Data Types:**
+## **Data Types:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 Sure, here's a detailed explanation of the main data types in C# presented in tabular form:
 
@@ -72,7 +80,7 @@ Sure, here's a detailed explanation of the main data types in C# presented in ta
 
 These data types cover a wide range of numeric, textual, and general-purpose values used in C# programming. Each data type has its own characteristics and usage scenarios, providing flexibility and precision in representing different kinds of data.
 
-## **Data Variables:**
+## **Data Variables:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 In C#, data variables are used to store and manipulate data values within a program. A variable is a named storage location in memory that holds a value of a specific data type. Here are examples of data variables and their types in C#:
 
@@ -164,7 +172,7 @@ class Program
 
 In this example, various types of data variables are declared and initialized with values. Then, their values are printed to the console. Each variable holds a specific type of data, such as integers, floating-point numbers, boolean values, characters, strings, arrays, and objects.
 
-## **Types of Variables:**
+## **Types of Variables:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 In C#, variables can be categorized into different types based on various factors such as scope, lifetime, and storage. Here are the main types of variables in C#:
 
@@ -238,7 +246,7 @@ In C#, variables can be categorized into different types based on various factor
 
 These are the main types of variables in C#, each serving different purposes and having specific characteristics regarding scope, lifetime, and storage. Understanding the types of variables is crucial for effective program design and memory management in C#.
 
-## **Instance variable Vs Static variable:**
+## **Instance variable Vs Static variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 | Aspect                 | Instance Variable                         | Static Variable                                |
 |------------------------|-------------------------------------------|------------------------------------------------|
@@ -251,7 +259,7 @@ These are the main types of variables in C#, each serving different purposes and
 
 In summary, instance variables are specific to each instance of a class and are accessed through instances of the class, whereas static variables belong to the class itself and are accessed directly using the class name. Instance variables have separate memory allocations for each instance, while static variables have a single memory allocation shared across all instances of the class.
 
-## **Constants variable Vs Read-Only variable:**
+## **Constants variable Vs Read-Only variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 Here's a comparison of constant variables and readonly variables in C# presented in a tabular form:
 
@@ -265,3 +273,391 @@ Here's a comparison of constant variables and readonly variables in C# presented
 | Lifetime              | Exist for the entire duration of the program. | Exist for the entire duration of the program. |
 
 In summary, constant variables are assigned a value at compile time and cannot be changed thereafter, while readonly variables can be assigned a value either at declaration or in the constructor, but their value can be modified only in the constructor. Both constant and readonly variables are available for the entire duration of the program and have the same scope.
+
+## **Var - Implicitely typed variable:**
+
+Implicitly Typed Local Variables, introduced in C# 3.0, allow you to declare variables without explicitly specifying their data types. Instead, the compiler infers the data type based on the value assigned to the variable at the time of initialization. Here's an explanation of var with examples and scenarios:
+
+### Syntax:
+```csharp
+var variableName = value;
+```
+
+### Example 1: Simple Usage
+```csharp
+var age = 25;
+var name = "John";
+```
+In this example, the compiler infers that `age` is of type `int` and `name` is of type `string` based on the assigned values.
+
+### Example 2: Complex Data Types
+```csharp
+var numbers = new int[] { 1, 2, 3, 4, 5 };
+var person = new { Name = "John", Age = 25 };
+```
+Here, `numbers` is inferred to be an array of integers, and `person` is inferred to be an anonymous type with `Name` and `Age` properties.
+
+### Example 3: LINQ Queries
+```csharp
+var result = from num in numbers
+             where num % 2 == 0
+             select num;
+```
+In this scenario, `result` will be of type `IEnumerable<int>` based on the LINQ query's result.
+
+### Example 4: Iterating Collections
+```csharp
+var countries = new List<string> { "USA", "UK", "Canada" };
+foreach (var country in countries)
+{
+    Console.WriteLine(country);
+}
+```
+Here, `country` is inferred as a `string` type based on the elements of the `countries` list.
+
+### Example 5: LINQ to SQL Queries
+```csharp
+var dbContext = new MyDataContext();
+var users = from user in dbContext.Users
+            where user.Age > 18
+            select user;
+```
+In this example, `users` will be inferred as an `IQueryable<User>` based on the LINQ to SQL query's result.
+
+### Scenarios:
+1. **Simplifying Code**: Var can simplify code, especially when the type is obvious from the right-hand side of the assignment.
+2. **Anonymous Types**: Var is commonly used when working with anonymous types, as the type name is unknown.
+3. **LINQ Queries**: Var is frequently used with LINQ queries to avoid explicitly specifying the data type of query results.
+4. **Complex Initialization**: Var can be useful when initializing complex data types or when the type name is long or cumbersome to write.
+
+### Considerations:
+1. **Readability**: While var can improve code readability in certain scenarios, it should not be overused, especially when the type is not clear from the initialization value.
+2. **Type Inference**: The compiler infers the type of var variables at compile time, so the actual type is known and enforced by the compiler.
+3. **Maintainability**: Using var excessively may make the code harder to maintain, especially for developers who are not familiar with the codebase.
+
+In summary, var provides a convenient way to declare variables without explicitly specifying their types, improving code readability and reducing redundancy in certain scenarios. However, it should be used judiciously to maintain code clarity and understandability.
+
+## **Dynamic Type:**
+
+In C#, the `dynamic` type was introduced in C# 4.0 as part of the dynamic language runtime (DLR) feature. It allows you to declare variables whose type is resolved at runtime rather than at compile time. With the `dynamic` type, you can defer type checking and binding until runtime, enabling scenarios such as late binding and interoperability with dynamic languages.
+
+### Syntax:
+```csharp
+dynamic variableName = value;
+```
+
+### Features and Characteristics:
+
+1. **Dynamic Binding**:
+   - Unlike other types where binding and type checking occur at compile time, `dynamic` variables postpone these processes until runtime.
+   - The type of a `dynamic` variable is determined at runtime based on the operations performed on it.
+
+2. **Late Binding**:
+   - `dynamic` enables late binding, allowing you to invoke members (methods, properties, fields, etc.) on objects without specifying their types at compile time.
+   - Member resolution occurs at runtime based on the actual type of the object.
+
+3. **Interoperability**:
+   - `dynamic` is commonly used for interoperability with dynamic languages such as Python, JavaScript, and Ruby, where types are determined at runtime.
+
+### Example:
+
+```csharp
+dynamic obj = GetDynamicObject(); // GetDynamicObject returns an object of unknown type
+
+// Late binding - member resolution occurs at runtime
+var result = obj.SomeMethod(); // SomeMethod may or may not exist on obj
+
+// Dynamic typing - type resolution occurs at runtime
+dynamic value = "Hello";
+value = 10; // value changes its type from string to int
+```
+
+### Scenarios:
+
+1. **COM Interop**:
+   - When working with COM objects, where types are resolved dynamically, the `dynamic` type can simplify interoperability.
+
+2. **Dynamic Languages Integration**:
+   - `dynamic` is useful when interacting with dynamic languages like Python or JavaScript from C# code, where types are not known until runtime.
+
+3. **Reflection and ExpandoObject**:
+   - `dynamic` can be used with reflection or `ExpandoObject` to manipulate objects dynamically at runtime, providing flexibility in certain scenarios.
+
+### Considerations:
+
+1. **Performance Overhead**:
+   - Using `dynamic` may incur a performance overhead compared to statically typed variables because of the additional runtime type checks and binding.
+
+2. **Type Safety**:
+   - Since type checking occurs at runtime, errors related to incorrect member invocations may only be detected during program execution.
+
+3. **Debugging**:
+   - Debugging code with `dynamic` variables can be more challenging since the types of these variables are not known at compile time.
+
+In summary, the `dynamic` type in C# provides flexibility and interoperability by deferring type checking and binding until runtime. While it can be useful in certain scenarios, it should be used judiciously to balance flexibility with performance and maintainability considerations.
+
+## **Var Vs Dynamic Type:**
+
+| Aspect             | var                                  | dynamic                                   |
+|--------------------|--------------------------------------|-------------------------------------------|
+| Intitialization     | If the variable does not initialized it throw an error. | If the variable does not initialized it will not throw an error. |
+| Type Inference     | Inferred at compile time based on the initialization value. | Type resolution deferred until runtime based on the operations performed on it. |
+| Static/Dynamic Typing | Static typing; type is known at compile time. | Dynamic typing; type is resolved at runtime. |
+| Usage              | Mainly used with statically typed language constructs. | Used for dynamic typing, late binding, and interoperability scenarios. |
+| Type Safety        | Provides type safety at compile time. | May lead to runtime errors if used improperly, as type checking is deferred until runtime. |
+| Performance        | No performance overhead, as it's just a syntactic sugar. | May incur a performance overhead due to runtime type checks and dynamic binding. |
+| Debugging          | Easier to debug, as the type is known at compile time. | Can be more challenging to debug, as type resolution occurs at runtime. |
+
+In summary, `var` is used for type inference at compile time, providing static typing and type safety, while `dynamic` allows for dynamic typing and late binding, deferring type resolution until runtime. The choice between `var` and `dynamic` depends on the specific requirements and constraints of the programming scenario.
+
+## **Scope of Variable:**
+
+Certainly! Let's delve into each scope level in C#:
+
+### 1. Class Level Scope:
+
+- **Definition**: Variables declared within a class but outside any method or constructor.
+- **Access**: Accessible to all methods and constructors within the class.
+- **Lifetime**: Exist as long as the class exists.
+- **Example**:
+  ```csharp
+  class MyClass
+  {
+      int classVar = 10; // Class level variable
+
+      public void Method1()
+      {
+          Console.WriteLine(classVar); // Accessible within methods
+      }
+
+      public void Method2()
+      {
+          Console.WriteLine(classVar); // Accessible within methods
+      }
+  }
+  ```
+
+### 2. Method Level Scope:
+
+- **Definition**: Variables declared within a method.
+- **Access**: Limited to the method in which they are declared.
+- **Lifetime**: Exist only as long as the method is executing.
+- **Example**:
+  ```csharp
+  class MyClass
+  {
+      public void MyMethod()
+      {
+          int methodVar = 20; // Method level variable
+          Console.WriteLine(methodVar); // Accessible within the method
+      }
+  }
+  ```
+
+### 3. Block Level Scope:
+
+- **Definition**: Variables declared within a block of code, such as within loops, conditionals, or method bodies.
+- **Access**: Limited to the block in which they are declared.
+- **Lifetime**: Exist only within the block in which they are declared.
+- **Example**:
+  ```csharp
+  class MyClass
+  {
+      public void MyMethod()
+      {
+          if (true)
+          {
+              int blockVar = 30; // Block level variable
+              Console.WriteLine(blockVar); // Accessible within the block
+          }
+      }
+  }
+  ```
+
+### Comparison:
+
+- **Scope Hierarchy**:
+  - Class level scope is the broadest, followed by method level scope, and then block level scope.
+- **Visibility**:
+  - Class level variables are visible to all methods within the class, method level variables are limited to the method, and block level variables are limited to the block in which they are declared.
+- **Lifetime**:
+  - Variables at each level have different lifetimes, depending on the duration of their enclosing scope.
+
+### Use Cases:
+
+- **Class Level Scope**: Used for variables that need to maintain state across multiple methods within a class.
+- **Method Level Scope**: Used for temporary variables required for computation within a method.
+- **Block Level Scope**: Used for variables that are only needed within a specific block of code, such as loop counters or temporary storage.
+
+Understanding and correctly utilizing these scope levels in C# is crucial for writing maintainable and efficient code. Each scope level serves a distinct purpose and offers different levels of visibility and accessibility for variables within a program.
+
+## **Access Modifiers:**
+
+Sure, let's delve into each access modifier in detail:
+
+### 1. public:
+
+- **Description**: Public members are accessible from any other class or assembly. They have the widest accessibility.
+- **Usage**: Often used for members that need to be accessed from outside the class or assembly.
+- **Example**:
+  ```csharp
+  public class MyClass
+  {
+      public int PublicVar;
+      public void PublicMethod() { }
+  }
+  ```
+
+### 2. private:
+
+- **Description**: Private members are accessible only within the same class. They have the narrowest accessibility.
+- **Usage**: Used to hide implementation details and restrict access to internal workings of a class.
+- **Example**:
+  ```csharp
+  public class MyClass
+  {
+      private int PrivateVar;
+      private void PrivateMethod() { }
+  }
+  ```
+
+### 3. protected:
+
+- **Description**: Protected members are accessible within the same class and its derived classes.
+- **Usage**: Used to allow derived classes to access certain members while still restricting access to other classes.
+- **Example**:
+  ```csharp
+  public class MyBaseClass
+  {
+      protected int ProtectedVar;
+      protected void ProtectedMethod() { }
+  }
+
+  public class MyDerivedClass : MyBaseClass
+  {
+      void AnotherMethod()
+      {
+          ProtectedVar = 10; // Accessing protected member from derived class
+          ProtectedMethod(); // Accessing protected method from derived class
+      }
+  }
+  ```
+
+### 4. internal:
+
+- **Description**: Internal members are accessible within the same assembly.
+- **Usage**: Used for members that should only be accessed within the same assembly but not from outside assemblies.
+- **Example**:
+  ```csharp
+  internal class InternalClass
+  {
+      internal int InternalVar;
+      internal void InternalMethod() { }
+  }
+  ```
+
+### 5. protected internal:
+
+- **Description**: Protected internal members are accessible within the same assembly and by derived classes, regardless of the assembly.
+- **Usage**: Used when you want members to be accessible by derived classes and within the same assembly.
+- **Example**:
+  ```csharp
+  public class MyBaseClass
+  {
+      protected internal int ProtectedInternalVar;
+      protected internal void ProtectedInternalMethod() { }
+  }
+
+  public class MyDerivedClass : MyBaseClass
+  {
+      void AnotherMethod()
+      {
+          ProtectedInternalVar = 10; // Accessing protected internal member from derived class
+          ProtectedInternalMethod(); // Accessing protected internal method from derived class
+      }
+  }
+  ```
+
+| Modifier             | Description                                      | Example                                   | Allows Access from Other Classes | Allows Access from Derived Classes | Allows Access from Same Assembly |
+|----------------------|--------------------------------------------------|-------------------------------------------|-----------------------------------|------------------------------------|----------------------------------|
+| `public`             | Accessible from any other class or assembly.    | `public class MyClass { }`                | Yes                               | Yes                                | Yes                              |
+| `private`            | Accessible only within the same class.          | `private int myVar;`                      | No                                | No                                 | No                               |
+| `protected`          | Accessible within the same class and its derived classes. | `protected void MyMethod() { }`         | No                                | Yes                                | Yes                              |
+| `internal`           | Accessible within the same assembly.            | `internal class MyClass { }`              | Yes                               | No                                 | Yes                              |
+| `protected internal` | Accessible within the same assembly and by derived classes, regardless of the assembly. | `protected internal void MyMethod() { }` | Yes                               | Yes                                | Yes                              |
+
+Understanding these access modifiers is crucial for designing classes with proper encapsulation and controlling the visibility of class members in C#. Each modifier offers different levels of access, allowing you to specify the desired level of encapsulation and accessibility for your class members.
+
+## **Literals in c#:**
+
+In C#, a literal represents a fixed value in your source code. Here's an explanation of various types of literals in C# along with examples and scenarios:
+
+### 1. Numeric Literals:
+
+- **Integer Literals**: Represent whole numbers without decimal points.
+  - Example: `int myInt = 10;`
+- **Floating-Point Literals**: Represent numbers with a decimal point.
+  - Example: `float myFloat = 3.14f;`
+- **Double Literals**: Similar to floating-point literals but with higher precision.
+  - Example: `double myDouble = 3.14;`
+- **Decimal Literals**: Represent precise decimal values with higher precision compared to floating-point literals.
+  - Example: `decimal myDecimal = 3.14159m;`
+
+   - Scenario: Calculations involving numbers.
+   - Example: Computing the area of a rectangle using integer literals.
+     ```csharp
+     int length = 10;
+     int width = 5;
+     int area = length * width; // area = 50
+     ```
+
+### 2. Boolean Literals:
+
+- **Boolean Literals**: Represent the values true or false.
+  - Example: `bool myBool = true;`
+    
+    - Scenario: Conditional statements.
+    - Example: Checking if a number is even or odd.
+        ```csharp
+        int number = 7;
+        bool isEven = (number % 2 == 0); // false
+        ```
+
+### 3. Character Literals:
+
+- **Character Literals**: Represent single characters enclosed in single quotes.
+  - Example: `char myChar = 'A';`
+
+   - Scenario: Processing individual characters.
+   - Example: Converting a character to uppercase.
+     ```csharp
+     char lowercase = 'a';
+     char uppercase = char.ToUpper(lowercase); // 'A'
+     ```
+
+### 4. String Literals:
+
+- **String Literals**: Represent sequences of characters enclosed in double quotes.
+  - Example: `string myString = "Hello, World!";`
+
+   - Scenario: Storing and manipulating text.
+   - Example: Concatenating strings.
+     ```csharp
+     string firstName = "John";
+     string lastName = "Doe";
+     string fullName = firstName + " " + lastName; // "John Doe"
+     ```
+
+### 5. Null Literal:
+
+- **Null Literal**: Represents a null reference.
+  - Example: `object myObject = null;`
+
+   - Scenario: Representing absence of a value.
+   - Example: Initializing reference types to null.
+     ```csharp
+     string address = null;
+     ```
+Literals in C# provide a way to represent fixed values directly within your code. They are fundamental to various programming tasks such as arithmetic calculations, conditional statements, string manipulation, and more. Understanding and correctly using literals is essential for writing clear, concise, and maintainable code in C#.
+
+## 
