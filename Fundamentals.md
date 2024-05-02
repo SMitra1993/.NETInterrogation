@@ -8,6 +8,12 @@
 - [Types of Variables](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#types-of-variables-)
 - [Instance variable Vs Static variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#instance-variable-vs-static-variable-)
 - [Constants variable Vs Read-Only variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#constants-variable-vs-read-only-variable-)
+- [Var - Implicitely typed variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#var---implicitely-typed-variable-)
+- [Dynamic Type](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#dynamic-type-)
+- [Var Vs Dynamic Type](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#var-vs-dynamic-type-)
+- [Scope of Variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#scope-of-variable-)
+- [Access Modifiers](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#access-modifiers-)
+- [Literals in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#literals-in-c-)
 
 ## **C# Identifier:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
@@ -274,7 +280,7 @@ Here's a comparison of constant variables and readonly variables in C# presented
 
 In summary, constant variables are assigned a value at compile time and cannot be changed thereafter, while readonly variables can be assigned a value either at declaration or in the constructor, but their value can be modified only in the constructor. Both constant and readonly variables are available for the entire duration of the program and have the same scope.
 
-## **Var - Implicitely typed variable:**
+## **Var - Implicitely typed variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 Implicitly Typed Local Variables, introduced in C# 3.0, allow you to declare variables without explicitly specifying their data types. Instead, the compiler infers the data type based on the value assigned to the variable at the time of initialization. Here's an explanation of var with examples and scenarios:
 
@@ -337,7 +343,7 @@ In this example, `users` will be inferred as an `IQueryable<User>` based on the 
 
 In summary, var provides a convenient way to declare variables without explicitly specifying their types, improving code readability and reducing redundancy in certain scenarios. However, it should be used judiciously to maintain code clarity and understandability.
 
-## **Dynamic Type:**
+## **Dynamic Type:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 In C#, the `dynamic` type was introduced in C# 4.0 as part of the dynamic language runtime (DLR) feature. It allows you to declare variables whose type is resolved at runtime rather than at compile time. With the `dynamic` type, you can defer type checking and binding until runtime, enabling scenarios such as late binding and interoperability with dynamic languages.
 
@@ -396,7 +402,7 @@ value = 10; // value changes its type from string to int
 
 In summary, the `dynamic` type in C# provides flexibility and interoperability by deferring type checking and binding until runtime. While it can be useful in certain scenarios, it should be used judiciously to balance flexibility with performance and maintainability considerations.
 
-## **Var Vs Dynamic Type:**
+## **Var Vs Dynamic Type:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 | Aspect             | var                                  | dynamic                                   |
 |--------------------|--------------------------------------|-------------------------------------------|
@@ -410,7 +416,7 @@ In summary, the `dynamic` type in C# provides flexibility and interoperability b
 
 In summary, `var` is used for type inference at compile time, providing static typing and type safety, while `dynamic` allows for dynamic typing and late binding, deferring type resolution until runtime. The choice between `var` and `dynamic` depends on the specific requirements and constraints of the programming scenario.
 
-## **Scope of Variable:**
+## **Scope of Variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 Certainly! Let's delve into each scope level in C#:
 
@@ -491,7 +497,7 @@ Certainly! Let's delve into each scope level in C#:
 
 Understanding and correctly utilizing these scope levels in C# is crucial for writing maintainable and efficient code. Each scope level serves a distinct purpose and offers different levels of visibility and accessibility for variables within a program.
 
-## **Access Modifiers:**
+## **Access Modifiers:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 Sure, let's delve into each access modifier in detail:
 
@@ -588,7 +594,7 @@ Sure, let's delve into each access modifier in detail:
 
 Understanding these access modifiers is crucial for designing classes with proper encapsulation and controlling the visibility of class members in C#. Each modifier offers different levels of access, allowing you to specify the desired level of encapsulation and accessibility for your class members.
 
-## **Literals in c#:**
+## **Literals in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
 
 In C#, a literal represents a fixed value in your source code. Here's an explanation of various types of literals in C# along with examples and scenarios:
 
