@@ -2,20 +2,22 @@
 
 **Links:**
 
-- [C# Identifier](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#c-identifier-)
-- [Data Types](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#data-types-)
-- [Data Variables](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#data-variables-)
-- [Types of Variables](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#types-of-variables-)
-- [Instance variable Vs Static variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#instance-variable-vs-static-variable-)
-- [Constants variable Vs Read-Only variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#constants-variable-vs-read-only-variable-)
-- [Var - Implicitely typed variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#var---implicitely-typed-variable-)
-- [Dynamic Type](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#dynamic-type-)
-- [Var Vs Dynamic Type](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#var-vs-dynamic-type-)
-- [Scope of Variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#scope-of-variable-)
-- [Access Modifiers](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#access-modifiers-)
-- [Literals in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#literals-in-c-)
+- [C# Identifier](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#c-identifier-)
+- [Data Types](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#data-types-)
+- [Data Variables](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#data-variables-)
+- [Types of Variables](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#types-of-variables-)
+- [Instance variable Vs Static variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#instance-variable-vs-static-variable-)
+- [Constants variable Vs Read-Only variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#constants-variable-vs-read-only-variable-)
+- [Var - Implicitely typed variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#var---implicitely-typed-variable-)
+- [Dynamic Type](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#dynamic-type-)
+- [Var Vs Dynamic Type](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#var-vs-dynamic-type-)
+- [Scope of Variable](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#scope-of-variable-)
+- [Access Modifiers](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#access-modifiers-)
+- [Literals in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#literals-in-c-)
+- [Opertors in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#opertors-in-c-)
+- [Assignment Operators in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#assignment-operators-in-c-)
 
-## **C# Identifier:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **C# Identifier:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 In C#, identifiers are names used to identify variables, methods, classes, namespaces, and other programming elements within a C# program. Identifiers play a crucial role in coding because they provide a way to refer to different elements and make the code readable and understandable. Here are the main rules and characteristics of C# identifiers:
 
@@ -58,7 +60,7 @@ In C#, identifiers are names used to identify variables, methods, classes, names
 
 In summary, identifiers in C# are names used to refer to various programming elements within a C# program, such as variables, methods, classes, and namespaces. They must adhere to certain rules and conventions to ensure readability, maintainability, and compliance with C# language specifications.
 
-## **Data Types:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Data Types:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Sure, here's a detailed explanation of the main data types in C# presented in tabular form:
 
@@ -86,7 +88,7 @@ Sure, here's a detailed explanation of the main data types in C# presented in ta
 
 These data types cover a wide range of numeric, textual, and general-purpose values used in C# programming. Each data type has its own characteristics and usage scenarios, providing flexibility and precision in representing different kinds of data.
 
-## **Data Variables:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Data Variables:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 In C#, data variables are used to store and manipulate data values within a program. A variable is a named storage location in memory that holds a value of a specific data type. Here are examples of data variables and their types in C#:
 
@@ -178,7 +180,7 @@ class Program
 
 In this example, various types of data variables are declared and initialized with values. Then, their values are printed to the console. Each variable holds a specific type of data, such as integers, floating-point numbers, boolean values, characters, strings, arrays, and objects.
 
-## **Types of Variables:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Types of Variables:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 In C#, variables can be categorized into different types based on various factors such as scope, lifetime, and storage. Here are the main types of variables in C#:
 
@@ -252,7 +254,7 @@ In C#, variables can be categorized into different types based on various factor
 
 These are the main types of variables in C#, each serving different purposes and having specific characteristics regarding scope, lifetime, and storage. Understanding the types of variables is crucial for effective program design and memory management in C#.
 
-## **Instance variable Vs Static variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Instance variable Vs Static variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 | Aspect                 | Instance Variable                         | Static Variable                                |
 |------------------------|-------------------------------------------|------------------------------------------------|
@@ -265,7 +267,7 @@ These are the main types of variables in C#, each serving different purposes and
 
 In summary, instance variables are specific to each instance of a class and are accessed through instances of the class, whereas static variables belong to the class itself and are accessed directly using the class name. Instance variables have separate memory allocations for each instance, while static variables have a single memory allocation shared across all instances of the class.
 
-## **Constants variable Vs Read-Only variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Constants variable Vs Read-Only variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Here's a comparison of constant variables and readonly variables in C# presented in a tabular form:
 
@@ -280,7 +282,7 @@ Here's a comparison of constant variables and readonly variables in C# presented
 
 In summary, constant variables are assigned a value at compile time and cannot be changed thereafter, while readonly variables can be assigned a value either at declaration or in the constructor, but their value can be modified only in the constructor. Both constant and readonly variables are available for the entire duration of the program and have the same scope.
 
-## **Var - Implicitely typed variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Var - Implicitely typed variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Implicitly Typed Local Variables, introduced in C# 3.0, allow you to declare variables without explicitly specifying their data types. Instead, the compiler infers the data type based on the value assigned to the variable at the time of initialization. Here's an explanation of var with examples and scenarios:
 
@@ -343,7 +345,7 @@ In this example, `users` will be inferred as an `IQueryable<User>` based on the 
 
 In summary, var provides a convenient way to declare variables without explicitly specifying their types, improving code readability and reducing redundancy in certain scenarios. However, it should be used judiciously to maintain code clarity and understandability.
 
-## **Dynamic Type:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Dynamic Type:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 In C#, the `dynamic` type was introduced in C# 4.0 as part of the dynamic language runtime (DLR) feature. It allows you to declare variables whose type is resolved at runtime rather than at compile time. With the `dynamic` type, you can defer type checking and binding until runtime, enabling scenarios such as late binding and interoperability with dynamic languages.
 
@@ -402,7 +404,7 @@ value = 10; // value changes its type from string to int
 
 In summary, the `dynamic` type in C# provides flexibility and interoperability by deferring type checking and binding until runtime. While it can be useful in certain scenarios, it should be used judiciously to balance flexibility with performance and maintainability considerations.
 
-## **Var Vs Dynamic Type:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Var Vs Dynamic Type:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 | Aspect             | var                                  | dynamic                                   |
 |--------------------|--------------------------------------|-------------------------------------------|
@@ -416,7 +418,7 @@ In summary, the `dynamic` type in C# provides flexibility and interoperability b
 
 In summary, `var` is used for type inference at compile time, providing static typing and type safety, while `dynamic` allows for dynamic typing and late binding, deferring type resolution until runtime. The choice between `var` and `dynamic` depends on the specific requirements and constraints of the programming scenario.
 
-## **Scope of Variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Scope of Variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Certainly! Let's delve into each scope level in C#:
 
@@ -497,7 +499,7 @@ Certainly! Let's delve into each scope level in C#:
 
 Understanding and correctly utilizing these scope levels in C# is crucial for writing maintainable and efficient code. Each scope level serves a distinct purpose and offers different levels of visibility and accessibility for variables within a program.
 
-## **Access Modifiers:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Access Modifiers:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Sure, let's delve into each access modifier in detail:
 
@@ -594,7 +596,7 @@ Sure, let's delve into each access modifier in detail:
 
 Understanding these access modifiers is crucial for designing classes with proper encapsulation and controlling the visibility of class members in C#. Each modifier offers different levels of access, allowing you to specify the desired level of encapsulation and accessibility for your class members.
 
-## **Literals in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/Fundamentals.md#fundamentals-)
+## **Literals in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 In C#, a literal represents a fixed value in your source code. Here's an explanation of various types of literals in C# along with examples and scenarios:
 
@@ -666,7 +668,7 @@ In C#, a literal represents a fixed value in your source code. Here's an explana
      ```
 Literals in C# provide a way to represent fixed values directly within your code. They are fundamental to various programming tasks such as arithmetic calculations, conditional statements, string manipulation, and more. Understanding and correctly using literals is essential for writing clear, concise, and maintainable code in C#.
 
-## **Opertors in c#:**
+## **Opertors in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 Sure, let's explore the various types of operators in C# along with examples and scenarios:
 
@@ -785,7 +787,7 @@ Sure, let's explore the various types of operators in C# along with examples and
 
 Operators are essential for performing various operations in C# programming. Understanding and using them effectively is crucial for writing efficient and readable code.
 
-## **Assignment Operators in c#:**
+## **Assignment Operators in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 ### 1. Simple Assignment Operator `=`:
 
