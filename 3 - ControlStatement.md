@@ -1,10 +1,32 @@
 # Control Statement ❤🍕
 
-## **Decision Making:**
+**Links:**
+
+- [Decision Making](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#c-identifier-)
+    - [If Statement](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [If-Else Statement](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [If-Else If-Else Statement](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [Switch Statement](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [Nested Switch Statement](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+- [Loops in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#data-types-)
+    - [For Loop](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [While Loop](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [Do-While Loop](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [Foreach Loop](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+- [for Vs foreach](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#data-variables-)
+- [Jump Statements](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#types-of-variables-)
+    - [Break Statement](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [Continue Statement](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [Return Statement](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [Goto Statement](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+    - [Throw Statement](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#instance-variable-vs-static-variable-)
+
+
+## **Decision Making:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 Decision making in C# refers to the ability to execute different blocks of code based on certain conditions. This is achieved using conditional statements such as `if`, `else`, `else if`, and `switch`. These statements allow you to control the flow of your program based on the evaluation of expressions or variables. Let's explore some scenarios and examples to understand how decision making works in C#:
 
-### Scenario 1: Simple If Statement
+### Scenario 1: Simple If Statement [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 ```csharp
 using System;
@@ -33,7 +55,7 @@ In this example:
 - The `if` statement checks if the value of `number` is greater than 0.
 - Since the condition is true (`10 > 0`), the statement inside the `if` block is executed, printing "Number is positive."
 
-### Scenario 2: If-Else Statement
+### Scenario 2: If-Else Statement [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 ```csharp
 using System;
@@ -65,7 +87,7 @@ In this example:
 - We have a variable `number` with a value of -5.
 - The `if` condition checks if the value of `number` is greater than 0. Since it's not (`-5 > 0` is false), the code inside the `else` block is executed, printing "Number is not positive."
 
-### Scenario 3: If-Else If-Else Statement
+### Scenario 3: If-Else If-Else Statement [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 ```csharp
 using System;
@@ -101,7 +123,7 @@ In this example:
 - We have a variable `number` with a value of 0.
 - The `if` condition checks if the value of `number` is greater than 0. Since it's not (`0 > 0` is false), it moves to the `else if` block and checks if the value is less than 0. Again, it's not (`0 < 0` is false), so it executes the code inside the `else` block, printing "Number is zero."
 
-### Scenario 4: Switch Statement
+### Scenario 4: Switch Statement [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 ```csharp
 using System;
@@ -140,7 +162,7 @@ In this example:
 - We have a variable `grade` with a value of 'B'.
 - The `switch` statement checks the value of `grade` against different cases. Since it matches the case `'B'`, it executes the code inside that case, printing "Good!".
 
-### Scenario 5: Nested Switch Statement
+### Scenario 5: Nested Switch Statement [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 ```csharp
 using System;
@@ -206,11 +228,11 @@ In this example:
 - Depending on the value of `category`, it executes the corresponding case block.
 - In this case, since the `department` is 'M' (Marketing) and the `category` is 'E', it executes the default case inside the nested switch statement for the Marketing department, printing "Other Marketing Services".
 
-## **Loops in c#**
+## **Loops in c#** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 In C#, loops are used to execute a block of code repeatedly until a specified condition is met. There are several types of loops available, including `for`, `while`, `do-while`, and `foreach`, each serving different purposes. Let's explore each type with scenarios, examples, and outputs:
 
-### 1. For Loop:
+### 1. For Loop: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 The `for` loop is commonly used when you know the number of iterations in advance. It consists of three parts: initialization, condition, and iteration. These parts are specified within the parentheses `()` of the loop declaration. The loop body is executed as long as the condition evaluates to true.
 
@@ -240,7 +262,7 @@ class Program
 5
 ```
 
-### 2. While Loop:
+### 2. While Loop: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 The `while` loop repeats a block of code as long as a specified condition is true. Unlike the `for` loop, the initialization and iteration steps are performed outside the loop declaration. This loop type is useful when the number of iterations is not known in advance and depends on the evaluation of a condition.
 
@@ -272,7 +294,7 @@ class Program
 Sum: 105
 ```
 
-### 3. Do-While Loop:
+### 3. Do-While Loop: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 Similar to the `while` loop, the `do-while` loop repeats a block of code based on a specified condition. However, it ensures that the loop body is executed at least once, even if the condition is false initially. This can be helpful when you want to execute a block of code before checking the loop condition.
 
@@ -299,7 +321,7 @@ class Program
 
 *(Input/Output not shown due to interactive nature)*
 
-### 4. Foreach Loop:
+### 4. Foreach Loop: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 The `foreach` loop simplifies iteration over elements in a collection, such as arrays, lists, or other enumerable types. It automatically iterates over each element in the collection, assigning the current element to a loop variable for processing. This loop type is particularly convenient for working with collections without needing to manage loop counters or indices manually.
 
@@ -333,7 +355,7 @@ class Program
 
 These examples demonstrate how to use different types of loops in C# to execute code repeatedly under various conditions. Depending on the situation, you can choose the appropriate loop type to achieve the desired behavior in your program.
 
-## **for Vs foreach:**
+## **for Vs foreach:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 Here's a comparison of the `for` and `foreach` loops in C# presented in a tabular format, along with considerations regarding their performance:
 
@@ -370,11 +392,11 @@ Here's a comparison of the `for` and `foreach` loops in C# presented in a tabula
 
 In summary, while both `for` and `foreach` loops have their advantages and performance considerations, the choice between them depends on factors such as the type of collection being iterated, the need for index management, and the importance of performance optimization in your application.
 
-## **Jump Statements:**
+## **Jump Statements:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 Jump statements in C# are used to alter the flow of control in a program. They allow you to transfer the control from one part of the code to another based on certain conditions or requirements. There are three main types of jump statements: `break`, `continue`, and `return`. Let's explore each of them with examples, scenarios, and outputs:
 
-### 1. Break Statement:
+### 1. Break Statement: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 The `break` statement is primarily used within loops (`for`, `while`, `do-while`) and `switch` statements to exit the loop or switch block prematurely. When encountered, the `break` statement immediately terminates the execution of the loop or switch block, and control transfers to the statement following the loop or switch.
 
@@ -408,7 +430,7 @@ First even number found: 6
 
 In this example, the `break` statement is used to exit the `foreach` loop as soon as the first even number is encountered in the array.
 
-### 2. Continue Statement:
+### 2. Continue Statement: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 The `continue` statement is used within loops (`for`, `while`, `do-while`) to skip the remaining code in the loop's body for the current iteration and proceed to the next iteration. When encountered, the `continue` statement bypasses the remaining code inside the loop and jumps back to the loop's condition check.
 
@@ -444,7 +466,7 @@ Even number found: 6
 
 In this example, the `continue` statement is used to skip printing odd numbers and proceed to the next iteration of the `foreach` loop.
 
-### 3. Return Statement:
+### 3. Return Statement: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 The `return` statement is used within methods to exit the method prematurely and return a value (if the method has a return type) to the caller. When encountered, the `return` statement immediately exits the method's execution, and control returns to the calling code with the specified return value (if any).
 
@@ -488,7 +510,7 @@ Is 11 prime? True
 
 In this example, the `return` statement is used to exit the `IsPrime` method as soon as it determines whether the number is prime or not, without continuing the loop unnecessarily.
 
-### 4. Goto Statement:
+### 4. Goto Statement: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 The `goto` statement allows transferring the control of the program to a labeled statement within the same method or block. While `goto` provides a way to change the flow of control, its usage is generally discouraged due to its potential to create spaghetti code and decrease code readability and maintainability.
 
@@ -524,7 +546,7 @@ Value is: 10
 
 In this example, the `goto` statement is used to transfer the control to the `ErrorHandler` label if the value is negative. The code inside the `ErrorHandler` block is then executed to handle the error condition.
 
-### 5. Throw Statement:
+### 5. Throw Statement: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#Control20%Statement-)
 
 The `throw` statement is used to explicitly raise an exception during the execution of a program. It is typically used to signal exceptional conditions or errors that cannot be handled within the current context and need to be propagated to higher-level error-handling code.
 
