@@ -28,6 +28,8 @@ Decision making in C# refers to the ability to execute different blocks of code 
 
 ### Scenario 1: Simple If Statement [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
 
+The `if` statement is a fundamental decision-making statement that allows you to execute a block of code if a specified condition evaluates to true. It can also be followed by an optional `else` block to execute code when the condition is false.
+
 ```csharp
 using System;
 
@@ -56,6 +58,8 @@ In this example:
 - Since the condition is true (`10 > 0`), the statement inside the `if` block is executed, printing "Number is positive."
 
 ### Scenario 2: If-Else Statement [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+The `else if` statement is an extension of the `if` statement, allowing you to test multiple conditions sequentially. It is used when you have multiple conditions to evaluate, each with its corresponding block of code to execute.
 
 ```csharp
 using System;
@@ -124,6 +128,8 @@ In this example:
 - The `if` condition checks if the value of `number` is greater than 0. Since it's not (`0 > 0` is false), it moves to the `else if` block and checks if the value is less than 0. Again, it's not (`0 < 0` is false), so it executes the code inside the `else` block, printing "Number is zero."
 
 ### Scenario 4: Switch Statement [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+The `switch` statement provides a convenient way to execute different blocks of code based on the value of an expression or variable. It evaluates the expression once and then matches the value of the expression to one of several possible `case` labels, executing the corresponding block of code.
 
 ```csharp
 using System;
@@ -318,8 +324,6 @@ class Program
     }
 }
 ```
-
-*(Input/Output not shown due to interactive nature)*
 
 ### 4. Foreach Loop: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
 
