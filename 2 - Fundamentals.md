@@ -24,6 +24,10 @@
 - [Get Accessor & Set Accessor](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#get-accessor--set-accessor-)
 - [Nullable types](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#nullable-types-)
 - [Structures in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#structures-in-c-)
+- [Static Keyword in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#static-keyword-in-c-)
+- [Is vs As operator keyword in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#is-vs-as-operator-keyword-in-c-)
+- [typeof vs GetType Operator](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#typeof-vs-gettype-operator-)
+- [ref in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#ref-in-c-)
 
 ## **C# Identifier:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
@@ -1632,7 +1636,7 @@ In the example above:
 
 Both static and non-static methods can be useful inside a struct, providing behavior and functionality along with data encapsulation. They allow structs to represent more complex entities and perform operations on them.
 
-## **Static Keyword in c#:**
+## **Static Keyword in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 The `static` keyword in C# is used to declare members (methods, properties, fields, and constructors) that belong to the type itself, rather than to instances of the type. This means that a static member is shared among all instances of the type and can be accessed directly through the type name without creating an instance. Let's explore various uses of the `static` keyword with examples and scenarios:
 
@@ -1827,7 +1831,7 @@ In this example, the static constructor of `AppConfig` initializes the `AppName`
 
 While the `static` keyword can be useful for certain scenarios, it should be used judiciously to avoid the aforementioned limitations and maintain code maintainability, testability, and performance.
 
-## **Is vs As operator keyword in C#:**
+## **Is vs As operator keyword in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 | Feature            | `is` Operator                                            | `as` Operator                                              |
 |--------------------|----------------------------------------------------------|-------------------------------------------------------------|
@@ -1845,7 +1849,7 @@ In summary:
 - **`is` Operator**: Used for type checking and returns a boolean value indicating whether the object is compatible with the specified type. Does not perform casting.
 - **`as` Operator**: Used for casting an object to a specified type. Returns `null` if the cast fails, otherwise, returns the casted object. Does not throw exceptions.
 
-## **typeof vs GetType Operator:**
+## **typeof vs GetType Operator:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 | Feature            | `typeof`                                          | `GetType()`                                       |
 |--------------------|---------------------------------------------------|--------------------------------------------------|
@@ -1862,7 +1866,7 @@ In summary:
 - **`typeof` Operator**: Used to get the `Type` object of a compile-time type. It's resolved at compile time and does not throw exceptions. It's used when you need type information for a type known at compile time.
 - **`GetType()` Method**: Used to get the `Type` object of a runtime object. It's resolved at runtime and doesn't throw exceptions. It's used when you need type information for an object whose type is determined at runtime.
 
-## **ref in c#:**
+## **ref in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
 In C#, the `ref` keyword is used to pass arguments by reference to a method, allowing the method to modify the value of the variable passed as an argument. When you pass a variable by reference, you are passing the memory address of the variable rather than a copy of its value. This means any changes made to the parameter inside the method will affect the original variable outside the method. Let's explore some scenarios and examples to understand how `ref` works:
 
