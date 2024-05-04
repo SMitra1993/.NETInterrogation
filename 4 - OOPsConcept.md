@@ -7,11 +7,11 @@
     - [Object](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#object-)
 - [Class Vs Structs](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-vs-structs-)
 
-## Class & Object: [🏠](hthttps://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Class & Object:** [🏠](hthttps://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
 Certainly! Let's start with explanations for class and object in C#, along with examples and scenarios:
 
-### Class: [🏠](hthttps://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+### **Class:** [🏠](hthttps://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
 In C#, a class is a blueprint or template for creating objects. It defines the properties, methods, events, and fields that characterize a particular type of object. Classes encapsulate data and behavior into a single unit, promoting code reusability, maintainability, and organization.
 
@@ -43,7 +43,7 @@ class Car
 }
 ```
 
-### Object: [🏠](hthttps://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+### **Object:** [🏠](hthttps://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
 An object is an instance of a class. It represents a specific realization of the class's blueprint, with its unique set of data and behavior. Objects are created using the `new` keyword, which allocates memory and initializes the object based on the class definition.
 
@@ -91,7 +91,7 @@ Starting the engine of 2018 Honda Accord
 
 In summary, classes and objects in C# facilitate the creation of reusable, modular, and organized code by encapsulating data and behavior into cohesive units. By understanding their concepts and usage, you can effectively model real-world entities and implement complex systems in your C# programs.
 
-## Class Vs Structs: [🏠](hthttps://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Class Vs Structs:** [🏠](hthttps://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
 Sure, let's provide a more detailed comparison of classes and structs in C#:
 
