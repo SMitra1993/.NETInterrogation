@@ -626,7 +626,7 @@ Sure, let's compare static constructors and non-static constructors in C# in tab
 | Access Modifier        | Cannot have access modifiers (always implicit `private`) | Can have various access modifiers (`public`, `private`, etc.) |
 | Parameters             | Cannot have parameters                                   | Can have parameters                                      |
 | Initialization         | Typically used for one-time initialization of static members | Used for initializing instance members                   |
-| Use Cases              | - Initializing static fields or performing one-time initialization tasks for a class || - Initializing static data or resources || - Ensuring that static members are initialized before they are accessed | - Initializing instance fields or performing instance-specific initialization tasks || - Setting up an object's initial state based on provided parameters || - Customizing object behavior during instantiation |
+| Use Cases              | - Initializing static fields or performing one-time initialization tasks for a class; - Initializing static data or resources; - Ensuring that static members are initialized before they are accessed | - Initializing instance fields or performing instance-specific initialization tasks; - Setting up an object's initial state based on provided parameters; - Customizing object behavior during instantiation |
 
 ### Detailed Explanation:
 
