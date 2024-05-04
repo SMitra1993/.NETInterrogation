@@ -11,7 +11,7 @@
 - [Default Constructor](https://github.com/SMitra1993/theNETInterrogation/blob/master/5%20-%20Constructors.md#default-constructor--1)
 - [Copy Constructor](https://github.com/SMitra1993/theNETInterrogation/blob/master/5%20-%20Constructors.md#copy-constructor--1)
 - [Private Constructor](https://github.com/SMitra1993/theNETInterrogation/blob/master/5%20-%20Constructors.md#private-constructor--1)
-- [Parameterized Constructor](https://github.com/SMitra1993/theNETInterrogation/blob/master/5%20-%20Constructors.md#parameterized-constructor-1-)
+- [Parameterized Constructor](https://github.com/SMitra1993/theNETInterrogation/blob/master/5%20-%20Constructors.md#parameterized-constructor--1)
 - [Static Constructor](https://github.com/SMitra1993/theNETInterrogation/blob/master/5%20-%20Constructors.md#static-constructor--1)
 - [Static Constructor Vs Non-Static Constructor](https://github.com/SMitra1993/theNETInterrogation/blob/master/5%20-%20Constructors.md#static-constructor-vs-non-static-constructor-)
 - [Constructor Overloading](https://github.com/SMitra1993/theNETInterrogation/blob/master/5%20-%20Constructors.md#constructor-overloading-)
