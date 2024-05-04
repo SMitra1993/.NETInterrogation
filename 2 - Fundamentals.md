@@ -1497,8 +1497,8 @@ using System;
 public struct Point
 {
     // Data members
-    public int X { get; set; }
-    public int Y { get; set; }
+    public int X;
+    public int Y;
 
     // Constructor
     public Point(int x, int y)
@@ -1521,8 +1521,14 @@ class Program
     static void Main()
     {
         // Create two points
-        Point point1 = new Point(3, 4);
-        Point point2 = new Point(6, 8);
+        // no need to create an
+        // instance using 'new' keyword
+        Point point1;
+        point1.X = 3;
+        point1.Y = 4;
+        Point point2;
+        point2.X = 6;
+        point2.Y = 8;
 
         // Display the coordinates of the points
         Console.WriteLine($"Point 1: ({point1.X}, {point1.Y})");
