@@ -91,7 +91,7 @@ Starting the engine of 2018 Honda Accord
 
 In summary, classes and objects in C# facilitate the creation of reusable, modular, and organized code by encapsulating data and behavior into cohesive units. By understanding their concepts and usage, you can effectively model real-world entities and implement complex systems in your C# programs.
 
-## **Class Vs Structs:** [🏠](hthttps://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Class Vs Structs:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
 Sure, let's provide a more detailed comparison of classes and structs in C#:
 
