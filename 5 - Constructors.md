@@ -662,4 +662,308 @@ Sure, let's compare static constructors and non-static constructors in C# in tab
 
 In summary, static constructors and non-static constructors serve different purposes in C#. Static constructors are used for one-time initialization of static members, while non-static constructors are used for initializing instance members and customizing object behavior during instantiation. Understanding when to use each type of constructor is essential for designing well-structured and maintainable C# code.
 
-## 
+## **Constructor Overloading:**
+
+Constructor overloading in C# allows you to define multiple constructors with the same name but with different parameter lists. This enables you to create objects using different combinations of parameters, providing flexibility in object initialization.
+
+### Scenario:
+
+Let's consider a scenario where you have a `Rectangle` class representing rectangles. You want to create `Rectangle` objects using different combinations of parameters, such as specifying width and height, specifying only width, or specifying no parameters (default constructor).
+
+### Example:
+
+```csharp
+using System;
+
+class Rectangle
+{
+    public double Width { get; }
+    public double Height { get; }
+
+    // Constructor with different types of arguments
+    public Rectangle(double width, double height)
+    {
+        Width = width;
+        Height = height;
+    }
+
+    // Constructor with different number of arguments
+    public Rectangle(double width)
+    {
+        Width = width;
+        Height = width; // Square by default
+    }
+
+    // Constructor with different order of arguments
+    public Rectangle(double height, double width)
+    {
+        Width = width;
+        Height = height;
+    }
+
+    // Default constructor
+    public Rectangle()
+    {
+        Width = 1;  // Default width
+        Height = 1; // Default height
+    }
+
+    // Method to calculate area
+    public double CalculateArea()
+    {
+        return Width * Height;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating Rectangle objects using different constructors
+        Rectangle rectangle1 = new Rectangle(5, 3);      // By using different type of arguments
+        Rectangle rectangle2 = new Rectangle(4);         // By using different number of arguments
+        Rectangle rectangle3 = new Rectangle(2, 6);      // By using different order of arguments
+        Rectangle rectangle4 = new Rectangle();          // Default constructor
+
+        // Calculating and displaying the area of each rectangle
+        Console.WriteLine("Area of Rectangle 1: " + rectangle1.CalculateArea());
+        Console.WriteLine("Area of Rectangle 2: " + rectangle2.CalculateArea());
+        Console.WriteLine("Area of Rectangle 3: " + rectangle3.CalculateArea());
+        Console.WriteLine("Area of Rectangle 4: " + rectangle4.CalculateArea());
+    }
+}
+```
+
+### Output:
+
+```
+Area of Rectangle 1: 15
+Area of Rectangle 2: 16
+Area of Rectangle 3: 12
+Area of Rectangle 4: 1
+```
+
+### Explanation:
+
+In this example:
+- The `Rectangle` class defines multiple constructors to demonstrate constructor overloading.
+- Constructor overloading is achieved by defining constructors with different parameter lists:
+  - Constructor with different types of arguments: `(double width, double height)`
+  - Constructor with different number of arguments: `(double width)` (height is set equal to width)
+  - Constructor with different order of arguments: `(double height, double width)`
+  - Default constructor: `()`
+- Each constructor initializes the `Width` and `Height` properties of the `Rectangle` object based on the provided parameters or default values.
+- In the `Main` method, different `Rectangle` objects are created using different constructors, showcasing constructor overloading.
+- The area of each rectangle is calculated using the `CalculateArea` method and displayed to the console.
+
+This demonstrates how constructor overloading allows you to create objects using different combinations of parameters, providing flexibility in object initialization based on different scenarios.
+
+## **Overloaded Constructor using “this” keyword:**
+
+In C#, you can use the `this` keyword within a constructor to invoke another constructor within the same class. This is known as constructor chaining or using an overloaded constructor using the `this` keyword. It allows you to avoid duplicating initialization logic by reusing it in multiple constructors within the same class.
+
+### Scenario:
+
+Let's consider a scenario where you have a `Person` class representing individuals. You want to create overloaded constructors to initialize `Person` objects with different combinations of properties. Instead of duplicating initialization logic in each constructor, you'll use the `this` keyword to chain constructors together.
+
+### Example:
+
+```csharp
+using System;
+
+class Person
+{
+    public string Name { get; }
+    public int Age { get; }
+    public string Gender { get; }
+
+    // Constructor with all properties
+    public Person(string name, int age, string gender)
+    {
+        Name = name;
+        Age = age;
+        Gender = gender;
+    }
+
+    // Constructor with only name and age (gender defaults to "Unknown")
+    public Person(string name, int age) : this(name, age, "Unknown")
+    {
+    }
+
+    // Constructor with only name (age defaults to 0, gender defaults to "Unknown")
+    public Person(string name) : this(name, 0)
+    {
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating Person objects using different constructors
+        Person person1 = new Person("Alice", 30, "Female");
+        Person person2 = new Person("Bob", 25);
+        Person person3 = new Person("Charlie");
+
+        // Displaying the properties of each person
+        Console.WriteLine($"Person 1: {person1.Name}, {person1.Age}, {person1.Gender}");
+        Console.WriteLine($"Person 2: {person2.Name}, {person2.Age}, {person2.Gender}");
+        Console.WriteLine($"Person 3: {person3.Name}, {person3.Age}, {person3.Gender}");
+    }
+}
+```
+
+### Output:
+
+```
+Person 1: Alice, 30, Female
+Person 2: Bob, 25, Unknown
+Person 3: Charlie, 0, Unknown
+```
+
+### Explanation:
+
+In this example:
+- The `Person` class defines multiple constructors with different parameter lists to demonstrate constructor overloading.
+- Constructor overloading is used to provide flexibility in object initialization.
+- The constructor with all properties initializes all properties of the `Person` object.
+- The other constructors use the `this` keyword to chain to the primary constructor, passing default values for omitted parameters.
+- In the `Main` method, different `Person` objects are created using different constructors, showcasing constructor overloading and constructor chaining.
+- The properties of each `Person` object are displayed to the console, showing the result of object initialization.
+
+This demonstrates how you can use the `this` keyword to chain constructors together, avoiding code duplication and providing flexibility in object initialization in C#.
+
+## **Overloaded Constructor using Copy Constructor:**
+
+In C#, you can overload the copy constructor of a class to provide different ways of copying objects. Overloading the copy constructor allows you to customize the copying process based on specific requirements or scenarios.
+
+### Scenario:
+
+Consider a scenario where you have a `Rectangle` class representing rectangles, and you want to provide different ways of copying `Rectangle` objects. You may want to copy only the dimensions, or you may want to perform a deep copy including additional properties.
+
+### Example:
+
+```csharp
+using System;
+
+class Rectangle
+{
+    public double Width { get; }
+    public double Height { get; }
+    public string Color { get; }
+
+    // Constructor with dimensions and color
+    public Rectangle(double width, double height, string color)
+    {
+        Width = width;
+        Height = height;
+        Color = color;
+    }
+
+    // Copy constructor (overloaded)
+    public Rectangle(Rectangle other)
+    {
+        Width = other.Width;
+        Height = other.Height;
+        Color = other.Color;
+    }
+
+    // Method to display rectangle information
+    public void DisplayInfo()
+    {
+        Console.WriteLine($"Width: {Width}, Height: {Height}, Color: {Color}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating a rectangle
+        Rectangle originalRectangle = new Rectangle(5, 3, "Red");
+
+        // Copying the rectangle using the copy constructor
+        Rectangle copiedRectangle = new Rectangle(originalRectangle);
+
+        // Displaying information of both rectangles
+        Console.WriteLine("Original Rectangle:");
+        originalRectangle.DisplayInfo();
+
+        Console.WriteLine("\nCopied Rectangle:");
+        copiedRectangle.DisplayInfo();
+    }
+}
+```
+
+### Output:
+
+```
+Original Rectangle:
+Width: 5, Height: 3, Color: Red
+
+Copied Rectangle:
+Width: 5, Height: 3, Color: Red
+```
+
+### Explanation:
+
+In this example:
+- The `Rectangle` class defines a copy constructor that takes another `Rectangle` object as its parameter. This constructor is used to create a copy of a `Rectangle` object.
+- Inside the copy constructor, the dimensions (`Width` and `Height`) and color properties of the new `Rectangle` object are initialized with the values of the corresponding properties of the `other` `Rectangle` object.
+- In the `Main` method, an original `Rectangle` object `originalRectangle` is created with dimensions 5x3 and color "Red".
+- Then, a copy of the original `Rectangle` object is created using the copy constructor, resulting in a new `Rectangle` object `copiedRectangle` with the same dimensions and color as the original object.
+- The information of both the original and copied rectangles is displayed to the console, showing that the copied rectangle has the same properties as the original rectangle.
+
+This demonstrates how you can overload the copy constructor in C# to customize the copying process of objects, providing flexibility in object duplication based on specific requirements or scenarios.
+
+## **Destructors in C#:**
+
+In C#, destructors are special methods used to clean up resources and perform finalization tasks before an object is destroyed or garbage collected. Unlike constructors, which are used to initialize objects when they are created, destructors are invoked automatically when an object is about to be removed from memory.
+
+### Example:
+
+```csharp
+using System;
+
+class MyClass
+{
+    // Destructor
+    ~MyClass()
+    {
+        Console.WriteLine("Destructor called.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an object of MyClass
+        MyClass myObject = new MyClass();
+
+        // No explicit call to the destructor
+        // Destructor will be called when the object is garbage collected
+    }
+}
+```
+
+### Output:
+
+```
+Destructor called.
+```
+
+### Explanation:
+
+In this example:
+- The `MyClass` class defines a destructor using the `~` symbol followed by the class name.
+- The destructor is automatically invoked when the `myObject` object of `MyClass` is no longer in use and is eligible for garbage collection.
+- In the `Main` method, an object of `MyClass` is created using the `new` keyword.
+- When the program terminates or when the object is no longer referenced and is garbage collected, the destructor is automatically called, and "Destructor called." is printed to the console.
+
+### Note:
+
+- Destructors are not explicitly called like constructors. They are automatically invoked by the garbage collector when the object is being collected.
+- Destructors cannot be overloaded or inherited. Each class can have only one destructor.
+- Destructors cannot have parameters or modifiers.
+- It's important to note that destructors are less commonly used in C# compared to constructors, as C# provides other mechanisms such as the `using` statement and IDisposable interface for managing resources more efficiently.
