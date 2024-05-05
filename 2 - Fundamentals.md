@@ -1648,7 +1648,7 @@ The `static` keyword in C# is used to declare members (methods, properties, fiel
 
 ### 1. Static Class:
 
-A static class in C# is a class that can only contain static members (fields, methods, properties, events, or nested types) and cannot be instantiated. Static classes are commonly used to group related utility methods or constants and provide a convenient way to organize and access functionality without the need for object instantiation.
+A static class in C# is a class that can only contain static members (fields, methods, properties, events, or nested types) and cannot be instantiated. Static classes are commonly used to group related utility methods or constants and provide a convenient way to organize and access functionality without the need for object instantiation. Static classes cannot be inherited from another class.
 
 ```csharp
 public static class MathUtility
@@ -1695,7 +1695,7 @@ In this example, `MathUtility` is a static class containing static methods for p
 
 ### 2. Static Method:
 
-Static methods in C# are methods that belong to the type itself rather than to instances of the type. They are declared using the `static` keyword and can be invoked directly through the type name without the need to create an instance of the class. Static methods are commonly used for utility methods, helper functions, or operations that do not require access to instance-specific data.
+Static methods in C# are methods that belong to the type itself rather than to instances of the type. They are declared using the `static` keyword and can be invoked directly through the type name without the need to create an instance of the class. Static method cannot access non-static members. Static methods are commonly used for utility methods, helper functions, or operations that do not require access to instance-specific data.
 
 ```csharp
 public class StringUtils

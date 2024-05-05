@@ -5,7 +5,28 @@
 - [Class & Object](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
     - [Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
     - [Object](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#object-)
+- [Different ways to create Object](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-vs-structs-)
 - [Class Vs Structs](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-vs-structs-)
+- [Early and late binding in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+    - [Early Binding](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
+    - [Late Binding](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#object-)
+- [Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Types on Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+    - [Single Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
+    - [Multilevel Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
+    - [Hierarchical Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
+    - [Multiple Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
+    - [Hybrid Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
+- [Multiple Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Encapsulation](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Abstraction](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Encapsulation Vs Abstraction](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Polymorphism](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Inheritance Vs Polymorphism](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [`this` Keyword](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Static Class vs Non-static Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Partial Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Shallow Copy and Deep Copy](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
 
 ## **Class & Object:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
@@ -91,6 +112,274 @@ Starting the engine of 2018 Honda Accord
 
 In summary, classes and objects in C# facilitate the creation of reusable, modular, and organized code by encapsulating data and behavior into cohesive units. By understanding their concepts and usage, you can effectively model real-world entities and implement complex systems in your C# programs.
 
+## **Different ways to create Object:**
+
+In C#, there are several ways to create objects, each with its own syntax and use cases. Let's explore each method with examples and output:
+
+### 1. Using the `new` Keyword:
+
+The most common way to create objects in C# is by using the `new` keyword followed by the class name and optional constructor arguments.
+
+#### Example:
+
+```csharp
+public class Person
+{
+    public string Name { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an object of the Person class
+        Person person = new Person();
+        person.Name = "Alice";
+
+        Console.WriteLine("Person's name: " + person.Name);
+    }
+}
+```
+
+#### Output:
+
+```
+Person's name: Alice
+```
+
+### 2. Using Object Initializer:
+
+C# allows you to initialize an object's properties at the time of creation using object initializer syntax.
+
+#### Example:
+
+```csharp
+public class Person
+{
+    public string Name { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an object of the Person class with object initializer
+        Person person = new Person { Name = "Bob" };
+
+        Console.WriteLine("Person's name: " + person.Name);
+    }
+}
+```
+
+#### Output:
+
+```
+Person's name: Bob
+```
+
+### 3. Using Constructor Overloading:
+
+If a class has multiple constructors, you can choose which constructor to invoke based on the provided arguments.
+
+#### Example:
+
+```csharp
+public class Person
+{
+    public string Name { get; set; }
+
+    public Person(string name)
+    {
+        Name = name;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an object of the Person class using a specific constructor
+        Person person = new Person("Charlie");
+
+        Console.WriteLine("Person's name: " + person.Name);
+    }
+}
+```
+
+#### Output:
+
+```
+Person's name: Charlie
+```
+
+### 4. Using Factory Method:
+
+A factory method is a static method that creates and returns instances of a class.
+
+#### Example:
+
+```csharp
+public class Person
+{
+    public string Name { get; set; }
+
+    private Person(string name)
+    {
+        Name = name;
+    }
+
+    // Factory method to create Person objects
+    public static Person Create(string name)
+    {
+        return new Person(name);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an object of the Person class using a factory method
+        Person person = Person.Create("David");
+
+        Console.WriteLine("Person's name: " + person.Name);
+    }
+}
+```
+
+#### Output:
+
+```
+Person's name: David
+```
+
+### 5. Using Reflection:
+
+Reflection allows you to create objects dynamically at runtime using the `Activator.CreateInstance` method.
+
+#### Example:
+
+```csharp
+using System;
+
+public class Person
+{
+    public string Name { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an object of the Person class using reflection
+        Type type = typeof(Person);
+        var person = Activator.CreateInstance(type);
+
+        // Setting property value using reflection
+        type.GetProperty("Name").SetValue(person, "Emily");
+
+        Console.WriteLine("Person's name: " + type.GetProperty("Name").GetValue(person));
+    }
+}
+```
+
+#### Output:
+
+```
+Person's name: Emily
+```
+Certainly! Let's include those additional methods for creating objects:
+
+### 6. Creating an Array of Objects:
+
+You can create an array of objects by specifying the array type followed by square brackets `[]` and using the `new` keyword to allocate memory for the array.
+
+#### Example:
+
+```csharp
+using System;
+
+public class Person
+{
+    public string Name { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an array of Person objects
+        Person[] people = new Person[2];
+
+        // Initializing individual objects in the array
+        people[0] = new Person { Name = "Alice" };
+        people[1] = new Person { Name = "Bob" };
+
+        // Accessing objects in the array
+        foreach (var person in people)
+        {
+            Console.WriteLine("Person's name: " + person.Name);
+        }
+    }
+}
+```
+
+#### Output:
+
+```
+Person's name: Alice
+Person's name: Bob
+```
+
+### 7. Creating a Reference to an Existing Object:
+
+You can create a reference to an existing object by assigning the object to a new variable. Both the original object and the reference point to the same memory location.
+
+#### Example:
+
+```csharp
+using System;
+
+public class Person
+{
+    public string Name { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an object of the Person class
+        Person originalPerson = new Person { Name = "Charlie" };
+
+        // Creating a reference to the original object
+        Person referencePerson = originalPerson;
+
+        // Modifying the original object
+        originalPerson.Name = "David";
+
+        // Accessing the object through the reference
+        Console.WriteLine("Reference Person's name: " + referencePerson.Name);
+    }
+}
+```
+
+#### Output:
+
+```
+Reference Person's name: David
+```
+
+### Description:
+
+- **Using the `new` Keyword**: This is the standard way to create objects in C#. It calls the class's constructor to initialize the object.
+- **Using Object Initializer**: Allows you to initialize object properties directly after creation, improving readability.
+- **Using Constructor Overloading**: Enables you to create objects using different sets of parameters, providing flexibility.
+- **Using Factory Method**: A design pattern that encapsulates object creation logic, allowing for more complex object creation scenarios.
+- **Using Reflection**: Allows for dynamic object creation at runtime, useful for scenarios where object types are determined at runtime or when creating objects from dynamically loaded assemblies.
+- **Creating an Array of Objects**: Allows you to store multiple objects of the same type in an array structure, providing convenient access and iteration over the objects.
+- **Creating a Reference to an Existing Object**: Creates a new variable that refers to the same object in memory as the original variable. Modifications made to the original object are reflected in the reference object, as they point to the same memory location.
+
 ## **Class Vs Structs:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
 Sure, let's provide a more detailed comparison of classes and structs in C#:
@@ -121,11 +410,11 @@ Sure, let's provide a more detailed comparison of classes and structs in C#:
 
 In summary, while classes and structs share similarities in their role as data types in C#, they have distinct characteristics and are used for different purposes. Classes are suitable for modeling complex objects with behavior and identity, while structs are more appropriate for representing lightweight data containers with simple data types. Understanding the differences between classes and structs is essential for choosing the appropriate type for your specific requirements and optimizing the performance and memory usage of your applications.
 
-## **Early and late binding in c#:**
+## **Early and late binding in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
 Early and late binding refer to the timing at which method calls are resolved to their corresponding implementations in object-oriented programming languages like C#.
 
-### Early Binding:
+### Early Binding: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
 Early binding, also known as static binding or compile-time binding, occurs when the method calls are resolved at compile time. In early binding, the compiler knows exactly which method implementation will be invoked based on the declared type of the object or variable.
 
@@ -163,7 +452,7 @@ class Circle : Shape
 
 In this example, the method call `shape.Draw()` is resolved to `Shape.Draw()` at compile time because the declared type of `shape` is `Shape`. This is early binding because the compiler knows the type of the object at compile time and can determine the method to call without needing to look at the runtime type.
 
-### Late Binding:
+### Late Binding: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
 Late binding, also known as dynamic binding or runtime binding, occurs when the method calls are resolved at runtime. In late binding, the actual method implementation to be invoked is determined dynamically based on the runtime type of the object.
 
@@ -209,3 +498,1346 @@ In this example, the method call `shape.Draw()` is resolved to `Circle.Draw()` a
 
 Understanding the concepts of early and late binding is important for designing flexible and efficient object-oriented systems in C# and other programming languages.
 
+## **Inheritance:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Inheritance is a fundamental concept in object-oriented programming (OOP) where a new class (called a derived class or subclass) is created from an existing class (called a base class or superclass). The derived class inherits properties and behaviors (methods) from the base class, allowing code reuse and promoting a hierarchical structure in software design.
+
+### Scenario:
+
+Consider a scenario where you are developing a software system for managing different types of vehicles. You have various types of vehicles such as cars, trucks, and motorcycles. These vehicles share common properties and behaviors, such as a manufacturer, model, and fuel type, but they also have distinct characteristics. Inheritance can be used to model this relationship efficiently.
+
+### Example:
+
+```csharp
+using System;
+
+// Base class representing a shape
+class Shape
+{
+    public string Color { get; set; }
+    public int X { get; set; }
+    public int Y { get; set; }
+
+    // Constructor
+    public Shape(string color, int x, int y)
+    {
+        Color = color;
+        X = x;
+        Y = y;
+    }
+
+    // Method to display shape information
+    public virtual void DisplayInfo()
+    {
+        Console.WriteLine($"Color: {Color}, Position: ({X}, {Y})");
+    }
+}
+
+// Derived class representing a circle
+class Circle : Shape
+{
+    public double Radius { get; set; }
+
+    // Constructor
+    public Circle(string color, int x, int y, double radius) : base(color, x, y)
+    {
+        Radius = radius;
+    }
+
+    // Method to display circle information
+    public override void DisplayInfo()
+    {
+        base.DisplayInfo();
+        Console.WriteLine($"Radius: {Radius}");
+    }
+}
+
+// Derived class representing a rectangle
+class Rectangle : Shape
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+
+    // Constructor
+    public Rectangle(string color, int x, int y, double width, double height) : base(color, x, y)
+    {
+        Width = width;
+        Height = height;
+    }
+
+    // Method to display rectangle information
+    public override void DisplayInfo()
+    {
+        base.DisplayInfo();
+        Console.WriteLine($"Width: {Width}, Height: {Height}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating objects of derived classes
+        Circle circle = new Circle("Red", 10, 20, 5);
+        Rectangle rectangle = new Rectangle("Blue", 30, 40, 10, 15);
+
+        // Displaying information of shapes
+        Console.WriteLine("Circle:");
+        circle.DisplayInfo();
+
+        Console.WriteLine("\nRectangle:");
+        rectangle.DisplayInfo();
+    }
+}
+```
+
+**Output:** 
+
+```csharp
+Circle:
+Color: Red, Position: (10, 20)
+Radius: 5
+
+Rectangle:
+Color: Blue, Position: (30, 40)
+Width: 10, Height: 15
+```
+
+### Explanation:
+
+- The `Shape` class serves as the base class representing common properties and behavior shared by all shapes.
+- The `Circle` and `Rectangle` classes are derived from the Shape class, inheriting its properties and behavior.
+- Each derived class has its own specific properties (`Radius` for `Circle` and `Width` and `Height` for `Rectangle`) and overrides the `DisplayInfo` method to display shape-specific information along with the base information.
+- In the `Main` method, objects of the derived classes are created and their information is displayed, demonstrating how inheritance allows for code reuse and polymorphic behavior.
+
+### Benefits of Inheritance:
+
+1. **Code Reusability**: Inheritance allows you to reuse code defined in the base class in the derived class, reducing redundancy and promoting efficient code organization.
+  
+2. **Hierarchical Structure**: Inheritance facilitates the creation of a hierarchical structure, where classes can be organized into parent-child relationships based on commonality and specialization.
+  
+3. **Polymorphism**: Inheritance enables polymorphic behavior, where objects of the derived class can be treated as objects of the base class, allowing for flexibility and extensibility in software design.
+
+Inheritance is a powerful mechanism in OOP that promotes code reuse, enhances maintainability, and facilitates a clear and structured design of software systems.
+
+## **Types on Inheritance:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Inheritance in object-oriented programming (OOP) allows a class (called a derived class or subclass) to inherit properties and behaviors from another class (called a base class or superclass). There are various types of inheritance, each serving different purposes and providing different levels of flexibility in software design. Let's explore some common types of inheritance with examples, scenarios, and outputs:
+
+### 1. Single Inheritance: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Single inheritance occurs when a class inherits properties and behaviors from only one superclass.
+
+**Example:**
+```csharp
+using System;
+
+// Base class
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+// Derived class inheriting from Animal
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog myDog = new Dog();
+        myDog.Eat();  // Inherited method from Animal class
+        myDog.Bark(); // Method defined in Dog class
+    }
+}
+```
+
+**Output:**
+```
+Animal is eating.
+Dog is barking.
+```
+
+### 2. Multilevel Inheritance: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Multilevel inheritance occurs when a derived class inherits from another derived class, creating a chain of inheritance.
+
+**Example:**
+```csharp
+using System;
+
+// Base class
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+// Derived class inheriting from Animal
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+// Derived class inheriting from Dog
+class Puppy : Dog
+{
+    public void Play()
+    {
+        Console.WriteLine("Puppy is playing.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Puppy myPuppy = new Puppy();
+        myPuppy.Eat();  // Inherited method from Animal class
+        myPuppy.Bark(); // Inherited method from Dog class
+        myPuppy.Play(); // Method defined in Puppy class
+    }
+}
+```
+
+**Output:**
+```
+Animal is eating.
+Dog is barking.
+Puppy is playing.
+```
+
+### 3. Hierarchical Inheritance: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Hierarchical inheritance occurs when multiple derived classes inherit from the same base class.
+
+**Example:**
+```csharp
+using System;
+
+// Base class
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+// Derived class inheriting from Animal
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+// Another derived class inheriting from Animal
+class Cat : Animal
+{
+    public void Meow()
+    {
+        Console.WriteLine("Cat is meowing.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog myDog = new Dog();
+        myDog.Eat();  // Inherited method from Animal class
+        myDog.Bark(); // Method defined in Dog class
+
+        Cat myCat = new Cat();
+        myCat.Eat();  // Inherited method from Animal class
+        myCat.Meow(); // Method defined in Cat class
+    }
+}
+```
+
+**Output:**
+```
+Animal is eating.
+Dog is barking.
+Animal is eating.
+Cat is meowing.
+```
+
+### 4. Multiple Inheritance (C# doesn't support multiple inheritance directly): [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Multiple inheritance occurs when a class inherits from more than one superclass. Although C# doesn't support multiple inheritance directly, you can achieve similar behavior using interfaces.
+
+**Example:**
+```csharp
+using System;
+
+// Interface 1
+interface IWalkable
+{
+    void Walk();
+}
+
+// Interface 2
+interface ISwimmable
+{
+    void Swim();
+}
+
+// Derived class implementing interfaces
+class Human : IWalkable, ISwimmable
+{
+    public void Walk()
+    {
+        Console.WriteLine("Human is walking.");
+    }
+
+    public void Swim()
+    {
+        Console.WriteLine("Human is swimming.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Human person = new Human();
+        person.Walk(); // Method defined in IWalkable interface
+        person.Swim(); // Method defined in ISwimmable interface
+    }
+}
+```
+
+**Output:**
+```
+Human is walking.
+Human is swimming.
+```
+
+### Hybrid Inheritance: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Hybrid inheritance is a combination of two or more types of inheritance, such as single, multilevel, or hierarchical inheritance. It involves multiple inheritance paths and can lead to complex class hierarchies.
+
+**Example:**
+
+```csharp
+using System;
+
+// Base class
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+// Derived class inheriting from Animal
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+// Another derived class inheriting from Animal
+class Cat : Animal
+{
+    public void Meow()
+    {
+        Console.WriteLine("Cat is meowing.");
+    }
+}
+
+// Derived class inheriting from both Dog and Cat
+class CatDog : Dog
+{
+    public void Sleep()
+    {
+        Console.WriteLine("CatDog is sleeping.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        CatDog myCatDog = new CatDog();
+        myCatDog.Eat();  // Inherited method from Animal class
+        myCatDog.Bark(); // Method defined in Dog class
+        myCatDog.Meow(); // Method inherited from Cat class (due to hierarchy)
+        myCatDog.Sleep(); // Method defined in CatDog class
+    }
+}
+```
+
+**Output:**
+
+```
+Animal is eating.
+Dog is barking.
+Cat is meowing.
+CatDog is sleeping.
+```
+
+### Conclusion:
+
+Different types of inheritance provide varying levels of flexibility and hierarchy in software design. Single inheritance, multilevel inheritance, hierarchical inheritance, and interface-based multiple inheritance (achieved using interfaces) are commonly used in object-oriented programming to model relationships between classes and promote code reuse. Understanding these types of inheritance helps in designing well-structured and maintainable software systems.
+
+## **Multiple Inheritance:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+### Problem:
+
+In C#, multiple inheritance, where a class inherits from more than one class, is not directly supported. This limitation is primarily due to the potential issues that arise from the diamond problem or ambiguity problem.
+
+### Example:
+
+Consider the following scenario:
+
+```csharp
+using System;
+
+// Base class A
+class A
+{
+    public void MethodA()
+    {
+        Console.WriteLine("MethodA from class A");
+    }
+}
+
+// Base class B
+class B
+{
+    public void MethodA()
+    {
+        Console.WriteLine("MethodA from class B");
+    }
+
+    public void MethodB()
+    {
+        Console.WriteLine("MethodB from class B");
+    }
+}
+
+// Derived class C inheriting from classes A and B
+class C : A, B
+{
+    // Class C attempts to inherit from both A and B
+    // However, C# does not support multiple inheritance for classes
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Attempt to create an instance of class C
+        C objC = new C();
+    }
+}
+```
+
+In this example, we have two base classes `A` and `B`, each with their own methods. Class `C` attempts to inherit from both `A` and `B`, but this is not allowed in C#. When you try to compile the code, you'll encounter a compilation error stating that "Class 'C' cannot have multiple base classes".
+
+### Explanation:
+
+1. **Ambiguity**: If both base classes `A` and `B` have methods with the same name, such as `MethodA()` and `MethodB()`, the derived class `C` would inherit both of these methods. If you call `MethodA()` on an instance of `C`, it's unclear whether you meant to call `MethodA()` from class `A` or `B`.
+
+2. **Diamond Problem**: If class `C` indirectly inherits from two base classes `A` and `B` (e.g., if class `D` inherits from `A` and `B`, and class `C` inherits from `D`), and both `A` and `B` have a common base class (e.g., class `Object`), there can be ambiguity in resolving method calls and memory allocation, leading to the diamond problem.
+
+### Solution:
+
+You can achieve multiple inheritance behavior using interfaces. Interfaces define contracts that classes can implement, allowing them to provide implementations for multiple behaviors. Let's explore how to achieve multiple inheritance using interfaces with scenarios, examples, and outputs:
+
+### Scenario:
+
+Consider a scenario where you have various types of vehicles, and you want to model their capabilities such as driving on land and floating on water. You need a way to represent both land and water functionalities in your vehicle classes.
+
+### Example:
+
+```csharp
+using System;
+
+// Interface representing land-based functionality
+interface ILandVehicle
+{
+    void Drive();
+}
+
+// Interface representing water-based functionality
+interface IWaterVehicle
+{
+    void Float();
+}
+
+// Car class implementing ILandVehicle
+class Car : ILandVehicle
+{
+    public void Drive()
+    {
+        Console.WriteLine("Car is driving on land.");
+    }
+}
+
+// Boat class implementing IWaterVehicle
+class Boat : IWaterVehicle
+{
+    public void Float()
+    {
+        Console.WriteLine("Boat is floating on water.");
+    }
+}
+
+// AmphibiousVehicle class implementing both ILandVehicle and IWaterVehicle
+class AmphibiousVehicle : ILandVehicle, IWaterVehicle
+{
+    public void Drive()
+    {
+        Console.WriteLine("Amphibious vehicle is driving on land.");
+    }
+
+    public void Float()
+    {
+        Console.WriteLine("Amphibious vehicle is floating on water.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating instances of different vehicle types
+        Car myCar = new Car();
+        Boat myBoat = new Boat();
+        AmphibiousVehicle myAmphibiousVehicle = new AmphibiousVehicle();
+
+        // Using land-based functionality
+        myCar.Drive(); // Output: Car is driving on land.
+        myAmphibiousVehicle.Drive(); // Output: Amphibious vehicle is driving on land.
+
+        // Using water-based functionality
+        myBoat.Float(); // Output: Boat is floating on water.
+        myAmphibiousVehicle.Float(); // Output: Amphibious vehicle is floating on water.
+    }
+}
+```
+
+### Output:
+
+```
+Car is driving on land.
+Amphibious vehicle is driving on land.
+Boat is floating on water.
+Amphibious vehicle is floating on water.
+```
+
+### Explanation:
+
+In this example:
+- We define two interfaces `ILandVehicle` and `IWaterVehicle`, representing land-based and water-based functionality, respectively.
+- Classes `Car` and `Boat` implement `ILandVehicle` and `IWaterVehicle`, respectively, providing implementations for the `Drive()` and `Float()` methods.
+- The class `AmphibiousVehicle` implements both `ILandVehicle` and `IWaterVehicle`, combining land and water functionality into a single class.
+- In the `Main` method, we create instances of `Car`, `Boat`, and `AmphibiousVehicle`, and demonstrate the use of both land-based and water-based functionality through method invocations.
+
+### Conclusion:
+
+By using interfaces, you can achieve multiple inheritance-like behavior in C#, allowing classes to implement multiple contracts and providing flexibility in defining class hierarchies and behaviors. This approach promotes code reuse, maintainability, and extensibility in software development.
+
+## **Encapsulation:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Encapsulation is one of the fundamental principles of object-oriented programming (OOP) and refers to the bundling of data (attributes) and methods (behaviors) that operate on the data within a single unit, typically a class. It helps in hiding the internal state of an object and only exposing the necessary functionalities to interact with it. Encapsulation ensures data integrity, enhances security, and facilitates code maintenance and reuse. Let's explore encapsulation with scenarios, an example, and output:
+
+### Scenario 1:
+
+### Example:
+
+```csharp
+using System;
+
+class BankAccount
+{
+    // Private fields
+    private string accountNumber;
+    private double balance;
+
+    // Constructor
+    public BankAccount(string accNumber, double initialBalance)
+    {
+        accountNumber = accNumber;
+        balance = initialBalance;
+    }
+
+    // Public method to deposit money
+    public void Deposit(double amount)
+    {
+        if (amount > 0)
+        {
+            balance += amount;
+            Console.WriteLine($"{amount} deposited successfully.");
+        }
+        else
+        {
+            Console.WriteLine("Invalid deposit amount.");
+        }
+    }
+
+    // Public method to withdraw money
+    public void Withdraw(double amount)
+    {
+        if (amount > 0 && amount <= balance)
+        {
+            balance -= amount;
+            Console.WriteLine($"{amount} withdrawn successfully.");
+        }
+        else
+        {
+            Console.WriteLine("Insufficient balance or invalid withdrawal amount.");
+        }
+    }
+
+    // Public method to check balance
+    public double CheckBalance()
+    {
+        return balance;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating a bank account
+        BankAccount myAccount = new BankAccount("123456789", 1000);
+
+        // Performing operations
+        myAccount.Deposit(500); // Output: 500 deposited successfully.
+        myAccount.Withdraw(200); // Output: 200 withdrawn successfully.
+        
+        // Checking balance
+        double currentBalance = myAccount.CheckBalance();
+        Console.WriteLine($"Current balance: {currentBalance}"); // Output: Current balance: 1300
+    }
+}
+```
+
+### Output:
+
+```
+500 deposited successfully.
+200 withdrawn successfully.
+Current balance: 1300
+```
+
+### Explanation:
+
+In this example:
+- We have a `BankAccount` class encapsulating private fields `accountNumber` and `balance`, and methods `Deposit`, `Withdraw`, and `CheckBalance`.
+- The private fields ensure that the internal state of the bank account is hidden from external access, preventing unauthorized modification.
+- The public methods `Deposit`, `Withdraw`, and `CheckBalance` provide controlled access to the account functionalities, enforcing business logic and maintaining data integrity.
+- When creating an instance of `BankAccount` and performing operations, the internal state is manipulated through the public methods, maintaining encapsulation and ensuring proper data handling.
+
+### Scenario 2:
+
+### Example:
+
+```csharp
+using System;
+
+class Person
+{
+    // Private fields
+    private string name;
+    private int age;
+
+    // Property for Name with encapsulation
+    public string Name
+    {
+        get { return name; }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+                name = value;
+            else
+                Console.WriteLine("Name cannot be empty.");
+        }
+    }
+
+    // Property for Age with encapsulation
+    public int Age
+    {
+        get { return age; }
+        set
+        {
+            if (value >= 0 && value <= 120)
+                age = value;
+            else
+                Console.WriteLine("Invalid age.");
+        }
+    }
+
+    // Constructor
+    public Person(string name, int age)
+    {
+        Name = name; // Using property to set name
+        Age = age;   // Using property to set age
+    }
+
+    // Public method to display person's information
+    public void DisplayInfo()
+    {
+        Console.WriteLine($"Name: {Name}, Age: {Age}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating a person object
+        Person person1 = new Person("John", 30);
+
+        // Accessing properties
+        person1.Name = "Alice"; // Output: Name cannot be empty. (since setting an empty name)
+        person1.Age = 150;      // Output: Invalid age. (since age is out of range)
+        person1.Age = 35;       // Output: (no output since age is valid)
+
+        // Displaying person's information
+        person1.DisplayInfo();  // Output: Name: John, Age: 35
+    }
+}
+```
+
+### Output:
+
+```
+Name cannot be empty.
+Invalid age.
+Name: John, Age: 35
+```
+
+### Explanation:
+
+In this example:
+- We have a `Person` class encapsulating private fields `name` and `age`, and properties `Name` and `Age`.
+- The properties `Name` and `Age` use encapsulation to enforce validation logic (non-empty name, valid age range) before setting the values of the private fields.
+- When creating an instance of `Person` and setting the properties, encapsulation ensures that only valid data is accepted and stored internally.
+- The public method `DisplayInfo` allows external code to access the person's information in a controlled manner, maintaining encapsulation and data integrity.
+
+### Benefits of Encapsulation:
+
+1. **Data Hiding**: Encapsulation hides the internal state of an object, preventing direct access and modification, thus enhancing data security and integrity.
+2. **Abstraction**: Encapsulation abstracts the implementation details, allowing users to interact with objects through well-defined interfaces without needing to understand the underlying complexities.
+3. **Modularity**: Encapsulation promotes modularity by grouping related data and functionalities within a single unit (class), facilitating code organization, maintenance, and reuse.
+
+Encapsulation is a powerful concept in OOP that promotes code reliability, security, and maintainability, and it is a key principle in designing robust and scalable software systems.
+
+## **Abstraction:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Abstraction is a fundamental concept in object-oriented programming (OOP) that involves hiding complex implementation details while exposing only the essential features of an object. It allows us to focus on what an object does rather than how it does it. Abstraction helps in managing complexity, promoting code reuse, and enhancing maintainability. Let's explore abstraction with a scenario, example, output, and detailed description:
+
+### Example:
+
+```csharp
+using System;
+
+// Abstract class representing a shape
+abstract class Shape
+{
+    // Abstract methods to be implemented by derived classes
+    public abstract double CalculateArea();
+    public abstract double CalculatePerimeter();
+}
+
+// Concrete class representing a circle
+class Circle : Shape
+{
+    private double radius;
+
+    public Circle(double radius)
+    {
+        this.radius = radius;
+    }
+
+    public override double CalculateArea()
+    {
+        return Math.PI * radius * radius;
+    }
+
+    public override double CalculatePerimeter()
+    {
+        return 2 * Math.PI * radius;
+    }
+}
+
+// Concrete class representing a rectangle
+class Rectangle : Shape
+{
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width)
+    {
+        this.length = length;
+        this.width = width;
+    }
+
+    public override double CalculateArea()
+    {
+        return length * width;
+    }
+
+    public override double CalculatePerimeter()
+    {
+        return 2 * (length + width);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating shapes
+        Shape circle = new Circle(5);
+        Shape rectangle = new Rectangle(4, 6);
+
+        // Calculating area and perimeter
+        Console.WriteLine("Circle - Area: " + circle.CalculateArea() + ", Perimeter: " + circle.CalculatePerimeter());
+        Console.WriteLine("Rectangle - Area: " + rectangle.CalculateArea() + ", Perimeter: " + rectangle.CalculatePerimeter());
+    }
+}
+```
+
+### Output:
+
+```
+Circle - Area: 78.53981633974483, Perimeter: 31.41592653589793
+Rectangle - Area: 24, Perimeter: 20
+```
+
+This example uses an abstract class `Shape` to represent a shape, with abstract methods `CalculateArea()` and `CalculatePerimeter()`. Concrete classes `Circle` and `Rectangle` inherit from `Shape` and provide specific implementations for these methods. The `Main` method demonstrates polymorphic behavior by treating instances of `Circle` and `Rectangle` as `Shape`. This design adheres to the principles of abstraction, as it hides the implementation details of each shape while providing a common interface for interacting with them.
+
+### Benefits of Abstraction:
+
+1. **Focus on Essentials**: Abstraction allows developers to focus on the essential characteristics and behaviors of objects, abstracting away unnecessary details.
+2. **Flexibility and Extensibility**: By defining interfaces and abstract classes, abstraction enables flexible and extensible designs, facilitating changes and enhancements.
+3. **Code Reusability**: Abstraction promotes code reusability by allowing classes to implement common interfaces and inherit from abstract classes, reducing redundancy and promoting modularity.
+
+Abstraction is a powerful concept in OOP that enables modular, maintainable, and scalable software design. By hiding implementation details behind well-defined interfaces and abstract classes, abstraction helps in managing complexity and promoting code quality.
+
+## **Encapsulation Vs Abstraction:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+| Aspect          | Encapsulation                                      | Abstraction                                        |
+|-----------------|----------------------------------------------------|----------------------------------------------------|
+| Definition      | Bundling of data and methods that operate on data, and restricting access to the internal state of an object. | Hiding complex implementation details and exposing only essential features of an object. |
+| Purpose         | Enhances data security and integrity by hiding internal state and providing controlled access through methods. | Manages complexity by focusing on what an object does rather than how it does it, promoting code reuse and maintainability. |
+| Implementation  | Achieved through access modifiers (e.g., private, protected) and properties/methods to control access to fields and methods. | Implemented using abstract classes, interfaces, and polymorphism to define common interfaces and hide implementation details. |
+| Example         | Private fields and public properties/methods in a class to control access to data and behavior. | Abstract classes defining common behavior (e.g., `Shape` with `CalculateArea()` and `CalculatePerimeter()` methods) and concrete classes implementing specific behavior. |
+| Key Principle   | Data Hiding                                        | Focus on Essentials                                |
+
+**Difference:**
+- **Encapsulation** focuses on bundling data and methods together and controlling access to them, while **abstraction** focuses on hiding implementation details and providing a simplified view of an object's functionality.
+- Encapsulation primarily involves access control mechanisms such as access modifiers and properties/methods, while abstraction involves defining common interfaces and hiding implementation details using abstract classes and interfaces.
+- Encapsulation enhances data security and integrity by restricting access to the internal state of an object, while abstraction promotes code reuse and maintainability by hiding unnecessary details and exposing only essential features.
+
+## **Polymorphism:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Polymorphism is a fundamental concept in object-oriented programming (OOP) that allows objects of different types to be treated as objects of a common base type. It enables flexibility, extensibility, and code reusability by allowing methods to behave differently based on the object they are invoked upon. Let's explore polymorphism with a scenario, example, and output in detailed description:
+
+### Scenario:
+
+Consider a scenario where you are developing a software system to manage various types of animals in a zoo. Each animal makes a distinct sound, and you want to create a generic way to interact with different types of animals without knowing their specific implementations.
+
+### Example:
+
+```csharp
+using System;
+
+// Base class representing an animal
+class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("The animal makes a sound.");
+    }
+}
+
+// Derived class representing a dog
+class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The dog barks.");
+    }
+}
+
+// Derived class representing a cat
+class Cat : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The cat meows.");
+    }
+}
+
+// Derived class representing a bird
+class Bird : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The bird chirps.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create instances of different animals
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+        Animal bird = new Bird();
+
+        // Invoke the MakeSound method on each animal
+        dog.MakeSound();  // Output: The dog barks.
+        cat.MakeSound();  // Output: The cat meows.
+        bird.MakeSound(); // Output: The bird chirps.
+    }
+}
+```
+
+### Output:
+
+```
+The dog barks.
+The cat meows.
+The bird chirps.
+```
+
+### Explanation:
+
+In this example:
+- We define a base class `Animal` with a virtual method `MakeSound()` representing the common behavior of animals making sounds.
+- Derived classes `Dog`, `Cat`, and `Bird` inherit from `Animal` and provide specific implementations for the `MakeSound()` method, representing the sounds made by each type of animal.
+- In the `Main` method, we create instances of `Dog`, `Cat`, and `Bird`, treating them polymorphically as `Animal`.
+- When invoking the `MakeSound()` method on each animal, the method behaves differently based on the actual type of the object, demonstrating polymorphic behavior.
+
+### Benefits of Polymorphism:
+
+1. **Flexibility**: Polymorphism allows for the development of flexible and extensible code by enabling methods to behave differently based on the object they are invoked upon.
+2. **Code Reusability**: Polymorphism promotes code reusability by allowing common interfaces to be defined and implemented by multiple classes, reducing redundancy and promoting modularity.
+3. **Ease of Maintenance**: Polymorphism simplifies maintenance and updates by allowing changes to be made in one place (e.g., base class or interface) and automatically reflected in all derived classes.
+
+Polymorphism is a powerful concept in OOP that enables dynamic behavior and enhances the flexibility and maintainability of software systems. By treating objects polymorphically, developers can write code that is more expressive, adaptable, and scalable.
+
+## **Inheritance Vs Polymorphism:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+| Aspect           | Inheritance                                      | Polymorphism                                      |
+|------------------|--------------------------------------------------|---------------------------------------------------|
+| Definition       | Mechanism where a new class inherits properties and behaviors from an existing class (base class). | Mechanism where a method can behave differently based on the object it operates on. |
+| Purpose          | Promotes code reuse and establishes an "is-a" relationship between classes. | Enables dynamic behavior and flexibility by allowing methods to be invoked on objects of different types. |
+| Implementation   | Achieved through class hierarchies and the use of keywords like `extends` (Java) or `:` (C#) to denote inheritance. | Implemented through method overriding and method overloading, often utilizing inheritance to establish a common base type. |
+| Example          | `class Dog : Animal`                            | `virtual/abstract void MakeSound()` in base class `Animal` overridden by `void MakeSound()` in derived class `Dog`. |
+| Key Principle    | "Is-a" Relationship                             | Dynamic Behavior                                  |
+
+**Difference:**
+- **Inheritance** establishes a relationship between classes where one class (derived or child class) inherits properties and behaviors from another class (base or parent class), promoting code reuse and establishing an "is-a" relationship. On the other hand, **polymorphism** allows methods to behave differently based on the object they operate on, enabling dynamic behavior and flexibility without necessarily relying on class hierarchies.
+
+## **`this` Keyword:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+In C#, the `this` keyword is a reference to the current instance of a class, allowing you to access members of the current object within its own methods or constructors. It is primarily used to disambiguate between instance variables and parameters or local variables with the same name, and to explicitly refer to instance members when necessary. Here's a breakdown of its usage:
+
+1. **Accessing Instance Members**: You can use `this` to access instance variables and methods of the current object within its own methods or constructors.
+
+```csharp
+class MyClass
+{
+    private int myNumber;
+
+    public MyClass(int myNumber)
+    {
+        // Using 'this' to disambiguate between the instance variable and the parameter
+        this.myNumber = myNumber;
+    }
+
+    public void DisplayNumber()
+    {
+        // Accessing the instance variable using 'this'
+        Console.WriteLine("My number is: " + this.myNumber);
+    }
+}
+```
+
+2. **Chaining Constructors**: In constructors, `this` can be used to call another constructor in the same class, allowing for constructor chaining.
+
+```csharp
+class MyClass
+{
+    private int myNumber;
+
+    public MyClass() : this(0) // Calls the parameterized constructor with default value
+    {
+        // Additional initialization logic if needed
+    }
+
+    public MyClass(int myNumber)
+    {
+        this.myNumber = myNumber;
+    }
+}
+```
+
+3. **Returning Current Instance**: You can return the current instance of the class from a method, enabling method chaining or fluent interfaces.
+
+```csharp
+class MyClass
+{
+    private int myNumber;
+
+    public MyClass SetNumber(int myNumber)
+    {
+        this.myNumber = myNumber;
+        return this; // Return the current instance for method chaining
+    }
+}
+```
+
+4. **Extension Methods**: In extension methods, `this` is used to indicate that the method operates on instances of the specified type.
+
+```csharp
+public static class StringExtensions
+{
+    public static bool IsNullOrEmpty(this string value)
+    {
+        return string.IsNullOrEmpty(value);
+    }
+}
+```
+
+5. **Current Class Methods**: This usage of the `this` keyword allows you to invoke another method within the same class. It is useful when you want to call another method of the current class, especially to reuse code or maintain a sequence of operations.
+
+```csharp
+class MyClass
+{
+    public void Method1()
+    {
+        Console.WriteLine("Method 1");
+    }
+
+    public void Method2()
+    {
+        // Invoking Method1 using 'this'
+        this.Method1();
+        Console.WriteLine("Method 2");
+    }
+}
+```
+
+6. **Declare an Indexer**: In C#, an indexer allows instances of a class to be accessed like arrays. By using the `this` keyword in the declaration of an indexer, you specify that instances of the class can be indexed using the `this` keyword followed by square brackets `[ ]`. This provides a convenient way to access or modify elements of the class instance, similar to arrays or collections.
+
+```csharp
+class MyClass
+{
+    private string[] values = new string[10];
+
+    // Indexer using 'this' keyword
+    public string this[int index]
+    {
+        get
+        {
+            return values[index];
+        }
+        set
+        {
+            values[index] = value;
+        }
+    }
+}
+class Program {
+     
+    // Main Method
+    public static void Main()
+    {
+        MyClass g = new MyClass();
+        g[0] = "Jan";
+        g[1] = "Feb";
+        g[2] = "Mar";
+        g[3] = "Apr";
+        g[4] = "May";
+        g[5] = "Jun";
+        g[6] = "Jul";
+        g[7] = "Aug";
+        g[8] = "Sep";
+        g[9] = "Oct";
+        g[10] = "Nov";
+        g[11] = "Dev";
+        for (int i = 0; i < 12; i++)
+            Console.Write(g[i] + " ");
+    }
+}
+```
+
+In summary, the `this` keyword in C# is a reference to the current instance of a class, used primarily to disambiguate between instance members and local variables, enable constructor chaining, return the current instance for method chaining, and indicate extension methods.
+
+## **Static Class vs Non-static Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+| Aspect              | Static Class                                      | Non-static Class                                  |
+|---------------------|---------------------------------------------------|---------------------------------------------------|
+| Definition          | A class that cannot be instantiated and can only contain static members (fields, methods, properties). | A class that can be instantiated to create objects, and may contain both static and instance members. |
+| Instantiation       | Cannot be instantiated with the `new` keyword.    | Can be instantiated with the `new` keyword to create objects. |
+| Usage               | Suitable for grouping related utility methods or constants, without the need for instance-specific data. | Suitable for modeling real-world entities or concepts, encapsulating data and behavior specific to individual instances. |
+| Memory Allocation   | Memory is allocated only once for the entire application, as static members are shared across all instances and threads. | Memory is allocated separately for each instance of the class, as each instance has its own set of instance members. |
+| Accessing Members   | Static members are accessed using the class name (e.g., `StaticClass.StaticMethod()`). | Instance members are accessed through object references (e.g., `objInstance.Method()`), where `objInstance` is an instance of the class. |
+| Example             | `public static class MathUtils { ... }`           | `public class Person { ... }`                      |
+
+**Difference:**
+- **Static Class**: Cannot be instantiated and is primarily used to group related utility methods or constants. Memory is allocated only once for the entire application, and static members are shared across all instances and threads. Static members are accessed using the class name.
+- **Non-static Class**: Can be instantiated to create objects, and may contain both static and instance members. Memory is allocated separately for each instance of the class, and instance members are accessed through object references. Non-static classes are used to model real-world entities or concepts, encapsulating data and behavior specific to individual instances.
+
+## **Partial Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+Partial classes in C# allow a class's members to be split across multiple files while appearing as a single entity to the developer. This feature is useful for organizing large classes, auto-generated code, or separating implementation details. Let's explore partial classes with scenarios, examples, and outputs:
+
+### Scenario:
+
+Imagine you are working on a large project with multiple developers. Each developer is responsible for implementing different aspects of a complex class. To maintain modularity and simplify collaboration, you decide to use partial classes.
+
+### Example:
+
+Consider a `Person` class with properties for `Name`, `Age`, and `Address`. Instead of defining all members in a single file, you can split the class across two partial class files: `Person.cs` and `PersonDetails.cs`.
+
+#### Person.cs:
+
+```csharp
+// Person.cs
+using System;
+
+public partial class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public void DisplayInfo()
+    {
+        Console.WriteLine($"Name: {Name}, Age: {Age}");
+    }
+}
+```
+
+#### PersonDetails.cs:
+
+```csharp
+// PersonDetails.cs
+public partial class Person
+{
+    public string Address { get; set; }
+}
+```
+
+#### Program.cs:
+
+```csharp
+// Program.cs
+class Program
+{
+    static void Main()
+    {
+        Person person = new Person
+        {
+            Name = "Alice",
+            Age = 30,
+            Address = "123 Main St"
+        };
+
+        person.DisplayInfo();
+        Console.WriteLine($"Address: {person.Address}");
+    }
+}
+```
+
+### Output:
+
+```
+Name: Alice, Age: 30
+Address: 123 Main St
+```
+
+### Explanation:
+
+- In this example, the `Person` class is defined as a partial class across two files: `Person.cs` and `PersonDetails.cs`.
+- The properties `Name` and `Age`, along with the method `DisplayInfo()`, are defined in `Person.cs`.
+- The `Address` property is defined in `PersonDetails.cs`.
+- Despite being split across multiple files, the `Person` class appears as a single entity to the developer. When compiled, the compiler merges all partial class definitions into a single class definition.
+- In the `Main` method of `Program.cs`, we instantiate a `Person` object and set its properties. We then call the `DisplayInfo()` method defined in `Person.cs` and access the `Address` property defined in `PersonDetails.cs`.
+
+### Benefits:
+
+1. **Modularity**: Partial classes allow you to organize and maintain large classes more effectively by splitting them into smaller, more manageable parts.
+2. **Separation of Concerns**: You can separate auto-generated code, framework-specific code, or different aspects of functionality into separate files.
+3. **Collaboration**: Different developers can work on different parts of the same class without interfering with each other's code.
+
+Partial classes provide a flexible and convenient way to structure your codebase, especially for large projects or classes with complex implementations.
+
+## **Shallow Copy and Deep Copy:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+
+In C#, when you copy an object, you can perform either a shallow copy or a deep copy, depending on your requirements. Let's explore both concepts with scenarios, examples, and outputs:
+
+### Shallow Copy:
+
+A shallow copy of an object creates a new object and then copies the non-static fields of the original object to the new object. If the field is a value type, a bit-by-bit copy is performed. If the field is a reference type, the reference is copied, not the actual object. As a result, both the original object and the shallow copy share references to the same child objects.
+
+#### Scenario:
+
+Consider a scenario where you have a `Person` class with a `Name` property of type `string` and an `Address` property of type `Address`, which is a reference type. You create a shallow copy of a `Person` object and modify the `Address` property in the copy.
+
+#### Example:
+
+```csharp
+using System;
+
+class Address
+{
+    public string Street { get; set; }
+    public string City { get; set; }
+}
+
+class Person
+{
+    public string Name { get; set; }
+    public Address Address { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Address address = new Address { Street = "123 Main St", City = "City" };
+        Person originalPerson = new Person { Name = "Alice", Address = address };
+
+        Person shallowCopyPerson = (Person)originalPerson.MemberwiseClone();
+        shallowCopyPerson.Address.City = "New City";
+
+        Console.WriteLine("Original Address: " + originalPerson.Address.City);
+        Console.WriteLine("Shallow Copy Address: " + shallowCopyPerson.Address.City);
+    }
+}
+```
+
+#### Output:
+
+```
+Original Address: New City
+Shallow Copy Address: New City
+```
+
+### Explanation:
+
+- In this example, we have a `Person` class with a `Name` property and an `Address` property of type `Address`.
+- We create an `Address` object and set its `Street` and `City` properties.
+- Then, we create a `Person` object named `originalPerson` with the `Name` property set to "Alice" and the `Address` property set to the `Address` object we created.
+- We create a shallow copy of the `originalPerson` object using the `MemberwiseClone()` method. This method creates a shallow copy of the object, copying the values of all non-static fields to the new object.
+- We modify the `City` property of the `Address` object in the shallow copy.
+- Both the original object and the shallow copy now reference the same `Address` object, so when we modify the `City` property in the shallow copy, it affects the original object as well.
+
+### Deep Copy:
+
+A deep copy of an object creates a new object and then recursively copies all non-static fields of the original object to the new object, including child objects. Each object and its child objects are duplicated in memory, resulting in completely independent copies.
+
+#### Scenario:
+
+Using the same `Person` and `Address` classes, you create a deep copy of a `Person` object and modify the `Address` property in the copy, verifying that the original object remains unchanged.
+
+#### Example:
+
+```csharp
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+
+[Serializable]
+class Address
+{
+    public string Street { get; set; }
+    public string City { get; set; }
+}
+
+[Serializable]
+class Person
+{
+    public string Name { get; set; }
+    public Address Address { get; set; }
+
+    public Person DeepClone()
+    {
+        using (MemoryStream stream = new MemoryStream())
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(stream, this);
+            stream.Seek(0, SeekOrigin.Begin);
+            return (Person)formatter.Deserialize(stream);
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Address address = new Address { Street = "123 Main St", City = "City" };
+        Person originalPerson = new Person { Name = "Alice", Address = address };
+
+        Person deepCopyPerson = originalPerson.DeepClone();
+        deepCopyPerson.Address.City = "New City";
+
+        Console.WriteLine("Original Address: " + originalPerson.Address.City);
+        Console.WriteLine("Deep Copy Address: " + deepCopyPerson.Address.City);
+    }
+}
+```
+
+#### Output:
+
+```
+Original Address: City
+Deep Copy Address: New City
+```
+
+### Explanation:
+
+- In this example, the `Address` and `Person` classes are marked as `[Serializable]` to enable binary serialization.
+- The `Person` class includes a `DeepClone()` method, which performs a deep copy of the object using binary serialization. This method serializes the object to a memory stream and then deserializes it, creating a new copy in memory.
+- We create an `originalPerson` object and set its `Address` property to an `Address` object.
+- We create a deep copy of the `originalPerson` object using the `DeepClone()` method.
+- We modify the `City` property of the `Address` object in the deep copy, verifying that the change does not affect the original object.
+
+### Summary:
+
+- Shallow copy creates a new object and copies the values of all non-static fields, including references to child objects. Changes to child objects affect both the original and shallow copy.
+- Deep copy creates a new object and recursively copies all non-static fields, including child objects. Each object and its child objects are duplicated in memory, resulting in completely independent copies.
+
+Here's a comparison of shallow and deep copy in tabular format:
+
+| Aspect          | Shallow Copy                                                  | Deep Copy                                                     |
+|-----------------|---------------------------------------------------------------|---------------------------------------------------------------|
+| Definition      | Copies the object and its non-static fields, including references to child objects. | Recursively copies the object and all its non-static fields, including child objects, creating independent copies. |
+| Child Objects  | References to child objects are shared between the original and the copy. | Each object and its child objects are duplicated in memory, resulting in independent copies. |
+| Memory Usage    | Consumes less memory since it shares references to child objects. | Consumes more memory since it duplicates each object and its child objects. |
+| Modifications   | Changes to child objects affect both the original and the copy. | Changes to child objects do not affect the original object or other copies. |
+| Implementation  | Usually performed using `MemberwiseClone()` method or manual copying of fields. | Often implemented using serialization and deserialization to create a completely independent copy. |
