@@ -5,19 +5,19 @@
 - [Class & Object](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
     - [Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
     - [Object](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#object-)
-- [Different ways to create Object](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-vs-structs-)
+- [Different ways to create Object](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#different-ways-to-create-objects-)
 - [Class Vs Structs](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-vs-structs-)
-- [Early and late binding in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-    - [Early Binding](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
-    - [Late Binding](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#object-)
-- [Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Types on Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-    - [Single Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
-    - [Multilevel Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
-    - [Hierarchical Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
-    - [Multiple Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
-    - [Hybrid Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class-)
-- [Multiple Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Early and late binding in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#early-and-late-binding-in-c-)
+    - [Early Binding](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#early-binding-)
+    - [Late Binding](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#late-binding-)
+- [Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#inheritance-)
+- [Types on Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#types-on-inheritance-)
+    - [Single Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#1-single-inheritance-)
+    - [Multilevel Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#2-multilevel-inheritance-)
+    - [Hierarchical Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#3-hierarchical-inheritance-)
+    - [Multiple Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#4-multiple-inheritance-c-doesnt-support-multiple-inheritance-directly-)
+    - [Hybrid Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#hybrid-inheritance-)
+- [Multiple Inheritance](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#multiple-inheritance-)
 - [Encapsulation](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
 - [Abstraction](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
 - [Encapsulation Vs Abstraction](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
@@ -830,7 +830,7 @@ Human is walking.
 Human is swimming.
 ```
 
-### Hybrid Inheritance: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
+### 5. Hybrid Inheritance: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
 
 Hybrid inheritance is a combination of two or more types of inheritance, such as single, multilevel, or hierarchical inheritance. It involves multiple inheritance paths and can lead to complex class hierarchies.
 
