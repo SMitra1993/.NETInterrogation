@@ -2,20 +2,20 @@
 
 **Links:**
 
-- [Methods in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Method Overloading](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Method Parameter](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Method Overriding](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Method Hiding](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Method Overriding vs Method Hiding](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Various ways to make method parameter as optional](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [ref Vs out parameter](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Anonnymous Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Partial Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Extension Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Local Function](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Methods in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-in-c-)
+- [Method Overloading](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#method-overloading-)
+- [Method Parameter](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#method-parameter-)
+- [Method Overriding](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#method-overriding-)
+- [Method Hiding](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#method-hiding-)
+- [Method Overriding vs Method Hiding](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#method-overriding-vs-method-hiding-)
+- [Various ways to make method parameter as optional](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#various-ways-to-make-method-parameter-as-optional-)
+- [ref Vs out parameter](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#ref-vs-out-parameter-)
+- [Anonnymous Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#anonnymous-method-)
+- [Partial Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#partial-method-)
+- [Extension Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#extension-method-)
+- [Local Function](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#local-function-)
 
-## **Methods in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Methods in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 In C#, methods are blocks of code within a class or struct that perform a specific task. They encapsulate functionality and can be called to execute their code. Let's explore methods in C# in detail, covering function declaration, calling, definition with or without parameters, and with or without return types, along with examples and outputs:
 
@@ -129,7 +129,7 @@ public int Add(int a, int b)
 - Methods can be called by specifying the method name followed by parentheses, with or without parameters.
 - Method definition includes the actual implementation of the method's functionality, which may include parameters and a return type.
 
-## **Method Overloading:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Method Overloading:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 Method overloading in C# allows you to define multiple methods in a class with the same name but different parameter lists. This enables you to provide different implementations of a method based on the types and number of parameters passed to it. Let's explore different ways to create method overloading in C# with examples and outputs:
 
@@ -254,7 +254,7 @@ class Program
 - Overloading can be achieved by providing different numbers, types, or sequences of parameters in the method signatures.
 - Overloaded methods provide flexibility and improve code readability by allowing multiple implementations of a method with similar functionality.
 
-## **Method Parameter:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Method Parameter:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 Method parameters in C# are variables that are defined within the parentheses of a method declaration and are used to pass values to the method when it is called. These parameters allow methods to accept input data and perform operations on that data. Method parameters play a crucial role in defining the behavior and functionality of a method.
 
@@ -487,7 +487,7 @@ class Program
 - Value parameters pass the value of the argument to the method.
 - Params parameters allow a variable number of arguments of the same type for a method.
 
-## **Method Overriding:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Method Overriding:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 Method overriding in C# is a feature of object-oriented programming that allows a derived class to provide a specific implementation of a method that is already defined in its base class. This enables polymorphism, where the same method name can behave differently based on the object type. Here's a detailed explanation of method overriding with examples and outputs:
 
@@ -628,7 +628,7 @@ class Program
 - `override`: Overrides a `virtual` method in a derived class, providing a new implementation.
 - `base`: Provides access to members of the base class within a derived class, including method invocation and constructor chaining.
 
-## **Method Hiding:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Method Hiding:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 Method hiding in C# occurs when a method in a derived class has the same name and signature as a method in its base class. Unlike method overriding, where the derived method replaces the base method implementation, method hiding introduces a new method in the derived class that "hides" the base class method. This means that the derived class method is called instead of the base class method when accessed through a reference to the derived class.
 
@@ -700,7 +700,7 @@ DerivedClass.Display
 - Method hiding is different from method overriding because the base class method is still accessible but shadowed by the derived class method.
 - You can access the hidden method through casting or by using a reference variable of the derived class type.
 
-## **Method Overriding vs Method Hiding:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Method Overriding vs Method Hiding:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 | Aspect                 | Method Overriding                                    | Method Hiding                                          |
 |------------------------|------------------------------------------------------|--------------------------------------------------------|
@@ -721,7 +721,7 @@ DerivedClass.Display
 - Method overriding enables dynamic polymorphism, allowing the runtime environment to determine the appropriate method to call based on the object's actual type.
 - Method hiding is determined by the compile-time type of the reference variable, and the version of the method called is based on the reference type.
 
-## **Various ways to make method parameter as optional:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Various ways to make method parameter as optional:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 Certainly! Here's an explanation of each way to make method parameters optional in C#:
 
@@ -808,7 +808,7 @@ PrintMessage("Goodbye"); // Output: Goodbye
 - Making method parameters optional in C# provides flexibility and allows callers to choose whether or not to provide values for those parameters.
 - Different approaches, such as default values, `OptionalAttribute`, `params` keyword, and method overloading, can be used to achieve optional parameters, depending on the specific requirements of the method and the calling code.
 
-## **ref Vs out parameter:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **ref Vs out parameter:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 Here's a detailed comparison between `ref` and `out` parameters in C#:
 
@@ -831,7 +831,7 @@ Here's a detailed comparison between `ref` and `out` parameters in C#:
 - `ref` parameters preserve their initial value, while `out` parameters ignore their initial value.
 - `ref` parameters can return multiple values, while `out` parameters are typically used to return a single value from a method.
 
-## **Anonnymous Method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Anonnymous Method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 An anonymous method in C# is a method without a name. It allows you to define a method "on the fly" without explicitly declaring a separate method. Anonymous methods are often used as arguments to other methods, such as event handlers or LINQ queries.
 
@@ -880,7 +880,7 @@ Square of 5: 25
 - They are often used for short, one-off operations, such as event handlers or simple calculations.
 - Anonymous methods are defined using the `delegate` keyword followed by a parameter list and method body.
 
-## **Partial Method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Partial Method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 Partial methods in C# allow a method declaration to be split into two parts: the declaration and the implementation. One part is defined in a partial class or struct, and the other part is optionally defined in a separate part of the class or struct.
 
@@ -941,7 +941,7 @@ Log message: This is a log message.
 - The declaration part is required, but the implementation part is optional.
 - Partial methods are typically used for event handling, allowing code generators to insert custom logic without requiring modification of the main codebase.
 
-## **Extension Method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Extension Method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 Extension methods in C# allow you to add new methods to existing types without modifying their source code. These methods are called as if they were instance methods of the extended type.
 
@@ -990,7 +990,7 @@ Word count: 7
 - They are defined as static methods in static classes, with the first parameter preceded by the `this` keyword, indicating the type being extended.
 - Extension methods are called as if they were instance methods of the extended type, providing a convenient way to add functionality to existing types.
 
-## **Local Function:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Local Function:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 Local functions in C# allow you to define methods within another method's scope. These methods are only accessible within the declaring method, making them useful for encapsulating logic that is specific to that method.
 
