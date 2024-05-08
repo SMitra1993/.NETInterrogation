@@ -32,10 +32,10 @@
 - [Abstract Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#abstract-class-)
 - [Interface in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#interface-in-c-)
 - [Why do we use interface in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#why-do-we-use-interface-in-c-)
-- [Indexers in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#why-do-we-use-interface-in-c-)
 - [Abstract Class Vs Interface](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#abstract-class-vs-interface-)
-- [Properties Vs Indexers](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#properties-vs-indexers-)
 - [Sealed Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#sealed-class-)
+- [Delegates vs Interfaces in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#sealed-class-)
+- [Explicit Interface](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#sealed-class-)
 
 ## **Class & Object:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
@@ -2258,85 +2258,6 @@ class Program
 
 By using interfaces, we can solve the problem of calculating the total area of different shapes in a flexible, polymorphic, and extensible manner, enabling better code organization and maintainability.
 
-## **Indexers in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
-
-Indexers in C# allow instances of a class or struct to be indexed just like arrays. They provide a way to access elements of a collection or class using square brackets, similar to array indexing. Indexers are defined using the `this` keyword followed by one or more parameters. When an object of the class or struct is indexed, the indexed property accessor (getter or setter) is invoked, allowing you to get or set the value associated with the index.
-
-### Example:
-
-Let's create an example to demonstrate indexers in C#:
-
-```csharp
-using System;
-
-public class MyCollection
-{
-    private int[] data = new int[5]; // Internal data storage
-
-    // Indexer definition
-    public int this[int index]
-    {
-        get
-        {
-            // Getter implementation
-            return data[index];
-        }
-        set
-        {
-            // Setter implementation
-            data[index] = value;
-        }
-    }
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        // Create an instance of MyCollection
-        MyCollection collection = new MyCollection();
-
-        // Set values using indexer
-        collection[0] = 10;
-        collection[1] = 20;
-        collection[2] = 30;
-        collection[3] = 40;
-        collection[4] = 50;
-
-        // Get and display values using indexer
-        Console.WriteLine("Values from the collection:");
-        for (int i = 0; i < 5; i++)
-        {
-            Console.WriteLine($"Value at index {i}: {collection[i]}");
-        }
-    }
-}
-```
-
-### Output:
-
-```
-Values from the collection:
-Value at index 0: 10
-Value at index 1: 20
-Value at index 2: 30
-Value at index 3: 40
-Value at index 4: 50
-```
-
-### Explanation:
-
-- We define a class `MyCollection` with an internal array `data` to store the collection elements.
-- Inside the class, we define an indexer using the `this` keyword, which allows indexing the instance of `MyCollection`.
-- The indexer provides both a getter and a setter, allowing us to get and set values at specific indices in the collection.
-- In the `Main` method, we create an instance of `MyCollection` and set values using the indexer.
-- We then retrieve and display the values using the indexer in a loop.
-
-### Summary:
-
-- Indexers in C# provide a way to access elements of a collection or class using square brackets, similar to array indexing.
-- They are defined using the `this` keyword followed by one or more parameters.
-- Indexers can have both getter and setter implementations, allowing you to get and set values at specific indices in the collection or class.
 
 ## **Abstract Class Vs Interface:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
@@ -2361,28 +2282,6 @@ Below is a detailed comparison of abstract classes and interfaces in C# presente
   
 - **Interface**: Used when you want to define a contract that classes must adhere to, regardless of their inheritance hierarchy. It can only have abstract members, cannot contain implementation details, constructors, or fields. Supports multiple inheritance by allowing a class to implement multiple interfaces.
 
-## **Properties Vs Indexers:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
-
-Here's a comparison of properties and indexers in C# presented in a tabular form:
-
-| Feature                      | Properties                                          | Indexers                                               |
-|------------------------------|-----------------------------------------------------|--------------------------------------------------------|
-| Definition                   | Define member accessors for fields or calculated values. | Define a mechanism to access elements of a collection or class. |
-| Syntax                       | Defined using `get` and `set` accessors.           | Defined using `this` keyword followed by parameters.    |
-| Access Modifier              | Can have access modifiers (public, private, etc.).  | Can have access modifiers (public, private, etc.).      |
-| Parameters                   | No parameters in property definition.               | Can have one or more parameters.                        |
-| Usage                        | Typically used to expose private fields with controlled access. | Used to access elements of a collection or class using square brackets. |
-| Return Type                  | Can return a single value of a specific type.      | Can return a value of any type, including arrays, collections, etc. |
-| Multiple                    | Cannot overload a property with different signatures. | Can overload an indexer with different parameter signatures. |
-| Naming Convention            | Typically named with descriptive names (e.g., `FirstName`). | Often named using generic names like `this[int index]`.  |
-| Syntax Example               | ```csharp                                         | ```csharp                                                 |
-|                              | public string Name { get; set; }                  | public int this[int index] { get; set; }                   |
-
-### Summary:
-
-- **Properties**: Used to provide controlled access to fields or calculated values of a class. They define `get` and `set` accessors and are commonly used to expose private fields with controlled access. Properties can have access modifiers and a single return type, and they cannot be overloaded with different signatures.
-
-- **Indexers**: Used to provide a mechanism to access elements of a collection or class using square brackets. They are defined using the `this` keyword followed by parameters, allowing for indexed access to elements. Indexers can have access modifiers, multiple parameters, and can return a value of any type, including arrays, collections, etc. They can be overloaded with different parameter signatures to provide different access patterns.
 
 ## **Sealed Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
@@ -2506,3 +2405,217 @@ Remember, sealing a class should be done when you are sure that no other class s
 - They are marked with the `sealed` keyword in their class definition.
 - Sealing a class prevents modification and extension of its behavior, promoting stability and security.
 - Sealed classes are useful when you want to restrict inheritance and ensure that a class's behavior remains unchanged.
+
+
+## **Delegates vs Interfaces in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+| Feature           | Delegates                                 | Interfaces                                   |
+|-------------------|-------------------------------------------|----------------------------------------------|
+| Definition        | A delegate is a type that represents references to methods with a specific signature. | An interface is a reference type that defines a contract for the behavior of a class but does not provide any implementation. |
+| Usage             | Delegates are used to encapsulate methods and treat them as objects, allowing for method invocation via delegate instances. | Interfaces are used to define a contract that classes must adhere to by implementing the members defined in the interface. |
+| Single Implementation | A delegate can reference a single method with a specific signature. | An interface can be implemented by multiple classes, each providing its own implementation for the interface members. |
+| Flexibility       | Delegates offer flexibility in method invocation, allowing for dynamic method invocation and callback mechanisms. | Interfaces provide a way to achieve polymorphism, enabling objects of different types to be treated interchangeably if they implement the same interface. |
+
+In this comparison:
+
+- **Delegates** are suitable for scenarios where you need to encapsulate methods and invoke them dynamically, such as event handling or callback mechanisms.
+- **Interfaces** are useful when you want to define a contract that multiple classes can implement, enabling polymorphism and interchangeability among objects of different types.
+
+In the provided scenarios, delegates are used to handle events in a UI component, while interfaces are employed to ensure consistent behavior across different classes representing shapes.
+
+**Scenario using Delegates:**
+
+Imagine you're developing a user interface (UI) application, and you need to implement a button component. When the button is clicked, you want to trigger an event to perform some action, such as displaying a message or updating UI elements.
+
+Here's how you can use delegates to handle the button click event:
+
+```csharp
+using System;
+
+// Delegate definition for event handler
+public delegate void EventHandler();
+
+// Button class with click event
+class Button
+{
+    public event EventHandler Click; // Event declaration
+
+    // Method to simulate button click
+    public void SimulateClick()
+    {
+        // Invoke the click event if it's not null
+        Click?.Invoke();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Button button = new Button();
+
+        // Subscribe to the button click event
+        button.Click += () => Console.WriteLine("Button clicked!");
+
+        // Simulate button click
+        button.SimulateClick();
+    }
+}
+```
+
+**Output:**
+```
+Button clicked!
+```
+
+In this scenario, the `Button` class encapsulates the click event using a delegate (`EventHandler`). When the `SimulateClick` method is called, it triggers the click event, and any subscribed event handlers (in this case, the lambda expression printing "Button clicked!") are invoked.
+
+---
+**Scenario using Interfaces:**
+
+Suppose you're working on a graphics application where you need to calculate the area of various shapes (e.g., circles, rectangles, triangles). To ensure consistency and ease of use, you decide to define an interface named `IShape` that all shape classes must implement.
+
+Here's how you can use interfaces to calculate the area of different shapes:
+
+```csharp
+using System;
+
+// Interface for shapes
+public interface IShape
+{
+    double CalculateArea();
+}
+
+// Circle class implementing IShape
+public class Circle : IShape
+{
+    private double radius;
+
+    public Circle(double radius)
+    {
+        this.radius = radius;
+    }
+
+    // Calculate area of circle
+    public double CalculateArea()
+    {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Rectangle class implementing IShape
+public class Rectangle : IShape
+{
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height)
+    {
+        this.width = width;
+        this.height = height;
+    }
+
+    // Calculate area of rectangle
+    public double CalculateArea()
+    {
+        return width * height;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create instances of Circle and Rectangle
+        IShape circle = new Circle(5);
+        IShape rectangle = new Rectangle(4, 6);
+
+        // Calculate and display areas
+        Console.WriteLine("Area of circle: " + circle.CalculateArea());
+        Console.WriteLine("Area of rectangle: " + rectangle.CalculateArea());
+    }
+}
+```
+
+**Output:**
+```
+Area of circle: 78.53981633974483
+Area of rectangle: 24
+```
+
+In this scenario, the `IShape` interface defines a contract with a single method `CalculateArea()`. Both the `Circle` and `Rectangle` classes implement this interface and provide their respective implementations of the method. This allows for consistent usage and calculation of areas for different shapes.
+
+## **Explicit Interface:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+Explicit interface implementation in C# allows a class to implement interface members in a way that those members are only accessible through an interface reference, not through the class itself. This technique is useful when a class implements multiple interfaces with members that have the same name but different implementations.
+
+### Example:
+
+Let's consider a scenario where we have two interfaces, `IA` and `IB`, both containing a method named `Method()`. We'll implement these interfaces explicitly in a class `Example`.
+
+```csharp
+using System;
+
+interface IA
+{
+    void Method();
+}
+
+interface IB
+{
+    void Method();
+}
+
+class Example : IA, IB
+{
+    // Explicitly implement IA.Method
+    void IA.Method()
+    {
+        Console.WriteLine("IA.Method() implementation");
+    }
+
+    // Explicitly implement IB.Method
+    void IB.Method()
+    {
+        Console.WriteLine("IB.Method() implementation");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Example example = new Example();
+
+        // Access IA.Method through IA interface reference
+        IA ia = example;
+        ia.Method(); // Output: IA.Method() implementation
+
+        // Access IB.Method through IB interface reference
+        IB ib = example;
+        ib.Method(); // Output: IB.Method() implementation
+    }
+}
+```
+
+### Output:
+
+```
+IA.Method() implementation
+IB.Method() implementation
+```
+
+In this example:
+
+- The `Example` class implements both `IA` and `IB` interfaces.
+- The `Method()` member of both interfaces is implemented explicitly in the `Example` class.
+- To access these members, we need to use interface references.
+- When `IA` interface reference is used, it invokes the `IA.Method()` implementation.
+- When `IB` interface reference is used, it invokes the `IB.Method()` implementation.
+
+### Summary:
+
+Explicit interface implementation is used:
+- When a class implements multiple interfaces with members that have the same name but different implementations.
+- To disambiguate between interface members and provide specialized implementations for each interface.
+- To hide interface members from the class's public API, making them accessible only through interface references.
