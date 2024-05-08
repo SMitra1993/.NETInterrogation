@@ -34,8 +34,8 @@
 - [Why do we use interface in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#why-do-we-use-interface-in-c-)
 - [Abstract Class Vs Interface](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#abstract-class-vs-interface-)
 - [Sealed Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#sealed-class-)
-- [Delegates vs Interfaces in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#sealed-class-)
-- [Explicit Interface](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#sealed-class-)
+- [Delegates vs Interfaces in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#delegates-vs-interfaces-in-c-)
+- [Explicit Interface](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#explicit-interface-)
 
 ## **Class & Object:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
