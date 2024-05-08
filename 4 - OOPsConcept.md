@@ -27,6 +27,15 @@
 - [Static Class vs Non-static Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#static-class-vs-non-static-class-)
 - [Partial Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#partial-class-)
 - [Shallow Copy and Deep Copy](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#shallow-copy-and-deep-copy-)
+- [Inheritance in Interface](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#partial-class-)
+- [Inheritance in Constructors](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#partial-class-)
+- [Abstract Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#partial-class-)
+- [Interface in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#partial-class-)
+- [Why do we use interface in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#partial-class-)
+- [Indexers in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#partial-class-)
+- [Abstract Class Vs Interface](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#partial-class-)
+- [Properties Vs Indexers](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#partial-class-)
+- [Sealed Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#partial-class-)
 
 ## **Class & Object:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
@@ -1841,3 +1850,659 @@ Here's a comparison of shallow and deep copy in tabular format:
 | Memory Usage    | Consumes less memory since it shares references to child objects. | Consumes more memory since it duplicates each object and its child objects. |
 | Modifications   | Changes to child objects affect both the original and the copy. | Changes to child objects do not affect the original object or other copies. |
 | Implementation  | Usually performed using `MemberwiseClone()` method or manual copying of fields. | Often implemented using serialization and deserialization to create a completely independent copy. |
+
+## **Inheritance in Interface:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+In C#, interfaces can inherit from one or more other interfaces, allowing them to inherit members (methods, properties, events, and indexers) from those interfaces. This concept is known as "inheritance in interfaces" or "interface inheritance."
+
+### Example:
+
+Let's create an example to demonstrate inheritance in interfaces:
+
+```csharp
+using System;
+
+// Base interface
+public interface IShape
+{
+    void Draw();
+}
+
+// Derived interface inheriting from IShape
+public interface ICircle : IShape
+{
+    double Radius { get; set; }
+}
+
+// Concrete class implementing ICircle
+public class Circle : ICircle
+{
+    public double Radius { get; set; }
+
+    public void Draw()
+    {
+        Console.WriteLine($"Drawing a circle with radius {Radius}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create an instance of Circle
+        Circle circle = new Circle { Radius = 5 };
+
+        // Call the Draw method of Circle
+        circle.Draw();
+    }
+}
+```
+
+### Output:
+
+```
+Drawing a circle with radius 5
+```
+
+### Explanation:
+
+- We define a base interface `IShape` with a single method `Draw`.
+- We define a derived interface `ICircle` that inherits from `IShape` and adds a property `Radius`.
+- We create a concrete class `Circle` that implements the `ICircle` interface. It provides implementations for both `Draw` and `Radius`.
+- In the `Main` method, we create an instance of `Circle` and set its radius to 5.
+- We call the `Draw` method on the `Circle` instance, which prints a message indicating that a circle with a radius of 5 is being drawn.
+
+### Summary:
+
+- Inheritance in interfaces allows one interface to inherit members from another interface.
+- A derived interface inherits all the members (methods, properties, events, and indexers) from its base interfaces.
+- Classes implementing the derived interface must provide implementations for all inherited members from both the derived interface and its base interfaces.
+- Inheritance in interfaces promotes code reusability and supports the design of modular and extensible systems. It enables the creation of hierarchies of related interfaces with shared functionality.
+
+## **Inheritance in Constructors:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+Inheritance in constructors refers to how constructors are inherited and invoked in a class hierarchy. When you create a subclass (derived class) that inherits from a base class, the constructors of the base class are also inherited. The derived class can choose to use one of the available constructors from the base class or define its own constructors.
+
+### Example:
+
+Let's create an example to demonstrate inheritance in constructors:
+
+```csharp
+using System;
+
+// Base class
+public class Animal
+{
+    public string Name { get; set; }
+
+    // Base class constructor
+    public Animal(string name)
+    {
+        Name = name;
+        Console.WriteLine("Animal constructor invoked.");
+    }
+
+    // Method to display information about the animal
+    public void Display()
+    {
+        Console.WriteLine($"Name: {Name}");
+    }
+}
+
+// Derived class inheriting from Animal
+public class Dog : Animal
+{
+    public Dog(string name) : base(name)
+    {
+        Console.WriteLine("Dog constructor invoked.");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create an instance of Dog
+        Dog dog = new Dog("Buddy");
+
+        // Call the Display method of Dog
+        dog.Display();
+    }
+}
+```
+
+### Output:
+
+```
+Animal constructor invoked.
+Dog constructor invoked.
+Name: Buddy
+```
+
+### Explanation:
+
+- We define a base class `Animal` with a constructor that takes a `name` parameter and sets the `Name` property.
+- The derived class `Dog` inherits from `Animal` and defines its own constructor that calls the base class constructor using the `base` keyword.
+- In the `Main` method, we create an instance of `Dog` with the name "Buddy."
+- When the `Dog` constructor is invoked, it first invokes the `Animal` constructor to initialize the `Name` property. Then, it executes its own constructor code.
+- Finally, we call the `Display` method of `Dog` to display information about the created dog.
+
+### Summary:
+
+- Inheritance in constructors allows derived classes to inherit and use constructors from their base classes.
+- Derived class constructors can choose to invoke one of the available constructors from the base class using the `base` keyword.
+- When a derived class constructor is invoked, it first invokes the constructor of its base class to initialize inherited members before executing its own constructor code.
+- Constructors in the base class can be parameterized or default constructors, and the derived class can choose which one to use or override.
+
+## **Abstract Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+An abstract class in C# is a class that cannot be instantiated directly and may contain one or more abstract members, such as methods, properties, or events. It serves as a blueprint for derived classes, providing common functionality and defining the structure of the class hierarchy. Abstract classes are typically used when you want to define a common interface or behavior that must be implemented by subclasses.
+
+### Example:
+
+Let's create an example to demonstrate an abstract class:
+
+```csharp
+using System;
+
+// Abstract class
+public abstract class Shape
+{
+    // Abstract method
+    public abstract double Area();
+
+    // Concrete method
+    public void DisplayArea()
+    {
+        Console.WriteLine($"Area: {Area()}");
+    }
+}
+
+// Concrete class inheriting from Shape
+public class Rectangle : Shape
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+
+    // Implementing the abstract method
+    public override double Area()
+    {
+        return Width * Height;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create an instance of Rectangle
+        Rectangle rectangle = new Rectangle { Width = 5, Height = 4 };
+
+        // Call the DisplayArea method
+        rectangle.DisplayArea();
+    }
+}
+```
+
+### Output:
+
+```
+Area: 20
+```
+
+### Explanation:
+
+- We define an abstract class `Shape` with an abstract method `Area()` and a concrete method `DisplayArea()`.
+- The `Shape` class cannot be instantiated directly because it contains an abstract method.
+- We define a concrete class `Rectangle` that inherits from `Shape` and implements the `Area()` method by providing its own implementation.
+- In the `Main` method, we create an instance of `Rectangle` and set its width and height.
+- We call the `DisplayArea` method on the `Rectangle` instance, which internally calls the overridden `Area()` method to calculate the area of the rectangle and display it.
+
+### Features of Abstract Classes:
+
+1. **Abstract Methods**: Abstract classes can contain one or more abstract methods, which are declared without an implementation and must be implemented by derived classes.
+
+2. **Concrete Methods**: Abstract classes can also contain concrete (non-abstract) methods with an implementation, which are inherited by derived classes.
+
+3. **Cannot Be Instantiated**: Abstract classes cannot be instantiated directly. They serve as a template for derived classes and must be subclassed to be used.
+
+4. **May Contain Fields and Properties**: Abstract classes can contain fields, properties, constructors, and other members just like regular classes.
+
+5. **Can Have Constructors**: Abstract classes can have constructors, which are used to initialize fields and perform common initialization tasks.
+
+6. **Can Have Access Modifiers**: Abstract classes can have access modifiers like `public`, `protected`, `internal`, etc., controlling their accessibility to other classes.
+
+7. **Supports Inheritance**: Abstract classes support inheritance, allowing derived classes to extend their functionality and provide implementations for abstract members.
+
+Abstract classes provide a powerful mechanism for defining common behavior and structure in a class hierarchy, promoting code reuse and maintainability in object-oriented programming.
+
+## **Interface in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+An interface in C# defines a contract that classes must adhere to, specifying a set of methods, properties, events, or indexers that implementing classes must provide. Interfaces enable polymorphism by allowing different classes to share common behavior without requiring a common base class. Classes implement interfaces by providing concrete implementations for all members defined in the interface.
+
+### Example:
+
+Let's create an example to demonstrate interfaces in C#:
+
+```csharp
+using System;
+
+// Interface definition
+public interface IShape
+{
+    // Method declaration
+    double Area();
+}
+
+// Class implementing the interface
+public class Circle : IShape
+{
+    public double Radius { get; set; }
+
+    // Implementing the Area method defined in the interface
+    public double Area()
+    {
+        return Math.PI * Radius * Radius;
+    }
+}
+
+// Class implementing the interface
+public class Rectangle : IShape
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+
+    // Implementing the Area method defined in the interface
+    public double Area()
+    {
+        return Width * Height;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create instances of classes implementing the interface
+        Circle circle = new Circle { Radius = 5 };
+        Rectangle rectangle = new Rectangle { Width = 4, Height = 6 };
+
+        // Call the Area method of each object
+        Console.WriteLine($"Area of Circle: {circle.Area()}");
+        Console.WriteLine($"Area of Rectangle: {rectangle.Area()}");
+    }
+}
+```
+
+### Output:
+
+```
+Area of Circle: 78.53981633974483
+Area of Rectangle: 24
+```
+
+### Explanation:
+
+- We define an interface `IShape` with a method `Area()` that calculates the area of a shape.
+- We define two classes `Circle` and `Rectangle` that implement the `IShape` interface by providing concrete implementations for the `Area()` method.
+- In the `Main` method, we create instances of the `Circle` and `Rectangle` classes and call the `Area()` method on each object.
+- Each class calculates the area based on its specific properties (`Radius` for `Circle` and `Width` and `Height` for `Rectangle`).
+
+### Summary:
+
+- Interfaces in C# define a contract that classes must adhere to by providing concrete implementations for all members defined in the interface.
+- Interfaces enable polymorphism by allowing different classes to share common behavior without requiring a common base class.
+- Classes implement interfaces by providing concrete implementations for all members defined in the interface, enabling code reuse and promoting a loosely coupled design.
+
+## **Why do we use interface in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+Interfaces in C# are used to define contracts that classes must adhere to, enabling polymorphism and promoting a loosely coupled design. They provide a way to share common behavior among different classes without requiring a common base class. Let's explore a problem scenario and its solution using interfaces:
+
+### Problem Scenario:
+
+Suppose we have a program that needs to calculate the total area of various shapes, such as circles, rectangles, and triangles. Each shape has a different formula for calculating its area, and we want to design our program to be flexible and extensible, allowing us to easily add new shapes in the future.
+
+### Solution using Interfaces:
+
+We can use interfaces to define a common contract for all shapes, specifying a method for calculating the area. Each shape class will then implement this interface by providing its own implementation of the area calculation method.
+
+### Example:
+
+Let's create an example to demonstrate how interfaces can solve this problem:
+
+```csharp
+using System;
+
+// Interface definition
+public interface IShape
+{
+    double Area();
+}
+
+// Circle class implementing the IShape interface
+public class Circle : IShape
+{
+    public double Radius { get; set; }
+
+    public Circle(double radius)
+    {
+        Radius = radius;
+    }
+
+    // Implementing the Area method defined in the interface
+    public double Area()
+    {
+        return Math.PI * Radius * Radius;
+    }
+}
+
+// Rectangle class implementing the IShape interface
+public class Rectangle : IShape
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+
+    public Rectangle(double width, double height)
+    {
+        Width = width;
+        Height = height;
+    }
+
+    // Implementing the Area method defined in the interface
+    public double Area()
+    {
+        return Width * Height;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create instances of different shapes
+        Circle circle = new Circle(5);
+        Rectangle rectangle = new Rectangle(4, 6);
+
+        // Calculate and display the total area
+        double totalArea = CalculateTotalArea(circle, rectangle);
+        Console.WriteLine($"Total Area: {totalArea}");
+    }
+
+    // Method to calculate total area of shapes using interface
+    static double CalculateTotalArea(params IShape[] shapes)
+    {
+        double totalArea = 0;
+        foreach (var shape in shapes)
+        {
+            totalArea += shape.Area();
+        }
+        return totalArea;
+    }
+}
+```
+
+### Explanation:
+
+- We define an interface `IShape` with a method `Area()` to calculate the area of a shape.
+- The `Circle` and `Rectangle` classes implement the `IShape` interface by providing their own implementations of the `Area()` method.
+- In the `Main` method, we create instances of `Circle` and `Rectangle` and calculate their individual areas.
+- We then call the `CalculateTotalArea` method, passing the instances of shapes as arguments. This method calculates the total area of all shapes by invoking the `Area()` method for each shape.
+
+### Benefits:
+
+1. **Flexibility**: Interfaces allow us to define a common contract for different classes, enabling flexibility in the design and promoting code reuse.
+
+2. **Polymorphism**: Interface implementations enable polymorphic behavior, allowing objects of different classes to be treated interchangeably based on the common interface they implement.
+
+3. **Extensibility**: Interfaces facilitate easy addition of new shapes or classes without modifying existing code, making the system more extensible and maintainable.
+
+By using interfaces, we can solve the problem of calculating the total area of different shapes in a flexible, polymorphic, and extensible manner, enabling better code organization and maintainability.
+
+## **Indexers in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+Indexers in C# allow instances of a class or struct to be indexed just like arrays. They provide a way to access elements of a collection or class using square brackets, similar to array indexing. Indexers are defined using the `this` keyword followed by one or more parameters. When an object of the class or struct is indexed, the indexed property accessor (getter or setter) is invoked, allowing you to get or set the value associated with the index.
+
+### Example:
+
+Let's create an example to demonstrate indexers in C#:
+
+```csharp
+using System;
+
+public class MyCollection
+{
+    private int[] data = new int[5]; // Internal data storage
+
+    // Indexer definition
+    public int this[int index]
+    {
+        get
+        {
+            // Getter implementation
+            return data[index];
+        }
+        set
+        {
+            // Setter implementation
+            data[index] = value;
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create an instance of MyCollection
+        MyCollection collection = new MyCollection();
+
+        // Set values using indexer
+        collection[0] = 10;
+        collection[1] = 20;
+        collection[2] = 30;
+        collection[3] = 40;
+        collection[4] = 50;
+
+        // Get and display values using indexer
+        Console.WriteLine("Values from the collection:");
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine($"Value at index {i}: {collection[i]}");
+        }
+    }
+}
+```
+
+### Output:
+
+```
+Values from the collection:
+Value at index 0: 10
+Value at index 1: 20
+Value at index 2: 30
+Value at index 3: 40
+Value at index 4: 50
+```
+
+### Explanation:
+
+- We define a class `MyCollection` with an internal array `data` to store the collection elements.
+- Inside the class, we define an indexer using the `this` keyword, which allows indexing the instance of `MyCollection`.
+- The indexer provides both a getter and a setter, allowing us to get and set values at specific indices in the collection.
+- In the `Main` method, we create an instance of `MyCollection` and set values using the indexer.
+- We then retrieve and display the values using the indexer in a loop.
+
+### Summary:
+
+- Indexers in C# provide a way to access elements of a collection or class using square brackets, similar to array indexing.
+- They are defined using the `this` keyword followed by one or more parameters.
+- Indexers can have both getter and setter implementations, allowing you to get and set values at specific indices in the collection or class.
+
+## **Abstract Class Vs Interface:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+Below is a detailed comparison of abstract classes and interfaces in C# presented in a tabular form:
+
+| Feature                      | Abstract Class                                     | Interface                                          |
+|------------------------------|----------------------------------------------------|----------------------------------------------------|
+| Definition                   | Can have both abstract and concrete members.       | Can only have abstract members (methods, properties, events, indexers). |
+| Multiple Inheritance         | Cannot inherit from multiple abstract classes.     | Can inherit from multiple interfaces.               |
+| Constructor                  | Can have constructors.                             | Cannot have constructors.                           |
+| Accessibility                | Can have access modifiers like `public`, `protected`, `internal`, etc. | By default, all members are `public`.             |
+| Default Implementation       | Can provide default implementations for some methods. | Cannot provide default implementations.            |
+| Fields and Properties        | Can have fields, properties, and other members.    | Cannot have fields, properties, or other members.  |
+| Extensibility                | Supports extension methods and properties.         | Cannot add additional functionality beyond what's defined in the interface. |
+| Code Reuse                   | Promotes code reuse through inheritance.           | Promotes code reuse through interface implementation. |
+| Flexibility                  | Provides more flexibility in terms of implementation details and structure. | Provides more flexibility in terms of multiple interface implementation. |
+| Use Case                     | Used when you want to define a common base for a group of related classes with shared functionality. | Used when you want to define a contract that classes must adhere to, regardless of their inheritance hierarchy. |
+
+### Summary:
+
+- **Abstract Class**: Used when you want to define a common base for a group of related classes with shared functionality. It can have both abstract and concrete members, constructors, access modifiers, and can provide default implementations for some methods. Supports inheritance but not multiple inheritance.
+  
+- **Interface**: Used when you want to define a contract that classes must adhere to, regardless of their inheritance hierarchy. It can only have abstract members, cannot contain implementation details, constructors, or fields. Supports multiple inheritance by allowing a class to implement multiple interfaces.
+
+## **Properties Vs Indexers:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+Here's a comparison of properties and indexers in C# presented in a tabular form:
+
+| Feature                      | Properties                                          | Indexers                                               |
+|------------------------------|-----------------------------------------------------|--------------------------------------------------------|
+| Definition                   | Define member accessors for fields or calculated values. | Define a mechanism to access elements of a collection or class. |
+| Syntax                       | Defined using `get` and `set` accessors.           | Defined using `this` keyword followed by parameters.    |
+| Access Modifier              | Can have access modifiers (public, private, etc.).  | Can have access modifiers (public, private, etc.).      |
+| Parameters                   | No parameters in property definition.               | Can have one or more parameters.                        |
+| Usage                        | Typically used to expose private fields with controlled access. | Used to access elements of a collection or class using square brackets. |
+| Return Type                  | Can return a single value of a specific type.      | Can return a value of any type, including arrays, collections, etc. |
+| Multiple                    | Cannot overload a property with different signatures. | Can overload an indexer with different parameter signatures. |
+| Naming Convention            | Typically named with descriptive names (e.g., `FirstName`). | Often named using generic names like `this[int index]`.  |
+| Syntax Example               | ```csharp                                         | ```csharp                                                 |
+|                              | public string Name { get; set; }                  | public int this[int index] { get; set; }                   |
+
+### Summary:
+
+- **Properties**: Used to provide controlled access to fields or calculated values of a class. They define `get` and `set` accessors and are commonly used to expose private fields with controlled access. Properties can have access modifiers and a single return type, and they cannot be overloaded with different signatures.
+
+- **Indexers**: Used to provide a mechanism to access elements of a collection or class using square brackets. They are defined using the `this` keyword followed by parameters, allowing for indexed access to elements. Indexers can have access modifiers, multiple parameters, and can return a value of any type, including arrays, collections, etc. They can be overloaded with different parameter signatures to provide different access patterns.
+
+## **Sealed Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+
+A sealed class in C# is a class that cannot be inherited by other classes. It prevents other classes from deriving from it, effectively sealing its functionality and preventing extension. Sealing a class can be useful when you want to restrict inheritance and ensure that the class behavior remains unchanged.
+
+### Example:
+
+Let's create an example to demonstrate a sealed class in C#:
+
+```csharp
+using System;
+
+// Sealed class definition
+public sealed class SealedClass
+{
+    public void Display()
+    {
+        Console.WriteLine("This is a sealed class.");
+    }
+}
+
+// This class cannot inherit from SealedClass because it is sealed
+// public class DerivedClass : SealedClass {}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create an instance of SealedClass
+        SealedClass sealedObj = new SealedClass();
+
+        // Call the Display method
+        sealedObj.Display();
+    }
+}
+```
+
+### Output:
+
+```
+This is a sealed class.
+```
+
+### Explanation:
+
+- We define a `SealedClass` as `sealed`, which means it cannot be inherited by other classes.
+- The `Display` method is defined within the sealed class to demonstrate its functionality.
+- Attempting to derive a class from `SealedClass`, as shown in the commented code, will result in a compilation error because the class is sealed.
+- In the `Main` method, we create an instance of `SealedClass` and call its `Display` method to demonstrate its behavior.
+
+### Benefits of Sealed Classes:
+
+1. **Prevent Modification**: Sealing a class prevents other classes from modifying or extending its behavior, ensuring that the class remains unchanged and stable.
+
+2. **Security**: Sealing a class can enhance security by preventing unauthorized modifications to its behavior, reducing the risk of introducing bugs or vulnerabilities.
+
+3. **Performance**: Sealed classes can potentially improve performance by allowing the compiler to optimize method calls and object creation.
+
+### Rules:
+
+1. **Sealed Class Declaration**: A class is marked as sealed by using the `sealed` keyword in its declaration. It prevents other classes from inheriting from it.
+
+   ```csharp
+   public sealed class SealedClass
+   {
+       // Class members...
+   }
+   ```
+
+2. **No Inheritance**: A sealed class cannot be used as a base class for other classes. Any attempt to derive a class from a sealed class will result in a compilation error.
+
+   ```csharp
+   // Error: 'DerivedClass' cannot derive from sealed type 'SealedClass'
+   public class DerivedClass : SealedClass {}
+   ```
+
+3. **Cannot Be Abstract**: A sealed class cannot be abstract because it cannot be inherited. It must provide concrete implementations for all its members.
+
+   ```csharp
+   // Error: Sealed class 'SealedClass' cannot have abstract members
+   public sealed class SealedClass
+   {
+       public abstract void Method(); // Compilation error
+   }
+   ```
+
+4. **Complete Implementation**: A sealed class must provide implementations for all its members, including methods, properties, events, and indexers.
+
+   ```csharp
+   public sealed class SealedClass
+   {
+       public void Method() { /* Implementation */ }
+       public int Property { get; set; }
+       // Other members...
+   }
+   ```
+
+5. **No Derivation Chains**: Even if a class derives from a non-sealed class that eventually derives from a sealed class, it cannot inherit from the sealed class directly.
+
+   ```csharp
+   // Error: 'DerivedClass' cannot derive from sealed type 'IntermediateClass'
+   public class IntermediateClass : SealedClass {}
+   public class DerivedClass : IntermediateClass {}
+   ```
+
+6. **Can Implement Interfaces**: Sealed classes can implement interfaces as usual. They can provide their own implementations for the interface members.
+
+   ```csharp
+   public sealed class SealedClass : IInterface
+   {
+       public void Method() { /* Implementation */ }
+       // Other interface members...
+   }
+   ```
+
+Remember, sealing a class should be done when you are sure that no other class should derive from it. It promotes code stability, security, and maintainability by preventing unwanted inheritance and extension.
+
+### Summary:
+
+- Sealed classes in C# are classes that cannot be inherited by other classes.
+- They are marked with the `sealed` keyword in their class definition.
+- Sealing a class prevents modification and extension of its behavior, promoting stability and security.
+- Sealed classes are useful when you want to restrict inheritance and ensure that a class's behavior remains unchanged.
