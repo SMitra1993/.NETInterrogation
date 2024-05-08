@@ -1,6 +1,15 @@
 # Delegates ❤🍕
 
-## **Delegates:**
+**Links:**
+
+- [Delegates](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Multicasting Delegate](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Predicate Delegate](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Func Delegate](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Action Delegate](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Func Vs Action Vs Predicate Delegates](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+
+## **Delegates:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
 
 Delegates in C# are reference types that represent methods with a specific signature. They provide a way to pass methods as parameters, store them in variables, and invoke them dynamically.
 
@@ -95,7 +104,7 @@ Subtraction result: 2
 - You can create instances of delegates and assign methods to them using the method name or lambda expressions.
 - Delegates provide a flexible way to implement callback mechanisms, event handling, and other scenarios requiring dynamic method invocation.
 
-## **Multicasting Delegate:**
+## **Multicasting Delegate:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
 
 Multicasting of delegates in C# refers to the ability to combine multiple methods into a single delegate instance. This allows you to invoke multiple methods sequentially through a single delegate invocation.
 
@@ -153,7 +162,7 @@ Triple of 5: 15
 - You can multicast methods to a delegate using the `+=` operator, and they will be invoked sequentially when the delegate is invoked.
 - Multicast delegates provide a convenient way to perform multiple operations through a single delegate invocation, useful in scenarios such as event handling and callback mechanisms.
 
-## **Predicate Delegate:**
+## **Predicate Delegate:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
 
 The `Predicate` delegate in C# is a built-in delegate type defined in the .NET Framework's `System` namespace. It represents a method that takes one input parameter and returns a Boolean value, typically used to determine whether an object meets a specific condition.
 
@@ -216,7 +225,7 @@ In this example:
 
 The `Predicate` delegate in C# provides a flexible and reusable way to define conditions for filtering elements in collections. It promotes encapsulation, flexibility, reusability, and separation of concerns in codebases, leading to cleaner and more maintainable code.
 
-## **Func Delegate:**
+## **Func Delegate:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
 
 The `Func` delegate in C# is a generic delegate type defined in the `System` namespace. It represents a method that takes zero or more input parameters and returns a value of a specified type. The last type parameter of the `Func` delegate represents the return type, while the preceding type parameters represent the input parameter types.
 
@@ -263,7 +272,7 @@ Area of circle with radius 5 = 78.54
 - `Func` delegates are commonly used in scenarios where you need to define and pass functions as parameters to other methods, such as LINQ queries, functional programming, and asynchronous programming.
 - The `Func` delegate simplifies the syntax for defining and using functions, making it easier to work with higher-order functions and functional programming concepts in C#.
 
-## **Action Delegate:**
+## **Action Delegate:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
 
 The `Action` delegate in C# is a generic delegate type defined in the `System` namespace. It represents a method that takes zero or more input parameters and does not return a value. The `Action` delegate simplifies the syntax for defining and using methods that perform actions or side effects without returning a value.
 
@@ -307,7 +316,7 @@ Hello, world!
 - `Action` delegates are commonly used in scenarios where you need to define and pass methods as parameters to other methods, such as event handling, asynchronous programming, and functional programming.
 - The `Action` delegate simplifies the syntax for defining and using methods that perform actions, making it easier to work with side-effecting functions and procedures in C#.
 
-## **Func Vs Action Vs Predicate Delegates:**
+## **Func Vs Action Vs Predicate Delegates:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/3%20-%20ControlStatement.md#control-statement-)
 
 Below is a detailed comparison of `Func`, `Action`, and `Predicate` delegates in tabular form:
 
