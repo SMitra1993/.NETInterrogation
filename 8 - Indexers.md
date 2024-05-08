@@ -1,12 +1,12 @@
 # Indexers ❤🍕
 
 **Links:**
-- [Indexers in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#why-do-we-use-interface-in-c-)
-- [Properties Vs Indexers](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#properties-vs-indexers-)
-- [Multidimensional Indexers](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#properties-vs-indexers-)
-- [Overloading of Indexers](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#properties-vs-indexers-)
+- [Indexers in c#](https://github.com/SMitra1993/theNETInterrogation/blob/master/8%20-%20Indexers.md#indexers-in-c-)
+- [Properties Vs Indexers](https://github.com/SMitra1993/theNETInterrogation/blob/master/8%20-%20Indexers.md#properties-vs-indexers-)
+- [Multidimensional Indexers](https://github.com/SMitra1993/theNETInterrogation/blob/master/8%20-%20Indexers.md#multidimensional-indexers-)
+- [Overloading of Indexers](https://github.com/SMitra1993/theNETInterrogation/blob/master/8%20-%20Indexers.md#overloading-of-indexers-)
 
-## **Indexers in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Indexers in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/8%20-%20Indexers.md#indexers-)
 
 Indexers in C# allow instances of a class or struct to be indexed just like arrays. They provide a way to access elements of a collection or class using square brackets, similar to array indexing. Indexers are defined using the `this` keyword followed by one or more parameters. When an object of the class or struct is indexed, the indexed property accessor (getter or setter) is invoked, allowing you to get or set the value associated with the index.
 
@@ -86,7 +86,7 @@ Value at index 4: 50
 - They are defined using the `this` keyword followed by one or more parameters.
 - Indexers can have both getter and setter implementations, allowing you to get and set values at specific indices in the collection or class.
 
-## **Properties Vs Indexers:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Properties Vs Indexers:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/8%20-%20Indexers.md#indexers-)
 
 Here's a comparison of properties and indexers in C# presented in a tabular form:
 
@@ -109,7 +109,7 @@ Here's a comparison of properties and indexers in C# presented in a tabular form
 
 - **Indexers**: Used to provide a mechanism to access elements of a collection or class using square brackets. They are defined using the `this` keyword followed by parameters, allowing for indexed access to elements. Indexers can have access modifiers, multiple parameters, and can return a value of any type, including arrays, collections, etc. They can be overloaded with different parameter signatures to provide different access patterns.
 
-## **Multidimensional Indexers:**
+## **Multidimensional Indexers:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/8%20-%20Indexers.md#indexers-)
 
 In C#, multidimensional indexers allow you to define classes with indexers that take multiple indices, enabling access to elements in a multidimensional array-like manner. This allows for more complex data structures to be represented and accessed conveniently.
 
@@ -203,7 +203,7 @@ Matrix:
 - They provide a convenient way to represent and access elements of complex data structures, such as matrices or grids.
 - Multidimensional indexers are defined using the `this` keyword followed by multiple index parameters, and they can have both getter and setter implementations.
 
-## **Overloading of Indexers:**
+## **Overloading of Indexers:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/8%20-%20Indexers.md#indexers-)
 
 Overloading of indexers in C# allows you to define multiple indexers within a class with different sets of parameters. This enables you to provide different ways to access elements or properties of the class based on the context or requirements.
 
