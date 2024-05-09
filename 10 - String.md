@@ -2,17 +2,17 @@
 
 **Links:**
 
-- [String](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array--1)
-- [`string` vs `System.String`](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#1-d-2-d-3-d-and-n-d-array-)
-- [Verbatim String Literal – `@`](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#jagged-array-)
-- [String Methods](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-class-)
-- [String Properties](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-methods-)
-- [String Constructors](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-properties-)
-- [String Builder](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#dynamic-array-)
-- [String Builder Methods](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#arraylist-)
-- [String Vs String Builder](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#arraylist-methods-)
+- [String](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
+- [`string` vs `System.String`](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-vs-systemstring-)
+- [Verbatim String Literal – `@`](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#verbatim-string-literal---)
+- [String Methods](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-methods-)
+- [String Properties](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-properties-)
+- [String Constructors](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-constructors-)
+- [String Builder](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-builder-)
+- [String Builder Methods](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-builder-methods-)
+- [String Vs String Builder](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-vs-string-builder-)
 
-## **String:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **String:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
 
 In C#, a string is a sequence of characters that represents text. It is a data type used to store textual data. Strings are immutable, meaning their values cannot be changed after they are created.
 
@@ -43,7 +43,7 @@ In this example:
 - We declare a string variable `message` and initialize it with the text `"Hello, World!"`.
 - We then use `Console.WriteLine` to display the value of the `message` string to the console.
 
-## **`string` vs `System.String`:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **`string` vs `System.String`:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
 
 Here's a detailed comparison between `string` and `System.String` in tabular form:
 
@@ -60,7 +60,7 @@ Here's a detailed comparison between `string` and `System.String` in tabular for
 
 In summary, while `string` and `System.String` are functionally equivalent in C#, the `string` keyword is preferred for its simplicity, readability, and familiarity. However, `System.String` can be used interchangeably with `string` when necessary, although it is less common due to its verbosity.
 
-## **Verbatim String Literal – `@`** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Verbatim String Literal – `@`** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
 
 In C#, the "@" symbol serves a dual purpose: as a verbatim string literal prefix and as an identifier prefix to create valid identifiers with reserved keywords. Let's merge both explanations into a comprehensive one:
 
@@ -86,7 +86,7 @@ The "@" symbol in C# is a versatile character that serves different purposes dep
 
 By leveraging the "@" symbol, developers can write cleaner and more readable code, especially in scenarios involving special characters in strings or when interfacing with systems using reserved keywords as identifiers.
 
-## **String Methods:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **String Methods:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
 
 | Method                  | Description                                                                                                                             | Example                                                     | Output                                     |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|--------------------------------------------|
@@ -114,7 +114,7 @@ By leveraging the "@" symbol, developers can write cleaner and more readable cod
 | `TrimStart`             | Removes all leading occurrences of a set of characters specified in an array from the current string.                                  | `string.TrimStart(trimChars)`                              | Removes leading characters specified in the array. |
 | `TrimEnd`               | Removes all trailing occurrences of a set of characters specified in an array from the current string.                                 | `string
 
-## **String Properties:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **String Properties:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
 
 Here are the properties of the String class in C# explained in detail:
 
@@ -127,7 +127,7 @@ Here are the properties of the String class in C# explained in detail:
 
 These properties provide access to various aspects of a string in C#, allowing for manipulation and retrieval of characters and length information. They offer valuable functionality for working with strings efficiently and effectively.
 
-## **String Constructors:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **String Constructors:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
 
 Here are the constructors of the String class in C# explained in detail:
 
@@ -143,7 +143,7 @@ Here are the constructors of the String class in C# explained in detail:
 
 These constructors provide various ways to create string instances, allowing for flexibility in initializing strings from different sources such as character arrays or byte arrays. They offer essential functionality for string manipulation and processing in C#.
 
-## **String Builder:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **String Builder:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
 
 StringBuilder is a mutable sequence of characters that allows efficient manipulation of strings in C#. Unlike the String class, which is immutable (meaning its value cannot be changed after creation), StringBuilder provides a way to modify strings without creating new instances. This can lead to better performance, especially when dealing with a large number of string concatenations or modifications.
 
@@ -193,7 +193,7 @@ In this example:
 
 StringBuilder provides various methods such as `Append`, `Insert`, `Replace`, `Remove`, and more for manipulating strings efficiently. It is particularly useful when you need to concatenate or modify strings dynamically, especially within loops or when building strings from multiple parts.
 
-## **String Builder Methods:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **String Builder Methods:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
 
 Here are the StringBuilder methods in C# explained in detail:
 
@@ -213,7 +213,7 @@ Here are the StringBuilder methods in C# explained in detail:
 
 These methods provide various ways to manipulate the contents of a StringBuilder instance, such as appending, inserting, replacing, and removing characters. They offer efficient string manipulation capabilities, especially when dealing with dynamic string construction or modification requirements.
 
-## **String Vs String Builder:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **String Vs String Builder:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
 
 Here's a detailed comparison between String and StringBuilder in C# presented in tabular form:
 
