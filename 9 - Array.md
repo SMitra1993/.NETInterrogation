@@ -2,21 +2,21 @@
 
 **Links:**
 
-- [Array](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [1-D, 2-D, 3-D and N-D Array](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Jagged Array](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Array Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Array Methods](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Array Properties](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Dynamic Array](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [ArrayList](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [ArrayList Methods](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [ArrayList Properties](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [ArrayList Constructors](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Array Vs ArrayList](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
-- [Arrayist Vs List](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#class--object-)
+- [Array](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array--1)
+- [1-D, 2-D, 3-D and N-D Array](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#1-d-2-d-3-d-and-n-d-array-)
+- [Jagged Array](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#jagged-array-)
+- [Array Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-class-)
+- [Array Methods](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-methods-)
+- [Array Properties](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-properties-)
+- [Dynamic Array](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#dynamic-array-)
+- [ArrayList](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#arraylist-)
+- [ArrayList Methods](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#arraylist-methods-)
+- [ArrayList Properties](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#arraylist-properties-)
+- [ArrayList Constructors](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#arraylist-constructors-)
+- [Array Vs ArrayList](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-vs-arraylist-)
+- [ArrayList Vs List](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#arraylist-vs-list-)
 
-## **Array** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Array** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 In C#, an array is a data structure that stores a fixed-size collection of elements of the same type in contiguous memory locations. Arrays provide a convenient way to work with collections of data and are widely used in programming for various tasks, such as storing data, accessing elements by index, and performing operations on elements.
 
@@ -78,7 +78,7 @@ Arrays in C# can be manipulated using various methods and operations, such as it
 
 Arrays in C# provide a convenient and efficient way to store and manipulate collections of data. They are versatile and widely used in programming for tasks involving structured data storage and processing. By understanding how to declare, initialize, access, and manipulate arrays, you can leverage this fundamental data structure to solve a wide range of programming problems.
 
-## **1-D, 2-D, 3-D and N-D Array:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **1-D, 2-D, 3-D and N-D Array:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 Arrays in C# are used to store multiple values of the same type in a contiguous memory location. They provide a convenient way to work with collections of data.
 
@@ -197,7 +197,7 @@ Consider a scenario where you are developing a chess game. You can use a 2-dimen
 
 Arrays in C# provide a flexible and efficient way to manage and manipulate multi-dimensional data structures like game boards, matrices, or any other structured data.
 
-## **Jagged Array:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Jagged Array:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 In C#, a jagged array (also known as an array of arrays) is an array whose elements are arrays themselves. Unlike a multi-dimensional array where each row has the same number of columns, in a jagged array, each row can have a different number of columns. This flexibility allows jagged arrays to represent irregular or ragged data structures efficiently.
 
@@ -264,7 +264,7 @@ Jagged arrays are useful when dealing with data structures that have varying len
 
 Jagged arrays provide a flexible way to represent and work with collections of data where each element may have a different size. They offer versatility and efficiency in handling irregular data structures and are commonly used in a variety of programming scenarios where fixed-size multi-dimensional arrays may not suffice.
 
-## **Array Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Array Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 In C#, the `Array` class is a fundamental class that provides methods and properties for working with arrays. It contains static methods for creating, manipulating, sorting, and searching arrays, as well as properties for obtaining information about arrays such as length and rank. The `Array` class is part of the `System` namespace.
 
@@ -345,7 +345,7 @@ Index of 6 in the sorted array: 5
 
 The `Array` class in C# provides powerful methods and properties for working with arrays. It offers functionality for creating, manipulating, sorting, and searching arrays efficiently. By leveraging the methods and properties of the `Array` class, you can perform a wide range of array-related operations with ease and efficiency in your C# programs.
 
-## **Array Methods:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Array Methods:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 | Method               | Description                                                                                                                                                       | Example                                                                                                                                                              |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -370,7 +370,7 @@ The `Array` class in C# provides powerful methods and properties for working wit
 
  Searches for an element that matches the conditions defined by the specified predicate and returns the zero-based index of the last occurrence within the array. | ```csharp int[] numbers = { 1, 2, 3, 4, 5 }; int index = Array.FindLastIndex(numbers, x => x % 2 == 0); // Finds the index of the last even number in the array (3) ``` |
 
- ## **Array Properties:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+ ## **Array Properties:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 | Property             | Description                                                                                                                                                       | Example                                                                                                                                                     |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -382,7 +382,7 @@ The `Array` class in C# provides powerful methods and properties for working wit
 | `IsSynchronized`     | Gets a value indicating whether access to the array is synchronized (thread safe).                                                                                 | ```csharp int[] numbers = { 1, 2, 3, 4, 5 }; bool isSynchronized = Array.IsSynchronized(numbers); // Checks if the array is synchronized (false) ``` |
 | `SyncRoot`           | Gets an object that can be used to synchronize access to the array.                                                                                               | ```csharp int[] numbers = { 1, 2, 3, 4, 5 }; object syncRoot = Array.SyncRoot(numbers); // Gets the synchronization root of the array ```            |
 
-## **Dynamic Array:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Dynamic Array:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 A dynamic array, also known as a resizable array or a dynamic array list, is a data structure that allows elements to be added or removed dynamically, unlike traditional arrays in C# which have a fixed size. The `List<T>` class in C# provides a dynamic array implementation.
 
@@ -439,7 +439,7 @@ In this example, we first create a dynamic array using the `List<T>` class. We a
 
 Dynamic arrays provide flexibility by automatically resizing themselves as elements are added or removed. This makes them suitable for scenarios where the size of the data structure may vary during runtime.
 
-## **ArrayList:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **ArrayList:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 `ArrayList` is a class in C# that provides a resizable array implementation. It belongs to the `System.Collections` namespace. `ArrayList` dynamically resizes itself as elements are added or removed, making it suitable for scenarios where the size of the data structure may vary during runtime.
 
@@ -506,7 +506,7 @@ Limitations of `ArrayList`:
 
 Overall, while `ArrayList` provides flexibility and dynamic resizing, it lacks type safety and may incur performance overhead due to boxing and unboxing. In modern C# development, `List<T>` from the `System.Collections.Generic` namespace is preferred over `ArrayList` due to its type safety and better performance.
 
-## **ArrayList Methods:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **ArrayList Methods:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 | Method                        | Description                                                                                                                                                                                         |
 |-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -536,7 +536,7 @@ Overall, while `ArrayList` provides flexibility and dynamic resizing, it lacks t
 
 These methods offer a wide range of functionalities for manipulating and working with the elements stored in an `ArrayList`. They provide operations for adding, removing, searching, sorting, and manipulating elements, making `ArrayList` a versatile choice for various scenarios.
 
-## **ArrayList Properties:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **ArrayList Properties:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 Here's a detailed explanation of the `ArrayList` properties in C# presented in a tabular format:
 
@@ -565,7 +565,7 @@ These properties provide various information and capabilities for working with `
 
 These properties offer valuable information about the state and behavior of `ArrayList` instances and enable developers to manage and manipulate them effectively.
 
-## **ArrayList Constructors:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **ArrayList Constructors:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 Here's a detailed explanation of the `ArrayList` constructors in C# presented in a tabular format:
 
@@ -593,7 +593,7 @@ These constructors provide various ways to create instances of the `ArrayList` c
 
 These constructors offer flexibility in creating and initializing `ArrayList` instances based on different requirements and scenarios.
 
-## **Array Vs ArrayList:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **Array Vs ArrayList:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 Here's a detailed comparison of `Array` and `ArrayList` in C#:
 
@@ -628,7 +628,7 @@ Here's a detailed comparison of `Array` and `ArrayList` in C#:
 In modern C# development, `List<T>` from the `System.Collections.Generic` namespace is preferred over `ArrayList` due to its type safety, better performance, and support for generics.
 
 
-## **Arrayist Vs List:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
+## **ArrayList Vs List:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 Here's a comparison between `ArrayList` and `List<T>` in tabular form:
 
