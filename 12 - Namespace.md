@@ -2,19 +2,19 @@
 
 **Links:**
 
-- [Stack Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
-- [Queue Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
-- [HashTable Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
-- [SortedList Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
-- [HashSet Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
-- [LinkedList Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
-- [List Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
-- [SortedSet Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
-- [Dictionary Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
-- [SortedDictionary Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
-- [BitArray Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
+- [Stack Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#stack-class-)
+- [Queue Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#queue-class-)
+- [HashTable Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#hashtable-class-)
+- [SortedList Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#sortedlist-class-)
+- [HashSet Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#hashset-class-)
+- [LinkedList Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#linkedlist-class-)
+- [List Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#list-class-)
+- [SortedSet Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#sortedset-class-)
+- [Dictionary Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#dictionary-class-)
+- [SortedDictionary Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#sorteddictionary-class-)
+- [BitArray Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#bitarray-class-)
 
-## **Stack Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **Stack Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 ### Constructors:
 1. **Stack()**: Initializes a new instance of the Stack class that is empty and has the default initial capacity.
@@ -105,7 +105,7 @@
 These constructors, methods, and properties provide various functionalities to manipulate and access elements in a Stack collection.
 
 
-## **Queue Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **Queue Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 ### Constructors:
 1. **Queue()**: Initializes a new instance of the Queue class that is empty and has the default initial capacity.
@@ -192,7 +192,7 @@ These constructors, methods, and properties provide various functionalities to m
 
 These constructors, methods, and properties provide various functionalities to manipulate and access elements in a Queue collection.
 
-## **HashTable Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **HashTable Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 ### Constructors:
 1. **Hashtable()**: Initializes a new instance of the Hashtable class that is empty, has the default initial capacity, and uses the default load factor.
@@ -340,7 +340,7 @@ These constructors, methods, and properties provide various functionalities to m
      ```
 These constructors, methods, and properties provide various functionalities to manipulate and access elements in a Hashtable collection.
 
-## **SortedList Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **SortedList Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 Certainly! Here's a breakdown of SortedList constructors, methods, and properties with examples:
 
@@ -420,7 +420,7 @@ Certainly! Here's a breakdown of SortedList constructors, methods, and propertie
 
 These constructors, properties, and methods provide various functionalities to work with SortedList instances in C#.
 
-## **HashSet Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **HashSet Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 ### Constructors:
 1. **HashSet()**: Initializes a new instance of the HashSet class that is empty and uses the default equality comparer for the set type.
@@ -497,7 +497,7 @@ These constructors, properties, and methods provide various functionalities to w
 
 These constructors, properties, and methods provide various functionalities to work with HashSet instances in C#.
 
-## **LinkedList Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **LinkedList Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 ### Constructors:
 1. **LinkedList()**: Initializes a new instance of the LinkedList class that is empty.
@@ -567,7 +567,7 @@ These constructors, properties, and methods provide various functionalities to w
 
 These constructors, properties, and methods provide various functionalities to work with LinkedList instances in C#.
 
-## **List Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **List Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 ### Constructors:
 1. **List()**: Initializes a new instance of the List class that is empty and has the default initial capacity.
@@ -645,7 +645,7 @@ These constructors, properties, and methods provide various functionalities to w
 
 These constructors, properties, and methods provide various functionalities to work with List instances in C#.
 
-## **SortedSet Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **SortedSet Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 ### Constructors:
 1. **SortedSet()**: Initializes a new instance of the SortedSet class that is empty and uses the default comparer for the element type.
@@ -734,7 +734,7 @@ These constructors, properties, and methods provide various functionalities to w
 
 These constructors, properties, and methods provide functionalities for working with SortedSet instances in C#.
 
-## **Dictionary Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **Dictionary Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 ### Constructors:
 1. **Dictionary()**: Initializes a new instance of the Dictionary<TKey, TValue> class that is empty.
@@ -837,7 +837,7 @@ These constructors, properties, and methods provide functionalities for working 
 
 These constructors, properties, and methods provide functionalities for working with Dictionary instances in C#.
 
-## **SortedDictionary Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **SortedDictionary Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 ### Constructors:
 1. **SortedDictionary()**: Initializes a new instance of the SortedDictionary<TKey, TValue> class that is empty and uses the default comparer for the key type.
@@ -935,7 +935,7 @@ These constructors, properties, and methods provide functionalities for working 
 
 These constructors, properties, and methods provide functionalities for working with SortedDictionary instances in C#.
 
-## **BitArray Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+## **BitArray Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
 Certainly! Here's an explanation of the constructors, methods, and properties of the BitArray class in C#:
 
