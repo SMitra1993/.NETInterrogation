@@ -2,25 +2,25 @@
 
 **Links:**
 
-- [List](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [Sorted List](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-vs-systemstring-)
-- [List Vs SortedList](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [HashSet](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [List Vs HashSet](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [SortedSet](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [HashSet Vs SortedSet](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [Dictionary](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [List Vs Dictionary](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [SortedDictionary](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [Dictionary Vs SortedDictionary](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [HashTable](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [Dictionary Vs HashTable](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [Stack](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [Queue](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [Linked List](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
-- [SortedDictionary Vs SortedList](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string--1)
+- [List](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-)
+- [Sorted List](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#sorted-list-)
+- [List Vs SortedList](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-vs-sortedlist-)
+- [HashSet](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#hashset-)
+- [List Vs HashSet](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-vs-hashset-)
+- [SortedSet](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#sortedset-)
+- [HashSet Vs SortedSet](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#hashset-vs-sortedset-)
+- [Dictionary](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#dictionary-)
+- [List Vs Dictionary](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-vs-dictionary-)
+- [SortedDictionary](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#sorteddictionary-)
+- [Dictionary Vs SortedDictionary](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#dictionary-vs-sorteddictionary-)
+- [HashTable](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#hashtable-)
+- [Dictionary Vs HashTable](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#dictionary-vs-hashtable-)
+- [Stack](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#stack-)
+- [Queue](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#queue-)
+- [Linked List](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#linked-list-)
+- [SortedDictionary Vs SortedList](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#sorteddictionary-vs-sortedlist-)
 
-## **List:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **List:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 List is a generic collection class in C# that represents a dynamic list of elements. It provides functionalities to add, remove, and access elements by index. Unlike arrays, lists can dynamically resize themselves to accommodate additional elements as needed.
 
@@ -65,7 +65,7 @@ In this example:
 
 Lists provide a flexible and efficient way to store and manipulate collections of items. They offer various methods for adding, removing, and accessing elements, making them widely used in C# programming for managing collections of data.
 
-## **Sorted List:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **Sorted List:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 SortedList is a collection class in C# that represents a collection of key/value pairs that are sorted by the keys. It maintains the items in sorted order based on the keys, allowing for efficient searching and retrieval operations.
 
@@ -111,7 +111,7 @@ In this example:
 
 SortedList provides efficient search operations based on the keys, making it suitable for scenarios where items need to be sorted and retrieved based on their keys. It is implemented as a combination of a dynamic array and a binary search tree, ensuring efficient insertion, removal, and retrieval operations while maintaining sorted order.
 
-## **List Vs SortedList:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **List Vs SortedList:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 Here's a comparison between List and SortedList in tabular form:
 
@@ -127,7 +127,7 @@ Here's a comparison between List and SortedList in tabular form:
 
 In summary, List is more suitable for scenarios where ordering is not important or where elements are frequently added or removed, while SortedList is suitable for scenarios where elements need to be maintained in sorted order based on keys and efficient searching is required.
 
-## **HashSet:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **HashSet:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 HashSet is a collection class in C# that represents a set of unique elements. It does not allow duplicate elements, and it does not maintain the order of elements. HashSet provides fast lookup operations, making it suitable for scenarios where uniqueness of elements and efficient membership testing are required.
 
@@ -173,7 +173,7 @@ In this example:
 
 HashSet provides efficient operations for adding, removing, and testing for membership of elements. It internally uses a hash table to store elements, allowing for fast lookup operations. Additionally, HashSet provides various set operations such as union, intersection, and difference, making it a versatile choice for working with sets of data.
 
-## **List Vs HashSet:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **List Vs HashSet:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 Here's a detailed comparison between List and HashSet in tabular form:
 
@@ -189,7 +189,7 @@ Here's a detailed comparison between List and HashSet in tabular form:
 
 In summary, List is suitable for scenarios where ordering is important or where duplicates are allowed, while HashSet is suitable for scenarios where uniqueness of elements and efficient membership testing are required. HashSet provides faster membership testing and does not allow duplicate elements, making it more efficient for scenarios requiring uniqueness. However, it does not maintain the order of elements like List does.
 
-## **SortedSet:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **SortedSet:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 SortedSet is a collection class in C# that represents a set of unique elements sorted in ascending order. It is similar to HashSet but maintains the elements in sorted order based on their natural ordering or using a custom comparer.
 
@@ -237,7 +237,7 @@ In this example:
 
 SortedSet provides efficient operations for adding, removing, and testing for membership of elements while maintaining them in sorted order. It is particularly useful in scenarios where elements need to be sorted and uniqueness is required.
 
-## **HashSet Vs SortedSet:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **HashSet Vs SortedSet:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 Here's a detailed comparison between HashSet and SortedSet in tabular form:
 
@@ -253,7 +253,7 @@ Here's a detailed comparison between HashSet and SortedSet in tabular form:
 
 In summary, HashSet is suitable for scenarios where uniqueness of elements is required and the order is not important, while SortedSet is suitable for scenarios where uniqueness of elements is required and maintaining elements in sorted order is necessary. HashSet provides faster membership testing but does not maintain order, while SortedSet maintains elements in sorted order but has slightly slower access times due to sorting.
 
-## **Dictionary:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **Dictionary:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 Dictionary is a collection class in C# that represents a collection of key-value pairs. It provides fast lookup operations based on keys and allows you to store and retrieve values associated with unique keys. Each key in a dictionary must be unique, and it provides efficient methods for adding, removing, and accessing elements.
 
@@ -314,7 +314,7 @@ In this example:
 
 Dictionaries provide efficient lookup operations based on keys, making them suitable for scenarios where fast retrieval of values based on keys is required. They are commonly used for caching, storing configuration settings, and mapping identifiers to values.
 
-## **List Vs Dictionary:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **List Vs Dictionary:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 Here's a detailed comparison between List and Dictionary in tabular form:
 
@@ -331,7 +331,7 @@ Here's a detailed comparison between List and Dictionary in tabular form:
 
 In summary, List is suitable for scenarios where ordered collection of elements is required or duplicates are allowed, while Dictionary is suitable for scenarios where efficient key-based lookup is required or key-value mapping is necessary. List provides fast access by index and maintains the order of elements, while Dictionary provides fast access by key but does not maintain any specific order.
 
-## **SortedDictionary:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **SortedDictionary:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 SortedDictionary is a collection class in C# that represents a collection of key-value pairs sorted by keys. It is similar to Dictionary but maintains its elements in sorted order based on the keys. Each key in a SortedDictionary must be unique, and it provides efficient methods for adding, removing, and accessing elements while maintaining them in sorted order.
 
@@ -392,7 +392,7 @@ In this example:
 
 SortedDictionary provides efficient operations for adding, removing, and accessing elements while maintaining them in sorted order. It is particularly useful in scenarios where elements need to be sorted by keys and uniqueness is required.
 
-## **Dictionary Vs SortedDictionary:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **Dictionary Vs SortedDictionary:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 Here's a detailed comparison between Dictionary and SortedDictionary in tabular form:
 
@@ -407,7 +407,7 @@ Here's a detailed comparison between Dictionary and SortedDictionary in tabular 
 
 In summary, Dictionary is suitable for scenarios where order is not important and fast key-based lookup is required, while SortedDictionary is suitable for scenarios where elements need to be sorted by keys and efficient key-based lookup is required. Dictionary provides faster access by key on average but does not maintain order, while SortedDictionary maintains elements in sorted order based on keys but has slightly slower access times due to sorting.
 
-## **Hashtable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **HashTable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 Hashtable is a collection class in C# that represents a collection of key-value pairs. It is similar to Dictionary but is a legacy class and is not type-safe. Hashtable stores key-value pairs in a hash table data structure, providing fast lookup operations based on keys. Each key in a Hashtable must be unique, and it provides efficient methods for adding, removing, and accessing elements.
 
@@ -468,7 +468,7 @@ In this example:
 
 Hashtable provides efficient operations for adding, removing, and accessing elements based on keys. However, it is not type-safe and does not preserve the order of elements. Hashtable is primarily used in legacy code and is recommended to use the generic Dictionary class for type-safe collections.
 
-## **Dictionary Vs HashTable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **Dictionary Vs HashTable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 Here's a detailed comparison between Dictionary and Hashtable in tabular form:
 
@@ -484,7 +484,7 @@ Here's a detailed comparison between Dictionary and Hashtable in tabular form:
 
 In summary, Dictionary is a type-safe collection class suitable for modern applications where type safety is important and fast key-based lookup is required. Hashtable, on the other hand, is not type-safe and is used in legacy code or scenarios where type safety is not critical and fast key-based lookup is required. Both collections provide efficient operations for adding, removing, and accessing elements based on keys, but Dictionary is recommended for most modern applications due to its type safety and improved syntax.
 
-## **Stack:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **Stack:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 In C#, a Stack is a collection class that represents a Last-In-First-Out (LIFO) data structure, meaning that the last element added to the stack is the first one to be removed. It provides operations for adding elements to the top of the stack (push) and removing elements from the top of the stack (pop). Stack is commonly used in scenarios where elements need to be processed in the reverse order of their addition.
 
@@ -536,7 +536,7 @@ In this example:
 
 Stack provides efficient operations for adding and removing elements from the top of the stack. It is commonly used in scenarios such as expression evaluation, backtracking algorithms, and maintaining function call stacks.
 
-## **Queue:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **Queue:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 In C#, a Queue is a collection class that represents a First-In-First-Out (FIFO) data structure, meaning that the first element added to the queue is the first one to be removed. It provides operations for adding elements to the end of the queue (enqueue) and removing elements from the beginning of the queue (dequeue). Queue is commonly used in scenarios where elements need to be processed in the same order as their addition.
 
@@ -588,7 +588,7 @@ In this example:
 
 Queue provides efficient operations for adding and removing elements from the beginning and end of the queue, respectively. It is commonly used in scenarios such as job scheduling, breadth-first search algorithms, and handling tasks in the order they were received.
 
-## **Linked List:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **Linked List:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 In C#, a Linked List is a collection class that represents a linear data structure where each element (node) contains a reference to the next element in the sequence. Unlike arrays, linked lists do not have a fixed size, and elements can be dynamically added or removed at any position within the list. Linked lists are commonly used when frequent insertion or deletion of elements is required, as they provide efficient operations for these operations.
 
@@ -671,7 +671,7 @@ In this example:
 
 Linked List provides efficient operations for adding, removing, and accessing elements at any position within the list. It is commonly used in scenarios where dynamic resizing and efficient insertion or deletion of elements are required, such as implementing stacks, queues, and certain algorithms like graph traversal.
 
-## **SortedDictionary Vs SortedList:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/10%20-%20String.md#string-)
+## **SortedDictionary Vs SortedList:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
 Certainly! Here's a comparison between SortedDictionary and SortedList in tabular form:
 
