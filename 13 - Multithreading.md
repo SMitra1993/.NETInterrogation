@@ -617,6 +617,8 @@ Understanding the role of the main thread in multithreading is essential for dev
 
 ## **Lifecycle and States of a Thread:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
 
+![alt text](lifecycle.png)
+
 The lifecycle of a thread in C# refers to the various states a thread transitions through from its creation to its termination. Understanding the thread lifecycle is crucial for effective multithreading programming. Here's a detailed explanation of the lifecycle and states of a thread in C#:
 
 ### Thread States:
