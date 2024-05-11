@@ -2,16 +2,16 @@
 
 **Links:**
 
-- [Multithreading](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#stack-class-)
-- [Multitasking](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#stack-class-)
-- [Thread Vs Process](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#stack-class-)
-- [Types of Threads](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#stack-class-)
-- [Thread Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#stack-class-)
-- [Main Thread](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#stack-class-)
-- [Lifecycle and States of a Thread](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#stack-class-)
-- [Thread Priority](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#stack-class-)
+- [Multithreading](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading--1)
+- [Multitasking](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multitasking-)
+- [Thread Vs Process](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#thread-vs-process-)
+- [Types of Threads](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#types-of-threads-)
+- [Thread Class](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#thread-class-)
+- [Main Thread](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#main-thread-)
+- [Lifecycle and States of a Thread](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#lifecycle-and-states-of-a-thread-)
+- [Thread Priority](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#thread-priority-)
 
-## **Multithreading:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
+## **Multithreading:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
 
 Multithreading in C# allows multiple threads to execute concurrently within the same application. This capability enables applications to perform multiple tasks simultaneously, improving performance and responsiveness. Here's an explanation of multithreading along with an example and output:
 
@@ -78,7 +78,7 @@ In this example, two threads are created: one for printing numbers and another f
 
 Multithreading in C# enables efficient utilization of resources and improved responsiveness in applications, especially for tasks that involve parallel processing or I/O-bound operations. However, it also introduces challenges such as thread synchronization and coordination, which need to be addressed to ensure proper behavior and avoid issues like race conditions and deadlocks.
 
-## **Multitasking:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
+## **Multitasking:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
 
 Multitasking in C# involves the concurrent execution of multiple tasks within the same application. These tasks can be performed asynchronously, allowing the application to remain responsive and efficient. Multitasking is typically achieved using asynchronous programming techniques, such as asynchronous methods, tasks, and async/await keywords. Here's an explanation of multitasking along with an example and output:
 
@@ -153,7 +153,7 @@ In this example, we use the `HttpClient` class to asynchronously download files 
 
 Multitasking in C# enables efficient utilization of system resources and improved performance by allowing multiple operations to be executed concurrently. It is especially useful for scenarios involving I/O-bound or CPU-bound operations, where tasks can be executed independently and in parallel to maximize throughput and responsiveness.
 
-## **Thread Vs Process:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
+## **Thread Vs Process:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
 
 | Feature          | Process                              | Thread                              |
 |------------------|--------------------------------------|-------------------------------------|
@@ -184,7 +184,7 @@ Multitasking in C# enables efficient utilization of system resources and improve
 
 In summary, processes offer better isolation and reliability but come with higher overhead, while threads provide better scalability and efficiency within the same process but may introduce stability issues. The choice between processes and threads depends on the specific requirements of the application, such as concurrency needs, resource utilization, and fault tolerance.
 
-## **Types of Threads:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
+## **Types of Threads:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
 
 In C#, threads can be categorized into different types based on their behavior and usage. Here are the main types of threads:
 
@@ -338,7 +338,7 @@ In C#, threads can be categorized into different types based on their behavior a
 
 These examples demonstrate different types of threads in C#, each with its own behavior and usage. Understanding these thread types is essential for efficient multithreading in C# applications.
 
-## **Thread Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
+## **Thread Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
 
 The `Thread` class in C# is part of the `System.Threading` namespace and is used to create and manage threads in a multi-threaded application. Below, I'll explain the constructors, methods, and properties of the `Thread` class in detail.
 
@@ -529,7 +529,7 @@ The `Thread` class in C# is part of the `System.Threading` namespace and is used
 
 These constructors, methods, and properties provide developers with a comprehensive set of tools to create, manage, and control threads in C# applications. Understanding and utilizing them effectively is essential for writing efficient and reliable multi-threaded code.
 
-## **Main Thread:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
+## **Main Thread:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
 
 In multithreading in C#, the main thread remains the initial thread of execution that starts when your application begins running. However, in the context of multithreading, the main thread can also create and manage other threads for parallel execution. Here's a detailed explanation of the main thread in multithreading, including its signature, overloads, examples, and outputs:
 
@@ -615,7 +615,7 @@ The `Main()` method can be overloaded in multithreading scenarios to accept diff
 
 Understanding the role of the main thread in multithreading is essential for developing efficient and scalable applications that leverage the power of parallel processing.
 
-## **Lifecycle and States of a Thread:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
+## **Lifecycle and States of a Thread:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
 
 The lifecycle of a thread in C# refers to the various states a thread transitions through from its creation to its termination. Understanding the thread lifecycle is crucial for effective multithreading programming. Here's a detailed explanation of the lifecycle and states of a thread in C#:
 
@@ -729,7 +729,7 @@ class Program
 
 Understanding the lifecycle and states of a thread in C# is crucial for building robust and scalable multithreaded applications. By managing thread transitions effectively, developers can optimize resource utilization and enhance application performance.
 
-## **Thread Priority:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
+## **Thread Priority:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
 
 Thread priority is a mechanism provided by the operating system to determine the relative importance of different threads in a multithreaded application. Threads with higher priority levels are given more CPU time compared to threads with lower priority levels, allowing critical tasks to be executed with minimal delay. However, it's important to note that thread priority is only a hint to the operating system, and it does not guarantee the order of execution.
 
