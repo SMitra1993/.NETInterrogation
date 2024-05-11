@@ -2,13 +2,13 @@
 
 **Links:**
 
-- [Exception](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading--1)
-- [System Level Exception vs Application Level Exception](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading--1)
-- [Exception Heirarchy](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading--1)
-- [Multiple Catch clause](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading--1)
-- [`finally` keyword](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading--1)
+- [Exception](https://github.com/SMitra1993/theNETInterrogation/blob/master/14%20-%20Exception.md#exception--1)
+- [System Level Exception vs Application Level Exception](https://github.com/SMitra1993/theNETInterrogation/blob/master/14%20-%20Exception.md#system-level-exception-vs-application-level-exception-)
+- [Exception Heirarchy](https://github.com/SMitra1993/theNETInterrogation/blob/master/14%20-%20Exception.md#exception-heirarchy-)
+- [Multiple Catch clause](https://github.com/SMitra1993/theNETInterrogation/blob/master/14%20-%20Exception.md#multiple-catch-clause-)
+- [`finally` keyword](https://github.com/SMitra1993/theNETInterrogation/blob/master/14%20-%20Exception.md#finally-keyword-)
 
-## **Exception:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
+## **Exception:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/14%20-%20Exception.md#exception-)
 
 In C#, an exception is an unexpected or exceptional condition that occurs during the execution of a program and disrupts the normal flow of control. Exceptions can arise due to various reasons such as invalid inputs, file I/O errors, network failures, or logical errors in the program.
 
@@ -59,7 +59,7 @@ Error: Attempted to divide by zero.
 
 By handling exceptions in this manner, you can prevent your program from crashing and provide meaningful feedback to the user about the encountered error. It's important to handle exceptions appropriately in your code to ensure robustness and reliability.
 
-## **System Level Exception vs Application Level Exception:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
+## **System Level Exception vs Application Level Exception:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/14%20-%20Exception.md#exception-)
 
 | Aspect                    | System Level Exception                           | Application Level Exception                             |
 |---------------------------|--------------------------------------------------|--------------------------------------------------------|
@@ -74,7 +74,7 @@ By handling exceptions in this manner, you can prevent your program from crashin
 
 In summary, system-level exceptions originate from the underlying infrastructure or runtime environment and may have broader implications, potentially affecting the entire system. Application-level exceptions, on the other hand, arise from within the application's codebase and are typically confined to specific application logic or operations. Handling application-level exceptions is the responsibility of the application developer, while system-level exceptions may require intervention at the system level.
 
-## **Exception Heirarchy:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
+## **Exception Heirarchy:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/14%20-%20Exception.md#exception-)
 
 ![alt text](exception.png)
 
@@ -103,7 +103,7 @@ Custom exceptions can be derived from either `System.Exception` or `System.Appli
 
 Understanding the exception hierarchy in C# helps developers organize their exception handling code effectively and write custom exceptions that adhere to established conventions.
 
-## **Multiple Catch clause:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
+## **Multiple Catch clause:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/14%20-%20Exception.md#exception-)
 
 In C#, you can use multiple `catch` clauses to handle different types of exceptions in exception handling. Each `catch` block can handle a specific type of exception, allowing you to customize the handling based on the type of exception thrown. Here's how you can use multiple `catch` clauses:
 
@@ -154,7 +154,7 @@ When an exception occurs:
 
 Using multiple `catch` clauses allows you to handle different types of exceptions gracefully, providing more informative error messages and improving the robustness of your code.
 
-## **`finally` keyword:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/13%20-%20Multithreading.md#multithreading-)
+## **`finally` keyword:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/14%20-%20Exception.md#exception-)
 
 The `finally` keyword in C# is used in exception handling to define a block of code that is guaranteed to execute, regardless of whether an exception is thrown or not. It ensures that certain cleanup or resource release tasks are performed, even if an exception occurs. Here's how it works:
 
