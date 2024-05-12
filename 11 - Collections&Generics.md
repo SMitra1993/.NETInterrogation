@@ -673,7 +673,7 @@ Linked List provides efficient operations for adding, removing, and accessing el
 
 ## **SortedDictionary Vs SortedList:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
-Certainly! Here's a comparison between SortedDictionary and SortedList in tabular form:
+Here's a comparison between SortedDictionary and SortedList in tabular form:
 
 | Feature               | SortedDictionary                                                | SortedList                                                        |
 |-----------------------|------------------------------------------------------------------|-------------------------------------------------------------------|

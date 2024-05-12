@@ -342,7 +342,7 @@ These constructors, methods, and properties provide various functionalities to m
 
 ## **SortedList Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
-Certainly! Here's a breakdown of SortedList constructors, methods, and properties with examples:
+Here's a breakdown of SortedList constructors, methods, and properties with examples:
 
 ### Constructors:
 1. **SortedList()**: Initializes a new instance of the SortedList class that is empty, has the default initial capacity, and is sorted according to the natural order of its elements.
@@ -937,7 +937,7 @@ These constructors, properties, and methods provide functionalities for working 
 
 ## **BitArray Class:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/12%20-%20Namespace.md#namespace-)
 
-Certainly! Here's an explanation of the constructors, methods, and properties of the BitArray class in C#:
+Here's an explanation of the constructors, methods, and properties of the BitArray class in C#:
 
 ### Constructors:
 1. **BitArray(Int32)**: Initializes a new instance of the BitArray class that can hold the specified number of bits, all set to false.

@@ -432,8 +432,6 @@ In summary, `var` is used for type inference at compile time, providing static t
 
 ## **Scope of Variable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
-Certainly! Let's delve into each scope level in C#:
-
 ### 1. Class Level Scope:
 
 - **Definition**: Variables declared within a class but outside any method or constructor.

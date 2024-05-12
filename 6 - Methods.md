@@ -723,8 +723,6 @@ DerivedClass.Display
 
 ## **Various ways to make method parameter as optional:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
-Certainly! Here's an explanation of each way to make method parameters optional in C#:
-
 ### 1. By Using Default Value:
 
 You can specify a default value for a method parameter in its declaration. If no argument is provided for that parameter when calling the method, the default value will be used.

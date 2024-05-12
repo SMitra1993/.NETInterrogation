@@ -39,8 +39,6 @@
 
 ## **Class & Object:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
-Certainly! Let's start with explanations for class and object in C#, along with examples and scenarios:
-
 ### Class: [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
 In C#, a class is a blueprint or template for creating objects. It defines the properties, methods, events, and fields that characterize a particular type of object. Classes encapsulate data and behavior into a single unit, promoting code reusability, maintainability, and organization.
@@ -297,8 +295,6 @@ class Program
 ```
 Person's name: Emily
 ```
-Certainly! Let's include those additional methods for creating objects:
-
 ### 6. Creating an Array of Objects:
 
 You can create an array of objects by specifying the array type followed by square brackets `[]` and using the `new` keyword to allocate memory for the array.
