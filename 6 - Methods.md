@@ -10,7 +10,7 @@
 - [Method Overriding vs Method Hiding](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#method-overriding-vs-method-hiding-)
 - [Various ways to make method parameter as optional](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#various-ways-to-make-method-parameter-as-optional-)
 - [ref Vs out parameter](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#ref-vs-out-parameter-)
-- [Anonnymous Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#anonnymous-method-)
+- [Anonymous Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#anonnymous-method-)
 - [Partial Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#partial-method-)
 - [Extension Method](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#extension-method-)
 - [Local Function](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#local-function-)
@@ -829,7 +829,7 @@ Here's a detailed comparison between `ref` and `out` parameters in C#:
 - `ref` parameters preserve their initial value, while `out` parameters ignore their initial value.
 - `ref` parameters can return multiple values, while `out` parameters are typically used to return a single value from a method.
 
-## **Anonnymous Method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
+## **Anonymous Method:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/6%20-%20Methods.md#methods-)
 
 An anonymous method in C# is a method without a name. It allows you to define a method "on the fly" without explicitly declaring a separate method. Anonymous methods are often used as arguments to other methods, such as event handlers or LINQ queries.
 
