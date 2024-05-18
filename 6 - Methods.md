@@ -562,7 +562,7 @@ Drawing a rectangle.
 
 ### **`virtual`,`override`, and `base` keywords:**
 
-Sure, let's break down each of these keywords:
+Let's break down each of these keywords:
 
 ### 1. `virtual` Keyword:
 

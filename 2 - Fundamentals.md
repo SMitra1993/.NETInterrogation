@@ -74,7 +74,7 @@ In summary, identifiers in C# are names used to refer to various programming ele
 
 ## **Data Types:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
-Sure, here's a detailed explanation of the main data types in C# presented in tabular form:
+Here's a detailed explanation of the main data types in C# presented in tabular form:
 
 | Data Type  | Description                                                | Size (bits)  | Range                                                     | Default Value    | .NET Framework Type       |
 |------------|------------------------------------------------------------|--------------|-----------------------------------------------------------|------------------|---------------------------|
@@ -511,7 +511,7 @@ Understanding and correctly utilizing these scope levels in C# is crucial for wr
 
 ## **Access Modifiers:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
-Sure, let's delve into each access modifier in detail:
+Let's delve into each access modifier in detail:
 
 ### 1. public:
 
@@ -680,7 +680,7 @@ Literals in C# provide a way to represent fixed values directly within your code
 
 ## **Opertors in c#:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
-Sure, let's explore the various types of operators in C# along with examples and scenarios:
+Let's explore the various types of operators in C# along with examples and scenarios:
 
 ### 1. Arithmetic Operators:
 
@@ -947,7 +947,7 @@ Assignment operators are fundamental in C# for modifying the values of variables
 
 ## **Boxing Vs Unboxing:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/2%20-%20Fundamentals.md#fundamentals-)
 
-Sure! Let's start with the explanations:
+Let's start with the explanations:
 
 ### Boxing:
 

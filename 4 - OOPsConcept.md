@@ -387,7 +387,7 @@ Reference Person's name: David
 
 ## **Class Vs Structs:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/4%20-%20OOPsConcept.md#oops-concept-)
 
-Sure, let's provide a more detailed comparison of classes and structs in C#:
+Let's provide a more detailed comparison of classes and structs in C#:
 
 | Feature           | Class                                                | Struct                                                |
 |-------------------|------------------------------------------------------|-------------------------------------------------------|

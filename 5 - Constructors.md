@@ -637,7 +637,7 @@ This demonstrates how a static constructor can be used to perform one-time initi
 
 ## **Static Constructor Vs Non-Static Constructor:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/5%20-%20Constructors.md#constructors-)
 
-Sure, let's compare static constructors and non-static constructors in C# in tabular form with detailed explanations and use cases:
+Let's compare static constructors and non-static constructors in C# in tabular form with detailed explanations and use cases:
 
 | Feature                | Static Constructors                                      | Non-Static Constructors                                 |
 |------------------------|----------------------------------------------------------|----------------------------------------------------------|
