@@ -370,6 +370,8 @@ The `Array` class in C# provides powerful methods and properties for working wit
 
  Searches for an element that matches the conditions defined by the specified predicate and returns the zero-based index of the last occurrence within the array. | ```csharp int[] numbers = { 1, 2, 3, 4, 5 }; int index = Array.FindLastIndex(numbers, x => x % 2 == 0); // Finds the index of the last even number in the array (3) ``` |
 
+These examples demonstrate how to use various methods of the `Array` class in C# to perform common array operations efficiently.
+
  ## **Array Properties:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/9%20-%20Array.md#array-)
 
 | Property             | Description                                                                                                                                                       | Example                                                                                                                                                     |
