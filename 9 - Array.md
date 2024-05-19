@@ -366,9 +366,7 @@ The `Array` class in C# provides powerful methods and properties for working wit
 | `Array.FindAll()`    | Retrieves all the elements that match the conditions defined by the specified predicate.                                                                         | ```csharp int[] numbers = { 1, 2, 3, 4, 5 }; int[] evenNumbers = Array.FindAll(numbers, x => x % 2 == 0); // Finds all even numbers in the array ```            |
 | `Array.FindIndex()`  | Searches for an element that matches the conditions defined by the specified predicate and returns the zero-based index of the first occurrence within the array. | ```csharp int[] numbers = { 1, 2, 3, 4, 5 }; int index = Array.FindIndex(numbers, x => x % 2 == 0); // Finds the index of the first even number in the array (1) ``` |
 | `Array.FindLast()`   | Searches for an element that matches the conditions defined by the specified predicate and returns the last occurrence within the array.                          | ```csharp int[] numbers = { 1, 2, 3, 4, 5 }; int result = Array.FindLast(numbers, x => x % 2 == 0); // Finds the last even number in the array (4) ```             |
-| `Array.FindLastIndex()` |
-
- Searches for an element that matches the conditions defined by the specified predicate and returns the zero-based index of the last occurrence within the array. | ```csharp int[] numbers = { 1, 2, 3, 4, 5 }; int index = Array.FindLastIndex(numbers, x => x % 2 == 0); // Finds the index of the last even number in the array (3) ``` |
+| `Array.FindLastIndex()` | Searches for an element that matches the conditions defined by the specified predicate and returns the zero-based index of the last occurrence within the array. | ```csharp int[] numbers = { 1, 2, 3, 4, 5 }; int index = Array.FindLastIndex(numbers, x => x % 2 == 0); // Finds the index of the last even number in the array (3) ``` |
 
 These examples demonstrate how to use various methods of the `Array` class in C# to perform common array operations efficiently.
 
