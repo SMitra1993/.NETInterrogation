@@ -19,6 +19,7 @@
 - [Queue](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#queue-)
 - [Linked List](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#linked-list-)
 - [SortedDictionary Vs SortedList](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#sorteddictionary-vs-sortedlist-)
+- [List Vs Enumerable](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#sorteddictionary-vs-sortedlist-)
 
 ## **List:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
@@ -688,3 +689,142 @@ Here's a comparison between SortedDictionary and SortedList in tabular form:
 | Use Case              | Dictionary with frequent insertions and deletions.                | Dictionary with frequent lookups and memory efficiency is important.|
 
 Both SortedDictionary and SortedList provide sorted collection semantics, but they use different underlying data structures, resulting in differences in performance characteristics and memory usage. The choice between the two depends on the specific requirements of your application, such as the frequency of insertions, deletions, lookups, and memory constraints.
+
+## **List Vs IEnumerable:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
+
+Let's compare `List` and `IEnumerable` in C# in a detailed tabular form:
+
+| **Feature**                  | **List<T>**                                                    | **IEnumerable<T>**                                         |
+|------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
+| **Namespace**                | `System.Collections.Generic`                                  | `System.Collections.Generic`                               |
+| **Type**                     | Concrete class                                                | Interface                                                  |
+| **Instantiation**            | Can be directly instantiated using `new List<T>()`            | Cannot be directly instantiated; requires implementation   |
+| **Usage**                    | Use when you need dynamic array-like data structures with random access and modification capabilities | Use when you need a simple iteration over a collection      |
+| **Random Access**            | Provides O(1) access via index                                | Does not provide direct access by index                    |
+| **Modification**             | Supports adding, removing, and modifying elements             | Read-only; does not support modification                    |
+| **Memory Consumption**       | Higher memory consumption due to storage overhead             | Lower memory consumption                                   |
+| **Performance**              | Faster for accessing elements by index and modifying          | Better for streaming data and forward-only iteration       |
+| **Linq Support**             | Fully supported with extension methods                        | Fully supported with extension methods                     |
+| **Methods and Properties**   | Rich set of methods and properties (e.g., `Add`, `Remove`, `Count`) | Limited to `GetEnumerator`                                 |
+| **Deferred Execution**       | Does not support deferred execution; evaluates immediately    | Supports deferred execution                                |
+| **Use Cases**                | Use when collection needs to be modified frequently or accessed randomly | Use when only iteration or read-only operations are needed |
+
+### Examples
+
+#### Example using `List<T>`
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+public class ListExample
+{
+    public static void Main()
+    {
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+
+        // Add an element
+        numbers.Add(6);
+
+        // Remove an element
+        numbers.Remove(3);
+
+        // Access elements by index
+        Console.WriteLine($"First element: {numbers[0]}");
+
+        // Iterate over the list
+        foreach (var number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+    }
+}
+```
+
+**Output:**
+```
+First element: 1
+1
+2
+4
+5
+6
+```
+
+#### Example using `IEnumerable<T>`
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class IEnumerableExample
+{
+    public static void Main()
+    {
+        IEnumerable<int> numbers = GetNumbers();
+
+        // Iterate over the collection
+        foreach (var number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+
+        // Use Linq methods
+        var evenNumbers = numbers.Where(n => n % 2 == 0);
+
+        foreach (var number in evenNumbers)
+        {
+            Console.WriteLine($"Even number: {number}");
+        }
+    }
+
+    public static IEnumerable<int> GetNumbers()
+    {
+        yield return 1;
+        yield return 2;
+        yield return 3;
+        yield return 4;
+        yield return 5;
+    }
+}
+```
+
+**Output:**
+```
+1
+2
+3
+4
+5
+Even number: 2
+Even number: 4
+```
+
+### Detailed Explanation
+
+1. **Namespace**: Both `List<T>` and `IEnumerable<T>` are part of the `System.Collections.Generic` namespace, making them part of the generic collection framework in .NET.
+
+2. **Type**: `List<T>` is a concrete class that provides a dynamic array functionality, whereas `IEnumerable<T>` is an interface that defines a sequence of values that can be iterated over.
+
+3. **Instantiation**: You can create an instance of a `List<T>` using `new List<T>()`. However, `IEnumerable<T>` cannot be instantiated directly since it is an interface; instead, it must be implemented by a class or provided by a method.
+
+4. **Usage**: Use `List<T>` when you need to frequently access elements by index or modify the collection. Use `IEnumerable<T>` when you need to iterate over a collection without modifying it.
+
+5. **Random Access**: `List<T>` allows you to access elements by their index, providing O(1) time complexity. `IEnumerable<T>` does not support random access; you must iterate through the collection.
+
+6. **Modification**: `List<T>` provides methods for adding, removing, and modifying elements in the collection. `IEnumerable<T>` is read-only and does not support modification methods.
+
+7. **Memory Consumption**: `List<T>` has higher memory consumption due to its internal array and resizing overhead. `IEnumerable<T>` typically has lower memory consumption since it is more lightweight.
+
+8. **Performance**: `List<T>` is faster for operations that require accessing elements by index or modifying the collection. `IEnumerable<T>` is more suitable for streaming data and forward-only iteration scenarios.
+
+9. **Linq Support**: Both `List<T>` and `IEnumerable<T>` support Linq extension methods, enabling powerful querying capabilities.
+
+10. **Methods and Properties**: `List<T>` has a rich set of methods and properties, such as `Add`, `Remove`, `Insert`, `Count`, etc. `IEnumerable<T>` primarily has the `GetEnumerator` method to support iteration.
+
+11. **Deferred Execution**: Linq queries on `IEnumerable<T>` support deferred execution, meaning the query is not executed until the results are enumerated. `List<T>` evaluates immediately when the methods are called.
+
+12. **Use Cases**: Use `List<T>` when you need a mutable, dynamic collection with fast access and modification capabilities. Use `IEnumerable<T>` for read-only operations and scenarios where you are only interested in iterating over a sequence of values.
+
+This comparison should help you understand when to use `List<T>` and `IEnumerable<T>` in your C# applications and their respective benefits and limitations.
