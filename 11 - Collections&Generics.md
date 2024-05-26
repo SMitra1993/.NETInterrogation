@@ -19,7 +19,7 @@
 - [Queue](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#queue-)
 - [Linked List](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#linked-list-)
 - [SortedDictionary Vs SortedList](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#sorteddictionary-vs-sortedlist-)
-- [List Vs Enumerable](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#sorteddictionary-vs-sortedlist-)
+- [List Vs Enumerable](https://github.com/SMitra1993/.NETInterrogation/blob/master/11%20-%20Collections%26Generics.md#list-vs-ienumerable-)
 
 ## **List:** [🏠](https://github.com/SMitra1993/theNETInterrogation/blob/master/11%20-%20Collections%26Generics.md#collections--generics-)
 
